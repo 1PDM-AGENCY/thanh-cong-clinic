@@ -1746,6 +1746,18 @@
            Hướng dẫn tạo: xem file FORM-SETUP.md. Khi chưa cấu hình, form chạy ở chế độ demo. */
         const FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycby9uY6KU7zwhpTqH5nglREgc8LAWoS7SAqZir7CM76bPJJV2dpknePq9NkMlrUpq9mm/exec';
 
+        // Gửi lead về Google Sheet. sendBeacon đáng tin với Apps Script (/exec có redirect);
+        // fallback fetch no-cors chỉ chạy khi beacon không queue được (tránh gửi trùng).
+        function submitLead(data) {
+            var body = new URLSearchParams(data);
+            var ok = false;
+            try { ok = navigator.sendBeacon(FORM_ENDPOINT, body); } catch (e) { ok = false; }
+            if (!ok) {
+                try { fetch(FORM_ENDPOINT, { method: 'POST', mode: 'no-cors', body: body }).catch(function(){}); } catch (e) {}
+            }
+            return ok;
+        }
+
         function submitForm(form) {
             // Gom dữ liệu; riêng "employees" lấy text hiển thị cho Sheet dễ đọc
             const data = {};
@@ -1767,21 +1779,15 @@
             btn.innerHTML = '<i data-lucide="loader-2" class="w-5 h-5 animate-spin"></i> Đang gửi...';
             if (window.lucide) lucide.createIcons();
 
-            // no-cors: gửi được sang Apps Script (web tĩnh) nhưng không đọc được phản hồi;
-            // coi như thành công khi request hoàn tất, lỗi mạng mới vào .catch.
-            fetch(FORM_ENDPOINT, { method: 'POST', mode: 'no-cors', body: new URLSearchParams(data) })
-                .then(function() {
-                    showToast();
-                    resetForm(form);
-                })
-                .catch(function() {
-                    showToast('Gửi không thành công, vui lòng gọi hotline 028 3815 9435.', true);
-                })
-                .finally(function() {
-                    btn.disabled = false;
-                    btn.innerHTML = originalHTML;
-                    if (window.lucide) lucide.createIcons();
-                });
+            // Gửi qua helper dùng chung (sendBeacon); không đọc được phản hồi nên coi như thành công khi đã gửi.
+            submitLead(data);
+            setTimeout(function() {
+                showToast();
+                resetForm(form);
+                btn.disabled = false;
+                btn.innerHTML = originalHTML;
+                if (window.lucide) lucide.createIcons();
+            }, 600);
         }
 
         function resetForm(form) {
@@ -2024,6 +2030,7 @@
             // Restart chat
             window.restartChat = function() {
                 chatState.currentStep = 1;
+                chatState.submitted = false;
                 chatState.formData = { company: '', contact: '', phone: '', employees: '', notes: '' };
                 messagesEl.innerHTML = '';
                 inputAreaEl.classList.remove('hidden');
@@ -2125,6 +2132,26 @@
 
             function showCompletionMessage() {
                 var data = chatState.formData;
+
+                // Đẩy lead về Google Sheet (chỉ 1 lần mỗi phiên chat)
+                if (!chatState.submitted) {
+                    chatState.submitted = true;
+                    var empMap = {
+                        'under-50': 'Dưới 50 nhân viên',
+                        '50-100': '50 - 100 nhân viên',
+                        '100-300': '100 - 300 nhân viên',
+                        'over-300': 'Trên 300 nhân viên'
+                    };
+                    submitLead({
+                        company: data.company || '',
+                        address: '',
+                        contact: data.contact || '',
+                        phone: data.phone || '',
+                        employees: empMap[data.employees] || data.employees || '',
+                        message: data.notes || ''
+                    });
+                }
+
                 var completionText = 'Tuyệt vời! ✅ Thông tin đã được ghi nhận. Phòng khám sẽ gửi báo giá chi tiết cho <strong>' + escapeHtml(data.company) + '</strong> qua số <strong>' + escapeHtml(data.phone) + '</strong> trong 24 giờ làm việc. Cảm ơn bạn!';
 
                 inputAreaEl.classList.add('hidden');
