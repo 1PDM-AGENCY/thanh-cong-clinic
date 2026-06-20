@@ -270,6 +270,8 @@
         .process-tab-trigger:hover:not(.active) { background: #F9FAFB; }
         #processTabList { scrollbar-width: none; -ms-overflow-style: none; }
         #processTabList::-webkit-scrollbar { display: none; }
+        .no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
         .process-tab-panel { animation: tabFadeIn 0.3s ease-out; }
         @keyframes tabFadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 
@@ -1143,113 +1145,30 @@
                     </div>
                 </div>
 
-                <!-- Right: Featured legal document (click to enlarge) -->
+                <!-- Right: Slider hồ sơ pháp lý (vuốt/mũi tên xem 12 giấy tờ, bấm để phóng to) -->
                 <div class="reveal reveal-delay-2">
-                    <button type="button" onclick="openCertLightbox(7)" class="block w-full text-left group">
-                        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm bg-white relative">
-                            <img src="images/cert-08-giay-phep-kcb.jpg" alt="Giấy phép hoạt động khám chữa bệnh" class="w-full max-h-[28rem] object-cover object-top" loading="lazy">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 flex items-center justify-center transition-colors">
-                                <span class="opacity-0 group-hover:opacity-100 bg-white/90 text-dark text-xs font-semibold px-3 py-1.5 rounded-full inline-flex items-center gap-1.5 transition-opacity"><i data-lucide="zoom-in" class="w-4 h-4"></i> Bấm để xem rõ</span>
-                            </div>
+                    <div class="relative rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden">
+                        <div id="certSlider" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar">
+                            <button type="button" onclick="openCertLightbox(0)" class="snap-center shrink-0 w-full"><img src="images/cert-01-dkkd-1-t.jpg" alt="Giấy chứng nhận đăng ký doanh nghiệp trang 1" class="w-full aspect-[3/4] object-contain bg-white" loading="lazy"></button>
+                            <button type="button" onclick="openCertLightbox(1)" class="snap-center shrink-0 w-full"><img src="images/cert-02-dkkd-2-t.jpg" alt="Giấy chứng nhận đăng ký doanh nghiệp trang 2" class="w-full aspect-[3/4] object-contain bg-white" loading="lazy"></button>
+                            <button type="button" onclick="openCertLightbox(2)" class="snap-center shrink-0 w-full"><img src="images/cert-03-pham-vi-cm-1-t.jpg" alt="Phê duyệt phạm vi hoạt động chuyên môn trang 1" class="w-full aspect-[3/4] object-contain bg-white" loading="lazy"></button>
+                            <button type="button" onclick="openCertLightbox(3)" class="snap-center shrink-0 w-full"><img src="images/cert-04-pham-vi-cm-2-t.jpg" alt="Phê duyệt phạm vi hoạt động chuyên môn trang 2" class="w-full aspect-[3/4] object-contain bg-white" loading="lazy"></button>
+                            <button type="button" onclick="openCertLightbox(4)" class="snap-center shrink-0 w-full"><img src="images/cert-05-pham-vi-cm-3-t.jpg" alt="Phê duyệt phạm vi hoạt động chuyên môn trang 3" class="w-full aspect-[3/4] object-contain bg-white" loading="lazy"></button>
+                            <button type="button" onclick="openCertLightbox(5)" class="snap-center shrink-0 w-full"><img src="images/cert-06-bo-sung-cm-1-t.jpg" alt="Bổ sung phạm vi hoạt động chuyên môn trang 1" class="w-full aspect-[3/4] object-contain bg-white" loading="lazy"></button>
+                            <button type="button" onclick="openCertLightbox(6)" class="snap-center shrink-0 w-full"><img src="images/cert-07-bo-sung-cm-2-t.jpg" alt="Bổ sung phạm vi hoạt động chuyên môn trang 2" class="w-full aspect-[3/4] object-contain bg-white" loading="lazy"></button>
+                            <button type="button" onclick="openCertLightbox(7)" class="snap-center shrink-0 w-full"><img src="images/cert-08-giay-phep-kcb-t.jpg" alt="Giấy phép hoạt động khám chữa bệnh" class="w-full aspect-[3/4] object-contain bg-white" loading="lazy"></button>
+                            <button type="button" onclick="openCertLightbox(8)" class="snap-center shrink-0 w-full"><img src="images/cert-09-kiem-chuan-xet-nghiem-t.jpg" alt="Giấy chứng nhận Kiểm chuẩn Xét nghiệm TP.HCM" class="w-full aspect-[3/4] object-contain bg-white" loading="lazy"></button>
+                            <button type="button" onclick="openCertLightbox(9)" class="snap-center shrink-0 w-full"><img src="images/cert-10-cong-van-tt14-1-t.jpg" alt="Công văn chấp thuận khám sức khỏe TT14 trang 1" class="w-full aspect-[3/4] object-contain bg-white" loading="lazy"></button>
+                            <button type="button" onclick="openCertLightbox(10)" class="snap-center shrink-0 w-full"><img src="images/cert-11-cong-van-tt14-2-t.jpg" alt="Công văn chấp thuận khám sức khỏe TT14 trang 2" class="w-full aspect-[3/4] object-contain bg-white" loading="lazy"></button>
+                            <button type="button" onclick="openCertLightbox(11)" class="snap-center shrink-0 w-full"><img src="images/cert-12-so-do-phong-kham-t.jpg" alt="Sơ đồ các phòng ban phòng khám" class="w-full aspect-[3/4] object-contain bg-white" loading="lazy"></button>
                         </div>
-                        <p class="text-sm text-muted mt-3 text-center">Giấy phép hoạt động khám chữa bệnh do Sở Y tế TP.HCM cấp</p>
-                    </button>
+                        <button type="button" onclick="certSlide(-1)" aria-label="Trước" class="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 hover:bg-white shadow flex items-center justify-center text-dark"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
+                        <button type="button" onclick="certSlide(1)" aria-label="Sau" class="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 hover:bg-white shadow flex items-center justify-center text-dark"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+                    </div>
+                    <p class="text-xs text-muted mt-2 text-center">Bấm vào giấy tờ để phóng to · vuốt hoặc dùng mũi tên để xem đủ 12 hồ sơ pháp lý</p>
                 </div>
             </div>
 
-            <!-- Gallery hồ sơ pháp lý (12 chứng chỉ, bấm để phóng to) -->
-            <div class="mt-14 reveal">
-                <div class="text-center mb-8">
-                    <h3 class="text-xl sm:text-2xl font-extrabold text-dark">Hồ sơ pháp lý &amp; chứng chỉ đầy đủ</h3>
-                    <p class="text-sm text-muted mt-1">Bấm vào từng giấy tờ để phóng to xem rõ</p>
-                </div>
-                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                    <button type="button" onclick="openCertLightbox(0)" class="group text-left">
-                        <div class="aspect-[3/4] rounded-lg overflow-hidden border border-gray-200 bg-white shadow-sm group-hover:shadow-md group-hover:border-primary/40 transition-all relative">
-                            <img src="images/cert-01-dkkd-1-t.jpg" alt="Giấy chứng nhận đăng ký doanh nghiệp trang 1" class="w-full h-full object-cover object-top" loading="lazy">
-                            <div class="absolute inset-0 group-hover:bg-primary/10 flex items-center justify-center transition-colors"><i data-lucide="zoom-in" class="w-6 h-6 text-white opacity-0 group-hover:opacity-100 drop-shadow"></i></div>
-                        </div>
-                        <p class="text-[11px] text-muted mt-1.5 leading-snug">Giấy CN đăng ký DN (1/2)</p>
-                    </button>
-                    <button type="button" onclick="openCertLightbox(1)" class="group text-left">
-                        <div class="aspect-[3/4] rounded-lg overflow-hidden border border-gray-200 bg-white shadow-sm group-hover:shadow-md group-hover:border-primary/40 transition-all relative">
-                            <img src="images/cert-02-dkkd-2-t.jpg" alt="Giấy chứng nhận đăng ký doanh nghiệp trang 2" class="w-full h-full object-cover object-top" loading="lazy">
-                            <div class="absolute inset-0 group-hover:bg-primary/10 flex items-center justify-center transition-colors"><i data-lucide="zoom-in" class="w-6 h-6 text-white opacity-0 group-hover:opacity-100 drop-shadow"></i></div>
-                        </div>
-                        <p class="text-[11px] text-muted mt-1.5 leading-snug">Giấy CN đăng ký DN (2/2)</p>
-                    </button>
-                    <button type="button" onclick="openCertLightbox(2)" class="group text-left">
-                        <div class="aspect-[3/4] rounded-lg overflow-hidden border border-gray-200 bg-white shadow-sm group-hover:shadow-md group-hover:border-primary/40 transition-all relative">
-                            <img src="images/cert-03-pham-vi-cm-1-t.jpg" alt="Phê duyệt phạm vi hoạt động chuyên môn trang 1" class="w-full h-full object-cover object-top" loading="lazy">
-                            <div class="absolute inset-0 group-hover:bg-primary/10 flex items-center justify-center transition-colors"><i data-lucide="zoom-in" class="w-6 h-6 text-white opacity-0 group-hover:opacity-100 drop-shadow"></i></div>
-                        </div>
-                        <p class="text-[11px] text-muted mt-1.5 leading-snug">Phạm vi hoạt động CM (1/3)</p>
-                    </button>
-                    <button type="button" onclick="openCertLightbox(3)" class="group text-left">
-                        <div class="aspect-[3/4] rounded-lg overflow-hidden border border-gray-200 bg-white shadow-sm group-hover:shadow-md group-hover:border-primary/40 transition-all relative">
-                            <img src="images/cert-04-pham-vi-cm-2-t.jpg" alt="Phê duyệt phạm vi hoạt động chuyên môn trang 2" class="w-full h-full object-cover object-top" loading="lazy">
-                            <div class="absolute inset-0 group-hover:bg-primary/10 flex items-center justify-center transition-colors"><i data-lucide="zoom-in" class="w-6 h-6 text-white opacity-0 group-hover:opacity-100 drop-shadow"></i></div>
-                        </div>
-                        <p class="text-[11px] text-muted mt-1.5 leading-snug">Phạm vi hoạt động CM (2/3)</p>
-                    </button>
-                    <button type="button" onclick="openCertLightbox(4)" class="group text-left">
-                        <div class="aspect-[3/4] rounded-lg overflow-hidden border border-gray-200 bg-white shadow-sm group-hover:shadow-md group-hover:border-primary/40 transition-all relative">
-                            <img src="images/cert-05-pham-vi-cm-3-t.jpg" alt="Phê duyệt phạm vi hoạt động chuyên môn trang 3" class="w-full h-full object-cover object-top" loading="lazy">
-                            <div class="absolute inset-0 group-hover:bg-primary/10 flex items-center justify-center transition-colors"><i data-lucide="zoom-in" class="w-6 h-6 text-white opacity-0 group-hover:opacity-100 drop-shadow"></i></div>
-                        </div>
-                        <p class="text-[11px] text-muted mt-1.5 leading-snug">Phạm vi hoạt động CM (3/3)</p>
-                    </button>
-                    <button type="button" onclick="openCertLightbox(5)" class="group text-left">
-                        <div class="aspect-[3/4] rounded-lg overflow-hidden border border-gray-200 bg-white shadow-sm group-hover:shadow-md group-hover:border-primary/40 transition-all relative">
-                            <img src="images/cert-06-bo-sung-cm-1-t.jpg" alt="Bổ sung phạm vi hoạt động chuyên môn trang 1" class="w-full h-full object-cover object-top" loading="lazy">
-                            <div class="absolute inset-0 group-hover:bg-primary/10 flex items-center justify-center transition-colors"><i data-lucide="zoom-in" class="w-6 h-6 text-white opacity-0 group-hover:opacity-100 drop-shadow"></i></div>
-                        </div>
-                        <p class="text-[11px] text-muted mt-1.5 leading-snug">Bổ sung phạm vi CM (1/2)</p>
-                    </button>
-                    <button type="button" onclick="openCertLightbox(6)" class="group text-left">
-                        <div class="aspect-[3/4] rounded-lg overflow-hidden border border-gray-200 bg-white shadow-sm group-hover:shadow-md group-hover:border-primary/40 transition-all relative">
-                            <img src="images/cert-07-bo-sung-cm-2-t.jpg" alt="Bổ sung phạm vi hoạt động chuyên môn trang 2" class="w-full h-full object-cover object-top" loading="lazy">
-                            <div class="absolute inset-0 group-hover:bg-primary/10 flex items-center justify-center transition-colors"><i data-lucide="zoom-in" class="w-6 h-6 text-white opacity-0 group-hover:opacity-100 drop-shadow"></i></div>
-                        </div>
-                        <p class="text-[11px] text-muted mt-1.5 leading-snug">Bổ sung phạm vi CM (2/2)</p>
-                    </button>
-                    <button type="button" onclick="openCertLightbox(7)" class="group text-left">
-                        <div class="aspect-[3/4] rounded-lg overflow-hidden border border-gray-200 bg-white shadow-sm group-hover:shadow-md group-hover:border-primary/40 transition-all relative">
-                            <img src="images/cert-08-giay-phep-kcb-t.jpg" alt="Giấy phép hoạt động khám chữa bệnh" class="w-full h-full object-cover object-top" loading="lazy">
-                            <div class="absolute inset-0 group-hover:bg-primary/10 flex items-center justify-center transition-colors"><i data-lucide="zoom-in" class="w-6 h-6 text-white opacity-0 group-hover:opacity-100 drop-shadow"></i></div>
-                        </div>
-                        <p class="text-[11px] text-muted mt-1.5 leading-snug">Giấy phép hoạt động KCB</p>
-                    </button>
-                    <button type="button" onclick="openCertLightbox(8)" class="group text-left">
-                        <div class="aspect-[3/4] rounded-lg overflow-hidden border border-gray-200 bg-white shadow-sm group-hover:shadow-md group-hover:border-primary/40 transition-all relative">
-                            <img src="images/cert-09-kiem-chuan-xet-nghiem-t.jpg" alt="Giấy chứng nhận Kiểm chuẩn Xét nghiệm TP.HCM" class="w-full h-full object-cover object-top" loading="lazy">
-                            <div class="absolute inset-0 group-hover:bg-primary/10 flex items-center justify-center transition-colors"><i data-lucide="zoom-in" class="w-6 h-6 text-white opacity-0 group-hover:opacity-100 drop-shadow"></i></div>
-                        </div>
-                        <p class="text-[11px] text-muted mt-1.5 leading-snug">Kiểm chuẩn Xét nghiệm TP.HCM</p>
-                    </button>
-                    <button type="button" onclick="openCertLightbox(9)" class="group text-left">
-                        <div class="aspect-[3/4] rounded-lg overflow-hidden border border-gray-200 bg-white shadow-sm group-hover:shadow-md group-hover:border-primary/40 transition-all relative">
-                            <img src="images/cert-10-cong-van-tt14-1-t.jpg" alt="Công văn chấp thuận tổ chức khám sức khỏe theo Thông tư 14 trang 1" class="w-full h-full object-cover object-top" loading="lazy">
-                            <div class="absolute inset-0 group-hover:bg-primary/10 flex items-center justify-center transition-colors"><i data-lucide="zoom-in" class="w-6 h-6 text-white opacity-0 group-hover:opacity-100 drop-shadow"></i></div>
-                        </div>
-                        <p class="text-[11px] text-muted mt-1.5 leading-snug">Công văn KSK - TT14 (1/2)</p>
-                    </button>
-                    <button type="button" onclick="openCertLightbox(10)" class="group text-left">
-                        <div class="aspect-[3/4] rounded-lg overflow-hidden border border-gray-200 bg-white shadow-sm group-hover:shadow-md group-hover:border-primary/40 transition-all relative">
-                            <img src="images/cert-11-cong-van-tt14-2-t.jpg" alt="Công văn chấp thuận tổ chức khám sức khỏe theo Thông tư 14 trang 2" class="w-full h-full object-cover object-top" loading="lazy">
-                            <div class="absolute inset-0 group-hover:bg-primary/10 flex items-center justify-center transition-colors"><i data-lucide="zoom-in" class="w-6 h-6 text-white opacity-0 group-hover:opacity-100 drop-shadow"></i></div>
-                        </div>
-                        <p class="text-[11px] text-muted mt-1.5 leading-snug">Công văn KSK - TT14 (2/2)</p>
-                    </button>
-                    <button type="button" onclick="openCertLightbox(11)" class="group text-left">
-                        <div class="aspect-[3/4] rounded-lg overflow-hidden border border-gray-200 bg-white shadow-sm group-hover:shadow-md group-hover:border-primary/40 transition-all relative">
-                            <img src="images/cert-12-so-do-phong-kham-t.jpg" alt="Sơ đồ các phòng ban phòng khám" class="w-full h-full object-cover object-top" loading="lazy">
-                            <div class="absolute inset-0 group-hover:bg-primary/10 flex items-center justify-center transition-colors"><i data-lucide="zoom-in" class="w-6 h-6 text-white opacity-0 group-hover:opacity-100 drop-shadow"></i></div>
-                        </div>
-                        <p class="text-[11px] text-muted mt-1.5 leading-snug">Sơ đồ phòng ban phòng khám</p>
-                    </button>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -2191,6 +2110,10 @@
             var lb = document.getElementById('certLightbox');
             lb.classList.add('hidden'); lb.classList.remove('flex');
             document.body.style.overflow = '';
+        };
+        window.certSlide = function(dir) {
+            var s = document.getElementById('certSlider');
+            if (s) s.scrollBy({ left: dir * s.clientWidth, behavior: 'smooth' });
         };
         window.navCert = function(dir) {
             certIndex = (certIndex + dir + CERT_DOCS.length) % CERT_DOCS.length;
