@@ -269,47 +269,6 @@
             border: 1px dashed #94A3B8;
         }
 
-        /* Testimonials columns infinite scroll */
-        .testimonials-container {
-            height: 500px;
-            overflow: hidden;
-            -webkit-mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
-            mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
-        }
-        @media (min-width: 768px) {
-            .testimonials-container { height: 600px; }
-        }
-        @media (min-width: 1024px) {
-            .testimonials-container { height: 700px; }
-        }
-        .testimonials-column {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            padding-bottom: 1.5rem;
-        }
-        @keyframes scroll-up {
-            from { transform: translateY(0); }
-            to { transform: translateY(-50%); }
-        }
-        .testimonials-column.animate {
-            animation: scroll-up var(--scroll-duration, 10s) linear infinite;
-        }
-        .testimonial-card {
-            padding: 2rem;
-            border-radius: 1.5rem;
-            border: 1px solid #E5E7EB;
-            box-shadow: 0 4px 20px -2px rgba(27, 94, 158, 0.1);
-            max-width: 20rem;
-            width: 100%;
-            background: white;
-            flex-shrink: 0;
-        }
-        .testimonial-card:hover {
-            box-shadow: 0 8px 30px -4px rgba(27, 94, 158, 0.18);
-            transform: translateY(-2px);
-            transition: all 0.3s ease;
-        }
 
         /* Process tab triggers */
         .process-tab-trigger { color: #6B7280; }
@@ -328,56 +287,6 @@
             background: linear-gradient(135deg, #1B5E9E 0%, #154A7E 100%);
         }
 
-        /* Arc Gallery - faithful port of React ArcGalleryHero */
-        @keyframes arc-fade-in-up {
-            from {
-                opacity: 0;
-                transform: translate(-50%, 60%);
-            }
-            to {
-                opacity: 1;
-                transform: translate(-50%, 50%);
-            }
-        }
-        @keyframes arc-text-fade {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        .arc-card {
-            position: absolute;
-            opacity: 0;
-        }
-        .arc-card.animated {
-            animation: arc-fade-in-up 0.8s ease-out forwards;
-        }
-        .arc-card-inner {
-            width: 100%;
-            height: 100%;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.15);
-            border: 1px solid rgba(229, 231, 235, 1);
-            background: white;
-            transition: transform 0.3s ease;
-        }
-        .arc-card-inner:hover {
-            transform: scale(1.05);
-        }
-        .arc-card-inner img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .arc-text-fade {
-            animation: arc-text-fade 0.8s ease-out;
-        }
 
         /* Chat box - collapsed bar */
         .chat-collapsed {
@@ -527,9 +436,9 @@
 
             <div class="flex items-center justify-between py-2">
                 <!-- Logo -->
-                <a href="#" class="flex items-center gap-3 shrink-0">
+                <a href="#hero" class="flex items-center gap-3 shrink-0">
                     <img
-                        src="https://thanhcongclinic.com/images/logo.png"
+                        src="images/logo.png"
                         alt="Logo Phòng Khám Đa Khoa Thành Công"
                         class="header-logo h-14 transition-all duration-300"
                         loading="eager"
@@ -572,7 +481,7 @@
 
 
     <!-- ===== SECTION 1: HERO BANNER (Editorial + AI Chat) ===== -->
-    <section class="hero-editorial pt-28 pb-16 lg:pt-32 lg:pb-20 flex items-center relative overflow-hidden">
+    <section id="hero" class="hero-editorial pt-28 pb-16 lg:pt-32 lg:pb-20 flex items-center relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
             <div class="grid lg:grid-cols-5 gap-10 lg:gap-12 items-center">
 
@@ -1299,75 +1208,6 @@
     </section>
 
 
-    <!-- ===== SECTION 7: DOANH NGHIỆP ĐÃ HỢP TÁC ===== -->
-    <section class="py-16 lg:py-24 section-gradient-light">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-14 reveal">
-                <span class="text-xs font-bold uppercase tracking-[0.2em] text-accent-dark border-l-2 border-accent pl-3 mb-4 inline-block">Đối tác</span>
-                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-dark mb-4">
-                    Doanh nghiệp đã hợp tác cùng Thành Công
-                </h2>
-            </div>
-
-            <!-- Testimonials columns (ported from React TestimonialsColumn) -->
-            <div class="flex justify-center gap-6 mb-16 reveal" id="testimonialsWrapper">
-                <!-- Column 1 (duration: 15s) -->
-                <div class="testimonials-container">
-                    <div class="testimonials-column" style="--scroll-duration: 15s;" data-testimonial-col="1">
-                    </div>
-                </div>
-                <!-- Column 2 (duration: 19s) - hidden on mobile -->
-                <div class="testimonials-container hidden md:block">
-                    <div class="testimonials-column" style="--scroll-duration: 19s;" data-testimonial-col="2">
-                    </div>
-                </div>
-                <!-- Column 3 (duration: 17s) - hidden on mobile/tablet -->
-                <div class="testimonials-container hidden lg:block">
-                    <div class="testimonials-column" style="--scroll-duration: 17s;" data-testimonial-col="3">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Counter Stats moved to Stats Strip below hero -->
-        </div>
-    </section>
-
-
-    <!-- ===== SECTION 8: ARC GALLERY - HÌNH ẢNH CƠ SỞ VẬT CHẤT ===== -->
-    <!-- Faithfully ported from ArcGalleryHero React component -->
-    <section id="co-so" class="relative overflow-hidden bg-white text-dark min-h-screen flex flex-col">
-        <!-- Arc container: height = radius * 1.2 (set by JS) -->
-        <div id="arcGallery" class="relative mx-auto" style="width: 100%;">
-            <!-- Pivot at bottom center -->
-            <div class="absolute left-1/2 bottom-0" style="transform: translateX(-50%);">
-                <!-- Arc cards rendered by JS -->
-            </div>
-        </div>
-
-        <!-- Content below the arc (matches React: flex-1 + negative margin) -->
-        <div class="relative z-10 flex-1 flex items-center justify-center px-6 -mt-40 md:-mt-52 lg:-mt-64">
-            <div class="text-center max-w-2xl px-6 opacity-0 arc-text-fade" style="animation-delay: 800ms; animation-fill-mode: forwards;">
-                <h2 class="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-dark">
-                    18 năm một hành trình
-                </h2>
-                <p class="mt-4 text-lg text-muted">
-                    Không ngừng đổi mới, không ngừng tốt lên, phụng sự vì sức khoẻ cộng đồng
-                </p>
-                <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="#lien-he" class="w-full sm:w-auto px-6 py-3 rounded-full bg-primary text-white hover:bg-primary-dark transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 inline-flex items-center justify-center gap-2 font-semibold">
-                        <i data-lucide="phone" class="w-5 h-5"></i>
-                        Đặt lịch tham quan phòng khám
-                    </a>
-                    <a href="#nang-luc" class="w-full sm:w-auto px-6 py-3 rounded-full border border-gray-300 hover:bg-gray-100 transition-all duration-200 inline-flex items-center justify-center gap-2 font-medium text-dark">
-                        <i data-lucide="shield-check" class="w-5 h-5"></i>
-                        Xem năng lực
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
     <!-- ===== KHÁCH HÀNG TIÊU BIỂU (lưới logo) ===== -->
     <section class="py-14 lg:py-20 bg-white border-t border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1524,7 +1364,7 @@
                 <!-- Column 1: Brand -->
                 <div>
                     <img
-                        src="https://thanhcongclinic.com/images/logo.png"
+                        src="images/logo.png"
                         alt="Logo Phòng Khám Đa Khoa Thành Công"
                         class="h-12 mb-4 brightness-0 invert"
                         loading="lazy"
@@ -1573,27 +1413,17 @@
                                 Facebook Phòng Khám Thành Công
                             </a>
                         </li>
-                        <!-- TODO: cập nhật URL YouTube thật -->
-                        <li>
-                            <a href="#" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-sm text-white/70 hover:text-white transition-colors">
-                                <i data-lucide="youtube" class="w-4 h-4 text-accent shrink-0"></i>
-                                YouTube Phòng Khám Thành Công
-                            </a>
-                        </li>
-                        <!-- TODO: cập nhật URL LinkedIn thật -->
-                        <li>
-                            <a href="#" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-sm text-white/70 hover:text-white transition-colors">
-                                <i data-lucide="linkedin" class="w-4 h-4 text-accent shrink-0"></i>
-                                LinkedIn Phòng Khám Thành Công
-                            </a>
-                        </li>
                     </ul>
 
-                    <!-- Map placeholder -->
-                    <div class="mt-6 bg-white/5 border border-white/10 rounded-xl h-36 flex flex-col items-center justify-center">
-                        <i data-lucide="map" class="w-8 h-8 text-white/20 mb-2"></i>
-                        <p class="text-xs text-white/30">Google Maps Embed</p>
-                    </div>
+                    <!-- Google Maps -->
+                    <iframe
+                        src="https://www.google.com/maps?q=36%20T%C3%A2y%20Th%E1%BA%A1nh%20%28%C4%91%C6%B0%E1%BB%9Dng%20CN4%20KCN%20T%C3%A2n%20B%C3%ACnh%29%2C%20P.%20T%C3%A2y%20Th%E1%BA%A1nh%2C%20Q.%20T%C3%A2n%20Ph%C3%BA%2C%20TP.HCM&output=embed"
+                        class="mt-6 w-full h-44 rounded-xl border border-white/10"
+                        style="border:0"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Bản đồ Phòng Khám Đa Khoa Thành Công"
+                        allowfullscreen></iframe>
                 </div>
             </div>
 
@@ -1642,8 +1472,6 @@
             initFloatingCTA();
             initAIChat();
             initProcessTabs();
-            initTestimonials();
-            initArcGallery();
         });
 
         /* ===== Sticky Header ===== */
@@ -2272,179 +2100,6 @@
             });
         }
 
-        /* ===== Testimonials Columns (faithful port of TestimonialsColumn React component) ===== */
-        function initTestimonials() {
-            var testimonials = [
-                { text: 'Phòng khám tổ chức khám rất chuyên nghiệp, quy trình nhanh gọn. Hơn 200 nhân viên công ty tôi được khám xong trong buổi sáng.', image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=80&h=80&fit=crop&crop=face', name: 'Nguyễn Văn Minh', role: 'Giám đốc nhân sự, Cty ABC' },
-                { text: 'Chi phí hợp lý, đội ngũ bác sĩ tận tâm. Kết quả khám được trả đúng hẹn và có tư vấn chi tiết cho từng nhân viên.', image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=80&h=80&fit=crop&crop=face', name: 'Trần Thị Hương', role: 'Trưởng phòng HC, Cty XYZ' },
-                { text: 'Lần đầu hợp tác nhưng rất hài lòng. Phòng khám hỗ trợ lên kế hoạch chi tiết, nhân viên công ty ai cũng khen.', image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face', name: 'Lê Hoàng Nam', role: 'CEO, Công ty DEF' },
-                { text: 'Đã hợp tác 3 năm liên tiếp. Mỗi năm phòng khám đều cải thiện dịch vụ, bổ sung thêm gói khám mới phù hợp.', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=80&h=80&fit=crop&crop=face', name: 'Phạm Thu Trang', role: 'Quản lý, Cty GHI' },
-                { text: 'Báo cáo sức khỏe tổng hợp rất chi tiết, giúp ban lãnh đạo nắm được tình hình sức khỏe chung của nhân viên.', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face', name: 'Hoàng Đức Anh', role: 'Phó GĐ, Tập đoàn JKL' },
-                { text: 'Trang thiết bị hiện đại, phòng khám sạch sẽ. Nhân viên công ty phản hồi rất tích cực sau đợt khám.', image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face', name: 'Ngô Thị Mai', role: 'HR Manager, Cty MNO' },
-                { text: 'Đội ngũ điều phối rất chuyên nghiệp, sắp xếp lịch khám linh hoạt theo ca làm việc của nhà máy chúng tôi.', image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=80&h=80&fit=crop&crop=face', name: 'Đặng Quốc Bảo', role: 'Giám đốc, Cty PQR' },
-                { text: 'Giá cả cạnh tranh nhất trong các phòng khám tôi đã khảo sát. Chất lượng dịch vụ hoàn toàn xứng đáng.', image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=80&h=80&fit=crop&crop=face', name: 'Vũ Thị Lan', role: 'Kế toán trưởng, Cty STU' },
-                { text: 'Phòng khám có dịch vụ khám tại chỗ rất tiện lợi. Không cần di chuyển, tiết kiệm thời gian cho cả công ty.', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&crop=face', name: 'Bùi Thanh Sơn', role: 'Trưởng phòng, Cty VWX' }
-            ];
-
-            // Split testimonials into 3 groups for 3 columns
-            var col1Data = [testimonials[0], testimonials[1], testimonials[2]];
-            var col2Data = [testimonials[3], testimonials[4], testimonials[5]];
-            var col3Data = [testimonials[6], testimonials[7], testimonials[8]];
-            var colDataMap = { '1': col1Data, '2': col2Data, '3': col3Data };
-
-            function buildCard(t) {
-                return '<div class="testimonial-card">' +
-                    '<div class="text-sm leading-relaxed text-gray-700">' + t.text + '</div>' +
-                    '<div class="flex items-center gap-2 mt-5">' +
-                        '<img width="40" height="40" src="' + t.image + '" alt="' + t.name + '" class="h-10 w-10 rounded-full object-cover" loading="lazy" />' +
-                        '<div class="flex flex-col">' +
-                            '<div class="font-medium tracking-tight leading-5 text-dark text-sm">' + t.name + '</div>' +
-                            '<div class="leading-5 text-muted text-xs tracking-tight">' + t.role + '</div>' +
-                        '</div>' +
-                    '</div>' +
-                '</div>';
-            }
-
-            // For each column, duplicate content (x2) for seamless infinite loop (matching React [...new Array(2)])
-            document.querySelectorAll('[data-testimonial-col]').forEach(function(col) {
-                var colNum = col.getAttribute('data-testimonial-col');
-                var data = colDataMap[colNum] || col1Data;
-                var html = '';
-                // Duplicate 2 times (matching React: ...new Array(2).fill(0).map)
-                for (var r = 0; r < 2; r++) {
-                    data.forEach(function(t) { html += buildCard(t); });
-                }
-                col.innerHTML = html;
-            });
-
-            // Start animation when visible using IntersectionObserver
-            var wrapper = document.getElementById('testimonialsWrapper');
-            if (!wrapper) return;
-            var observer = new IntersectionObserver(function(entries) {
-                entries.forEach(function(entry) {
-                    if (entry.isIntersecting) {
-                        wrapper.querySelectorAll('.testimonials-column').forEach(function(col) {
-                            col.classList.add('animate');
-                        });
-                    }
-                });
-            }, { threshold: 0.1 });
-            observer.observe(wrapper);
-        }
-
-        /* ===== Arc Gallery (faithful port of ArcGalleryHero React component) ===== */
-        function initArcGallery() {
-            var container = document.getElementById('arcGallery');
-            if (!container) return;
-            var pivot = container.querySelector('div');
-            var section = document.getElementById('co-so');
-
-            // 12 images - Ảnh thật phòng khám Thành Công
-            var images = [
-                'images/public-building-waiting-area-health-care-center-2026-01-07-06-02-06-utc.jpg',
-                'images/clean-sterile-hospital-corridor-with-physician-wal-2026-01-06-09-41-10-utc.jpg',
-                'images/asian-male-doctor-talking-to-asian-female-patient-2026-01-11-10-37-20-utc.jpg',
-                'images/beautiful-nurse-comforting-female-patient-in-the-r-2026-01-08-05-46-01-utc.jpg',
-                'images/empty-corridor-of-an-old-hospital-2026-01-07-00-22-16-utc.jpg',
-                'images/checking-results-of-medical-tests-2026-01-08-00-08-25-utc.jpg',
-                'images/young-asian-woman-nurse-caregiver-encourage-take-c-2026-01-05-23-26-21-utc.jpg',
-                'images/smiling-doctor-examines-the-patient-lying-in-bed-i-2026-01-11-09-35-14-utc.jpg',
-                'images/elderly-people-and-caregivers-walking-in-wheelchai-2026-01-09-12-07-51-utc.jpg',
-                'images/asian-caregiver-instructing-how-to-change-position-2026-01-11-10-12-12-utc.jpg',
-                'images/nurse-and-medic-helping-old-patient-with-cervical-2026-01-08-02-23-08-utc.jpg',
-                'images/smiling-senior-male-patient-lying-and-sitting-on-b-2026-01-09-07-19-28-utc.jpg',
-            ];
-
-            // Exact values from React component defaults
-            var startAngle = 20;
-            var endAngle = 160;
-            var count = Math.max(images.length, 2);
-            var step = (endAngle - startAngle) / (count - 1);
-
-            // Responsive dimensions matching React component defaults
-            function getDimensions() {
-                var w = window.innerWidth;
-                if (w < 640) return { radius: 260, cardSize: 80 };
-                if (w < 1024) return { radius: 360, cardSize: 100 };
-                return { radius: 480, cardSize: 120 };
-            }
-
-            function buildArc() {
-                pivot.innerHTML = '';
-                var dims = getDimensions();
-
-                // Container height = radius * 1.2 (matches React)
-                container.style.height = (dims.radius * 1.2) + 'px';
-
-                images.forEach(function(src, i) {
-                    var angle = startAngle + step * i;
-                    var rad = (angle * Math.PI) / 180;
-                    var x = Math.cos(rad) * dims.radius;
-                    var y = Math.sin(rad) * dims.radius;
-
-                    var card = document.createElement('div');
-                    card.className = 'arc-card';
-                    card.style.width = dims.cardSize + 'px';
-                    card.style.height = dims.cardSize + 'px';
-                    card.style.left = 'calc(50% + ' + x + 'px)';
-                    card.style.bottom = y + 'px';
-                    card.style.transform = 'translate(-50%, 50%)';
-                    // i * 100ms delay (matches React)
-                    card.style.animationDelay = (i * 100) + 'ms';
-                    card.style.animationFillMode = 'forwards';
-                    card.style.zIndex = count - i;
-
-                    var inner = document.createElement('div');
-                    inner.className = 'arc-card-inner';
-                    // rotate(angle / 4) matches React
-                    inner.style.transform = 'rotate(' + (angle / 4) + 'deg)';
-
-                    var img = document.createElement('img');
-                    img.src = src;
-                    img.alt = 'Hình ảnh phòng khám ' + (i + 1);
-                    img.loading = 'lazy';
-                    img.draggable = false;
-                    img.onerror = function() {
-                        this.src = 'https://placehold.co/400x400/334155/e2e8f0?text=Memory';
-                    };
-
-                    inner.appendChild(img);
-                    card.appendChild(inner);
-                    pivot.appendChild(card);
-                });
-            }
-
-            buildArc();
-
-            // Trigger animation when section scrolls into view
-            var observer = new IntersectionObserver(function(entries) {
-                entries.forEach(function(entry) {
-                    if (entry.isIntersecting) {
-                        container.querySelectorAll('.arc-card').forEach(function(card) {
-                            card.classList.add('animated');
-                        });
-                        // Also trigger text fade
-                        var textEl = section.querySelector('.arc-text-fade');
-                        if (textEl) textEl.style.animationName = 'arc-text-fade';
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.15 });
-
-            observer.observe(container);
-
-            // Rebuild on resize (matches React useEffect resize handler)
-            var resizeTimer;
-            window.addEventListener('resize', function() {
-                clearTimeout(resizeTimer);
-                resizeTimer = setTimeout(function() {
-                    buildArc();
-                    container.querySelectorAll('.arc-card').forEach(function(card) {
-                        card.classList.add('animated');
-                    });
-                }, 200);
-            });
-        }
     </script>
 
     <!-- Filum Chatbox Integration -->
