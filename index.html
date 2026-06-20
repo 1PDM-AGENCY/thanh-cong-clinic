@@ -741,48 +741,39 @@
 
                 <!-- Bento grid (matching React Feature component layout) -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Pain point 1 — large card (2 cols on lg) -->
+                    <!-- Khó khăn 1 — thẻ lớn (2 cột trên lg) -->
                     <div class="reveal reveal-delay-1 bg-gray-100 rounded-2xl h-full lg:col-span-2 p-6 aspect-square lg:aspect-auto flex justify-between flex-col">
+                        <i data-lucide="calendar-clock" class="w-8 h-8 stroke-1 text-orange-500"></i>
+                        <div class="flex flex-col">
+                            <h3 class="text-xl tracking-tight font-semibold text-dark">Tốn thời gian sắp xếp và điều phối lịch khám cho nhân viên</h3>
+                            <p class="text-muted max-w-md text-base mt-2">Bộ phận nhân sự mất nhiều thời gian lập danh sách, phân ca và điều phối lịch khám cho hàng trăm nhân viên, thay vì tập trung vào công việc chuyên môn chính.</p>
+                        </div>
+                    </div>
+
+                    <!-- Khó khăn 2 — thẻ vuông -->
+                    <div class="reveal reveal-delay-2 bg-gray-100 rounded-2xl aspect-square p-6 flex justify-between flex-col">
+                        <i data-lucide="clock" class="w-8 h-8 stroke-1 text-blue-500"></i>
+                        <div class="flex flex-col">
+                            <h3 class="text-xl tracking-tight font-semibold text-dark">Nhân viên phải chờ đợi lâu, ảnh hưởng năng suất làm việc</h3>
+                            <p class="text-muted max-w-xs text-base mt-2">Quy trình thiếu tối ưu khiến nhân viên chờ đợi và nghỉ làm kéo dài, ảnh hưởng đến tiến độ sản xuất, kinh doanh.</p>
+                        </div>
+                    </div>
+
+                    <!-- Khó khăn 3 — thẻ vuông -->
+                    <div class="reveal reveal-delay-3 bg-gray-100 rounded-2xl aspect-square p-6 flex justify-between flex-col">
                         <i data-lucide="alert-triangle" class="w-8 h-8 stroke-1 text-red-500"></i>
                         <div class="flex flex-col">
-                            <h3 class="text-xl tracking-tight font-semibold text-dark">Khó đánh giá chất lượng đơn vị khám</h3>
-                            <p class="text-muted max-w-xs text-base mt-2">Thị trường có nhiều cơ sở khám sức khỏe nhưng không đồng đều về chất lượng. Việc lựa chọn sai đơn vị ảnh hưởng trực tiếp đến độ chính xác của kết quả và quyền lợi nhân viên.</p>
+                            <h3 class="text-xl tracking-tight font-semibold text-dark">Lo ngại chất lượng khám và độ chính xác của kết quả</h3>
+                            <p class="text-muted max-w-xs text-base mt-2">Thị trường nhiều cơ sở không đồng đều; chọn sai đơn vị ảnh hưởng trực tiếp đến độ chính xác kết quả và quyền lợi người lao động.</p>
                         </div>
                     </div>
 
-                    <!-- Pain point 2 — square card -->
-                    <div class="reveal reveal-delay-2 bg-gray-100 rounded-2xl aspect-square p-6 flex justify-between flex-col">
-                        <i data-lucide="calendar-x" class="w-8 h-8 stroke-1 text-orange-500"></i>
+                    <!-- Khó khăn 4 — thẻ lớn (2 cột trên lg) -->
+                    <div class="reveal reveal-delay-1 bg-gray-100 rounded-2xl h-full lg:col-span-2 p-6 aspect-square lg:aspect-auto flex justify-between flex-col">
+                        <i data-lucide="file-text" class="w-8 h-8 stroke-1 text-purple-500"></i>
                         <div class="flex flex-col">
-                            <h3 class="text-xl tracking-tight font-semibold text-dark">Tổ chức khám phức tạp, tốn thời gian</h3>
-                            <p class="text-muted max-w-xs text-base mt-2">Từ lập danh sách, phân ca, đến điều phối ngày khám, bộ phận nhân sự thường mất nhiều thời gian xử lý công tác tổ chức thay vì tập trung vào chuyên môn chính.</p>
-                        </div>
-                    </div>
-
-                    <!-- Pain point 3 — square card -->
-                    <div class="reveal reveal-delay-3 bg-gray-100 rounded-2xl aspect-square p-6 flex justify-between flex-col">
-                        <i data-lucide="file-warning" class="w-8 h-8 stroke-1 text-yellow-600"></i>
-                        <div class="flex flex-col">
-                            <h3 class="text-xl tracking-tight font-semibold text-dark">Thiếu báo cáo tổng hợp cho ban lãnh đạo</h3>
-                            <p class="text-muted max-w-xs text-base mt-2">Nhiều đơn vị khám chỉ trả kết quả cá nhân rời rạc, không cung cấp báo cáo tổng hợp tình trạng sức khỏe toàn công ty để ban lãnh đạo có cơ sở ra quyết định.</p>
-                        </div>
-                    </div>
-
-                    <!-- Pain point 4 — square card -->
-                    <div class="reveal reveal-delay-1 bg-gray-100 rounded-2xl aspect-square p-6 flex justify-between flex-col">
-                        <i data-lucide="wallet" class="w-8 h-8 stroke-1 text-purple-500"></i>
-                        <div class="flex flex-col">
-                            <h3 class="text-xl tracking-tight font-semibold text-dark">Chi phí phát sinh ngoài báo giá ban đầu</h3>
-                            <p class="text-muted max-w-xs text-base mt-2">Một số cơ sở báo giá gói khám cơ bản nhưng phát sinh thêm phụ phí khi thực hiện xét nghiệm bổ sung, gây khó khăn cho công tác duyệt chi và quyết toán.</p>
-                        </div>
-                    </div>
-
-                    <!-- Pain point 5 — square card -->
-                    <div class="reveal reveal-delay-2 bg-gray-100 rounded-2xl aspect-square p-6 flex justify-between flex-col">
-                        <i data-lucide="map-pin" class="w-8 h-8 stroke-1 text-blue-500"></i>
-                        <div class="flex flex-col">
-                            <h3 class="text-xl tracking-tight font-semibold text-dark">Di chuyển xa, ảnh hưởng năng suất lao động</h3>
-                            <p class="text-muted max-w-xs text-base mt-2">Cơ sở khám ở xa khiến nhân viên phải nghỉ làm cả ngày, ảnh hưởng đến tiến độ sản xuất và hoạt động kinh doanh của doanh nghiệp.</p>
+                            <h3 class="text-xl tracking-tight font-semibold text-dark">Mất nhiều công sức tổng hợp hồ sơ, báo cáo sau khám</h3>
+                            <p class="text-muted max-w-md text-base mt-2">Kết quả trả rời rạc, thiếu báo cáo tổng hợp khiến nhân sự tốn công ghép hồ sơ và ban lãnh đạo khó nắm tổng quan sức khỏe toàn công ty.</p>
                         </div>
                     </div>
                 </div>
@@ -811,7 +802,7 @@
                 <!-- Solution 1 -->
                 <div class="reveal reveal-delay-1 bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow">
                     <div class="relative">
-                        <img src="images/public-building-waiting-area-health-care-center-2026-01-07-06-02-06-utc.jpg" alt="Quy trình khám tối ưu" class="w-full aspect-square object-cover" loading="lazy">
+                        <img src="images/the-manh-quy-trinh.jpg" alt="Quy trình khám tối ưu, tiết kiệm thời gian" class="w-full aspect-square object-cover" loading="lazy">
                         <div class="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white via-white/80 to-transparent"></div>
                         <h3 class="absolute top-0 inset-x-0 px-5 pt-5 text-center text-base font-semibold italic text-primary">Quy trình khám tối ưu, tiết kiệm thời gian</h3>
                     </div>
@@ -820,7 +811,7 @@
                 <!-- Solution 2 -->
                 <div class="reveal reveal-delay-2 bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow">
                     <div class="relative">
-                        <img src="images/asian-male-doctor-talking-to-asian-female-patient-2026-01-11-10-37-20-utc.jpg" alt="Khám đa chuyên khoa" class="w-full aspect-square object-cover" loading="lazy">
+                        <img src="images/the-manh-da-chuyen-khoa.jpg" alt="Khám đa chuyên khoa tại một cơ sở" class="w-full aspect-square object-cover" loading="lazy">
                         <div class="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white via-white/80 to-transparent"></div>
                         <h3 class="absolute top-0 inset-x-0 px-5 pt-5 text-center text-base font-semibold italic text-primary">Khám đa chuyên khoa tại một cơ sở duy nhất</h3>
                     </div>
@@ -829,7 +820,7 @@
                 <!-- Solution 3 -->
                 <div class="reveal reveal-delay-3 bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow">
                     <div class="relative">
-                        <img src="images/checking-results-of-medical-tests-2026-01-08-00-08-25-utc.jpg" alt="Báo giá trọn gói" class="w-full aspect-square object-cover" loading="lazy">
+                        <img src="images/the-manh-bao-gia.jpg" alt="Báo giá trọn gói, cam kết không phát sinh" class="w-full aspect-square object-cover" loading="lazy">
                         <div class="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white via-white/80 to-transparent"></div>
                         <h3 class="absolute top-0 inset-x-0 px-5 pt-5 text-center text-base font-semibold italic text-primary">Báo giá trọn gói, cam kết không phát sinh</h3>
                     </div>
@@ -838,7 +829,7 @@
                 <!-- Solution 4 -->
                 <div class="reveal reveal-delay-4 bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow">
                     <div class="relative">
-                        <img src="images/smiling-doctor-examines-the-patient-lying-in-bed-i-2026-01-11-09-35-14-utc.jpg" alt="Báo cáo tổng hợp" class="w-full aspect-square object-cover" loading="lazy">
+                        <img src="images/the-manh-bao-cao.jpg" alt="Báo cáo tổng hợp sức khỏe cho doanh nghiệp" class="w-full aspect-square object-cover" loading="lazy">
                         <div class="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white via-white/80 to-transparent"></div>
                         <h3 class="absolute top-0 inset-x-0 px-5 pt-5 text-center text-base font-semibold italic text-primary">Báo cáo tổng hợp sức khỏe cho doanh nghiệp</h3>
                     </div>
@@ -1109,64 +1100,91 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex gap-5 overflow-x-auto team-scroll lg:grid lg:grid-cols-4 lg:overflow-visible pb-4 lg:pb-0 -mx-4 px-4 lg:mx-0 lg:px-0 reveal">
 
-                <!-- Card 1 — Thay src ảnh headshot bác sĩ, xóa div.team-card-placeholder -->
+                <!-- BS 1 -->
                 <div class="team-card shrink-0 w-[270px] sm:w-[290px] lg:w-auto">
                     <div class="flex items-start justify-between px-6 pt-6 pb-4">
-                        <p class="font-bold text-dark text-lg leading-snug">BS. Nguyễn<br>Văn Minh</p>
+                        <p class="font-bold text-dark text-lg leading-snug">ThS. BS Tôn Thất<br>Thanh Long</p>
                         <span class="text-[10px] font-bold text-dark/50 uppercase tracking-widest text-right leading-tight mt-1">Giám đốc<br>chuyên môn</span>
                     </div>
                     <div class="team-card-photo aspect-[4/5] overflow-hidden relative">
-                        <!-- Thay bằng: <img src="images/bs-minh.jpg" alt="BS. Nguyễn Văn Minh" class="w-full h-full object-cover object-top" loading="lazy"> -->
-                        <div class="team-card-placeholder w-full h-full flex items-center justify-center">
-                            <div class="w-32 h-32 rounded-full bg-[#E0D5C3] flex items-center justify-center">
-                                <span class="text-4xl font-extrabold text-[#B8A890]">NM</span>
-                            </div>
-                        </div>
+                        <img src="images/bs-ton-that-thanh-long.png" alt="ThS. BS Tôn Thất Thanh Long" class="w-full h-full object-cover object-top" loading="lazy">
                     </div>
                 </div>
 
-                <!-- Card 2 -->
+                <!-- BS 2 -->
                 <div class="team-card shrink-0 w-[270px] sm:w-[290px] lg:w-auto">
                     <div class="flex items-start justify-between px-6 pt-6 pb-4">
-                        <p class="font-bold text-dark text-lg leading-snug">BS. Trần<br>Thị Hương</p>
-                        <span class="text-[10px] font-bold text-dark/50 uppercase tracking-widest text-right leading-tight mt-1">Nội<br>tổng quát</span>
+                        <p class="font-bold text-dark text-lg leading-snug">BS Trần<br>Thị Hằng</p>
+                        <span class="text-[10px] font-bold text-dark/50 uppercase tracking-widest text-right leading-tight mt-1">Phó Giám đốc<br>chuyên môn</span>
                     </div>
                     <div class="team-card-photo aspect-[4/5] overflow-hidden relative">
-                        <div class="team-card-placeholder w-full h-full flex items-center justify-center">
-                            <div class="w-32 h-32 rounded-full bg-[#E0D5C3] flex items-center justify-center">
-                                <span class="text-4xl font-extrabold text-[#B8A890]">TH</span>
-                            </div>
-                        </div>
+                        <img src="images/bs-tran-thi-hang.png" alt="BS Trần Thị Hằng" class="w-full h-full object-cover object-top" loading="lazy">
                     </div>
                 </div>
 
-                <!-- Card 3 -->
+                <!-- BS 3 -->
                 <div class="team-card shrink-0 w-[270px] sm:w-[290px] lg:w-auto">
                     <div class="flex items-start justify-between px-6 pt-6 pb-4">
-                        <p class="font-bold text-dark text-lg leading-snug">BS. Lê<br>Hoàng Nam</p>
-                        <span class="text-[10px] font-bold text-dark/50 uppercase tracking-widest text-right leading-tight mt-1">Chẩn đoán<br>hình ảnh</span>
+                        <p class="font-bold text-dark text-lg leading-snug">BS Đặng<br>Hồng Giang</p>
+                        <span class="text-[10px] font-bold text-dark/50 uppercase tracking-widest text-right leading-tight mt-1">BS phụ trách đoàn<br>KSK ngoại viện</span>
                     </div>
                     <div class="team-card-photo aspect-[4/5] overflow-hidden relative">
-                        <div class="team-card-placeholder w-full h-full flex items-center justify-center">
-                            <div class="w-32 h-32 rounded-full bg-[#E0D5C3] flex items-center justify-center">
-                                <span class="text-4xl font-extrabold text-[#B8A890]">HN</span>
-                            </div>
-                        </div>
+                        <img src="images/bs-dang-hong-giang.png" alt="BS Đặng Hồng Giang" class="w-full h-full object-cover object-top" loading="lazy">
                     </div>
                 </div>
 
-                <!-- Card 4 -->
+                <!-- BS 4 -->
                 <div class="team-card shrink-0 w-[270px] sm:w-[290px] lg:w-auto">
                     <div class="flex items-start justify-between px-6 pt-6 pb-4">
-                        <p class="font-bold text-dark text-lg leading-snug">BS. Phạm<br>Thị Mai</p>
-                        <span class="text-[10px] font-bold text-dark/50 uppercase tracking-widest text-right leading-tight mt-1">Xét nghiệm<br>& sinh hóa</span>
+                        <p class="font-bold text-dark text-lg leading-snug">BS Võ<br>Văn Thắng</p>
+                        <span class="text-[10px] font-bold text-dark/50 uppercase tracking-widest text-right leading-tight mt-1">Trưởng khoa<br>Bác sĩ gia đình</span>
                     </div>
                     <div class="team-card-photo aspect-[4/5] overflow-hidden relative">
-                        <div class="team-card-placeholder w-full h-full flex items-center justify-center">
-                            <div class="w-32 h-32 rounded-full bg-[#E0D5C3] flex items-center justify-center">
-                                <span class="text-4xl font-extrabold text-[#B8A890]">TM</span>
-                            </div>
-                        </div>
+                        <img src="images/bs-vo-van-thang.png" alt="BS Võ Văn Thắng" class="w-full h-full object-cover object-top" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- BS 5 -->
+                <div class="team-card shrink-0 w-[270px] sm:w-[290px] lg:w-auto">
+                    <div class="flex items-start justify-between px-6 pt-6 pb-4">
+                        <p class="font-bold text-dark text-lg leading-snug">BS Đỗ<br>Xuân Tân</p>
+                        <span class="text-[10px] font-bold text-dark/50 uppercase tracking-widest text-right leading-tight mt-1">Trưởng khoa<br>Mắt</span>
+                    </div>
+                    <div class="team-card-photo aspect-[4/5] overflow-hidden relative">
+                        <img src="images/bs-do-xuan-tan.png" alt="BS Đỗ Xuân Tân" class="w-full h-full object-cover object-top" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- BS 6 -->
+                <div class="team-card shrink-0 w-[270px] sm:w-[290px] lg:w-auto">
+                    <div class="flex items-start justify-between px-6 pt-6 pb-4">
+                        <p class="font-bold text-dark text-lg leading-snug">BS Phạm<br>Khắc Hòa</p>
+                        <span class="text-[10px] font-bold text-dark/50 uppercase tracking-widest text-right leading-tight mt-1">Trưởng khoa<br>Chẩn đoán hình ảnh</span>
+                    </div>
+                    <div class="team-card-photo aspect-[4/5] overflow-hidden relative">
+                        <img src="images/bs-pham-khac-hoa.png" alt="BS Phạm Khắc Hòa" class="w-full h-full object-cover object-top" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- BS 7 -->
+                <div class="team-card shrink-0 w-[270px] sm:w-[290px] lg:w-auto">
+                    <div class="flex items-start justify-between px-6 pt-6 pb-4">
+                        <p class="font-bold text-dark text-lg leading-snug">BS Dương<br>Thị Yến</p>
+                        <span class="text-[10px] font-bold text-dark/50 uppercase tracking-widest text-right leading-tight mt-1">Bác sĩ<br>Chẩn đoán hình ảnh</span>
+                    </div>
+                    <div class="team-card-photo aspect-[4/5] overflow-hidden relative">
+                        <img src="images/bs-duong-thi-yen.png" alt="BS Dương Thị Yến" class="w-full h-full object-cover object-top" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- BS 8 -->
+                <div class="team-card shrink-0 w-[270px] sm:w-[290px] lg:w-auto">
+                    <div class="flex items-start justify-between px-6 pt-6 pb-4">
+                        <p class="font-bold text-dark text-lg leading-snug">BS Phùng<br>Văn Đức</p>
+                        <span class="text-[10px] font-bold text-dark/50 uppercase tracking-widest text-right leading-tight mt-1">Bác sĩ khoa<br>Tai Mũi Họng</span>
+                    </div>
+                    <div class="team-card-photo aspect-[4/5] overflow-hidden relative">
+                        <img src="images/bs-phung-van-duc.png" alt="BS Phùng Văn Đức" class="w-full h-full object-cover object-top" loading="lazy">
                     </div>
                 </div>
 
@@ -1248,17 +1266,21 @@
                         </div>
                     </div>
 
-                    <!-- Chứng nhận & giải thưởng — TODO: thay 2 ô placeholder bằng file logo GPTW & BW -->
+                    <!-- Chứng nhận & giải thưởng — CHỜ ẢNH BADGE: chưa có file logo ISO 15189 / GPTW / BW -->
                     <div class="mt-6">
                         <p class="text-xs font-bold uppercase tracking-[0.15em] text-muted mb-3">Chứng nhận &amp; giải thưởng</p>
                         <div class="flex flex-wrap items-center gap-4">
                             <div class="w-28 h-20 rounded-xl border-2 border-dashed border-gray-300 flex flex-col items-center justify-center text-center text-gray-400">
                                 <i data-lucide="award" class="w-6 h-6 mb-1"></i>
-                                <span class="text-[11px] font-semibold">Logo GPTW</span>
+                                <span class="text-[11px] font-semibold leading-tight">ISO 15189<br><span class="text-[9px] font-normal">CHỜ ẢNH BADGE</span></span>
                             </div>
                             <div class="w-28 h-20 rounded-xl border-2 border-dashed border-gray-300 flex flex-col items-center justify-center text-center text-gray-400">
                                 <i data-lucide="award" class="w-6 h-6 mb-1"></i>
-                                <span class="text-[11px] font-semibold">Logo BW</span>
+                                <span class="text-[11px] font-semibold leading-tight">GPTW<br><span class="text-[9px] font-normal">CHỜ ẢNH BADGE</span></span>
+                            </div>
+                            <div class="w-28 h-20 rounded-xl border-2 border-dashed border-gray-300 flex flex-col items-center justify-center text-center text-gray-400">
+                                <i data-lucide="award" class="w-6 h-6 mb-1"></i>
+                                <span class="text-[11px] font-semibold leading-tight">Best Workplaces<br><span class="text-[9px] font-normal">CHỜ ẢNH BADGE</span></span>
                             </div>
                         </div>
                     </div>
@@ -1342,6 +1364,40 @@
                     </a>
                 </div>
             </div>
+        </div>
+    </section>
+
+
+    <!-- ===== KHÁCH HÀNG TIÊU BIỂU (lưới logo) ===== -->
+    <section class="py-14 lg:py-20 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10 reveal">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-primary border-l-2 border-primary pl-3 mb-3 inline-block">Khách hàng tiêu biểu</span>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-dark">Được hàng trăm doanh nghiệp tin tưởng</h2>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-px bg-gray-100 rounded-2xl overflow-hidden border border-gray-100 reveal">
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-acecook.png" alt="Acecook" class="max-h-12 max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-ajinomoto.png" alt="Ajinomoto" class="max-h-12 max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-coca-cola.png" alt="Coca-Cola" class="max-h-12 max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-vietnam-airlines.png" alt="Vietnam Airlines" class="max-h-12 max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-acb.png" alt="ACB" class="max-h-12 max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-sacombank.jpg" alt="Sacombank" class="max-h-12 max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-lotte-mart.jpg" alt="LOTTE Mart" class="max-h-12 max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-cj-cgv.png" alt="CGV" class="max-h-12 max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-metro.png" alt="Metro" class="max-h-12 max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-bibica.png" alt="BIBICA" class="max-h-12 max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-sabeco.png" alt="Bia Sài Gòn (SABECO)" class="max-h-12 max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-vifon.jpg" alt="Vifon" class="max-h-12 max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-phuc-long.jpg" alt="Phúc Long" class="max-h-12 max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-thien-long.png" alt="Thiên Long" class="max-h-12 max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-rang-dong.jpg" alt="Rạng Đông" class="max-h-12 max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-kido.png" alt="KIDO" class="max-h-12 max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-cholimex.png" alt="Cholimex" class="max-h-12 max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-tuong-an.png" alt="Dầu Tường An" class="max-h-12 max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-generali.png" alt="Generali" class="max-h-12 max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-bong-bach-tuyet.png" alt="Bông Bạch Tuyết" class="max-h-12 max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy"></div>
+            </div>
+            <p class="text-center text-xs text-muted mt-4 reveal">và hàng trăm doanh nghiệp, trường học khác trên toàn quốc</p>
         </div>
     </section>
 
