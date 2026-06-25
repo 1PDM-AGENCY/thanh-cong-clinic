@@ -646,39 +646,47 @@
 
                 <!-- Bento grid (matching React Feature component layout) -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Khó khăn 1 — thẻ lớn (2 cột trên lg) -->
-                    <div class="reveal reveal-delay-1 bg-gray-100 rounded-2xl h-full lg:col-span-2 p-6 aspect-square lg:aspect-auto flex justify-between flex-col">
-                        <i data-lucide="calendar-clock" class="w-8 h-8 stroke-1 text-orange-500"></i>
-                        <div class="flex flex-col">
-                            <h3 class="text-xl tracking-tight font-semibold text-dark">Tốn thời gian sắp xếp và điều phối lịch khám cho nhân viên</h3>
-                            <p class="text-muted max-w-md text-base mt-2">Bộ phận nhân sự mất nhiều thời gian lập danh sách, phân ca và điều phối lịch khám cho hàng trăm nhân viên, thay vì tập trung vào công việc chuyên môn chính.</p>
+                    <!-- Khó khăn 1 — thẻ lớn (ảnh nền) -->
+                    <div class="reveal reveal-delay-1 group relative overflow-hidden bg-gray-900 rounded-2xl h-full lg:col-span-2 p-6 aspect-square lg:aspect-auto lg:min-h-[300px] flex justify-between flex-col">
+                        <img src="images/anh-thuc-te-1.jpg" alt="Buổi khám sức khỏe doanh nghiệp tại Thành Công" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/55 to-black/25"></div>
+                        <i data-lucide="calendar-clock" class="relative z-10 w-8 h-8 stroke-1 text-white"></i>
+                        <div class="relative z-10 flex flex-col">
+                            <h3 class="text-xl tracking-tight font-semibold text-white">Tốn thời gian sắp xếp và điều phối lịch khám cho nhân viên</h3>
+                            <p class="text-white/85 max-w-md text-base mt-2">Bộ phận nhân sự mất nhiều thời gian lập danh sách, phân ca và điều phối lịch khám cho hàng trăm nhân viên, thay vì tập trung vào công việc chuyên môn chính.</p>
                         </div>
                     </div>
 
-                    <!-- Khó khăn 2 — thẻ vuông -->
-                    <div class="reveal reveal-delay-2 bg-gray-100 rounded-2xl aspect-square p-6 flex justify-between flex-col">
-                        <i data-lucide="clock" class="w-8 h-8 stroke-1 text-blue-500"></i>
-                        <div class="flex flex-col">
-                            <h3 class="text-xl tracking-tight font-semibold text-dark">Nhân viên phải chờ đợi lâu, ảnh hưởng năng suất làm việc</h3>
-                            <p class="text-muted max-w-xs text-base mt-2">Quy trình thiếu tối ưu khiến nhân viên chờ đợi và nghỉ làm kéo dài, ảnh hưởng đến tiến độ sản xuất, kinh doanh.</p>
+                    <!-- Khó khăn 2 — thẻ vuông (ảnh nền) -->
+                    <div class="reveal reveal-delay-2 group relative overflow-hidden bg-gray-900 rounded-2xl aspect-square p-6 flex justify-between flex-col">
+                        <img src="images/anh-thuc-te-2.jpg" alt="Tổ chức khám sức khỏe định kỳ cho nhân viên" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/55 to-black/25"></div>
+                        <i data-lucide="clock" class="relative z-10 w-8 h-8 stroke-1 text-white"></i>
+                        <div class="relative z-10 flex flex-col">
+                            <h3 class="text-xl tracking-tight font-semibold text-white">Nhân viên phải chờ đợi lâu, ảnh hưởng năng suất làm việc</h3>
+                            <p class="text-white/85 max-w-xs text-base mt-2">Quy trình thiếu tối ưu khiến nhân viên chờ đợi và nghỉ làm kéo dài, ảnh hưởng đến tiến độ sản xuất, kinh doanh.</p>
                         </div>
                     </div>
 
-                    <!-- Khó khăn 3 — thẻ vuông -->
-                    <div class="reveal reveal-delay-3 bg-gray-100 rounded-2xl aspect-square p-6 flex justify-between flex-col">
-                        <i data-lucide="alert-triangle" class="w-8 h-8 stroke-1 text-red-500"></i>
-                        <div class="flex flex-col">
-                            <h3 class="text-xl tracking-tight font-semibold text-dark">Lo ngại chất lượng khám và độ chính xác của kết quả</h3>
-                            <p class="text-muted max-w-xs text-base mt-2">Thị trường nhiều cơ sở không đồng đều; chọn sai đơn vị ảnh hưởng trực tiếp đến độ chính xác kết quả và quyền lợi người lao động.</p>
+                    <!-- Khó khăn 3 — thẻ vuông (ảnh nền) -->
+                    <div class="reveal reveal-delay-3 group relative overflow-hidden bg-gray-900 rounded-2xl aspect-square p-6 flex justify-between flex-col">
+                        <img src="images/anh-thuc-te-3.jpg" alt="Đội ngũ y bác sĩ khám tại doanh nghiệp" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/55 to-black/25"></div>
+                        <i data-lucide="alert-triangle" class="relative z-10 w-8 h-8 stroke-1 text-white"></i>
+                        <div class="relative z-10 flex flex-col">
+                            <h3 class="text-xl tracking-tight font-semibold text-white">Lo ngại chất lượng khám và độ chính xác của kết quả</h3>
+                            <p class="text-white/85 max-w-xs text-base mt-2">Thị trường nhiều cơ sở không đồng đều; chọn sai đơn vị ảnh hưởng trực tiếp đến độ chính xác kết quả và quyền lợi người lao động.</p>
                         </div>
                     </div>
 
-                    <!-- Khó khăn 4 — thẻ lớn (2 cột trên lg) -->
-                    <div class="reveal reveal-delay-1 bg-gray-100 rounded-2xl h-full lg:col-span-2 p-6 aspect-square lg:aspect-auto flex justify-between flex-col">
-                        <i data-lucide="file-text" class="w-8 h-8 stroke-1 text-purple-500"></i>
-                        <div class="flex flex-col">
-                            <h3 class="text-xl tracking-tight font-semibold text-dark">Mất nhiều công sức tổng hợp hồ sơ, báo cáo sau khám</h3>
-                            <p class="text-muted max-w-md text-base mt-2">Kết quả trả rời rạc, thiếu báo cáo tổng hợp khiến nhân sự tốn công ghép hồ sơ và ban lãnh đạo khó nắm tổng quan sức khỏe toàn công ty.</p>
+                    <!-- Khó khăn 4 — thẻ lớn (ảnh nền) -->
+                    <div class="reveal reveal-delay-1 group relative overflow-hidden bg-gray-900 rounded-2xl h-full lg:col-span-2 p-6 aspect-square lg:aspect-auto lg:min-h-[300px] flex justify-between flex-col">
+                        <img src="images/anh-thuc-te-4.jpg" alt="Khám sức khỏe doanh nghiệp số lượng lớn" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/55 to-black/25"></div>
+                        <i data-lucide="file-text" class="relative z-10 w-8 h-8 stroke-1 text-white"></i>
+                        <div class="relative z-10 flex flex-col">
+                            <h3 class="text-xl tracking-tight font-semibold text-white">Mất nhiều công sức tổng hợp hồ sơ, báo cáo sau khám</h3>
+                            <p class="text-white/85 max-w-md text-base mt-2">Kết quả trả rời rạc, thiếu báo cáo tổng hợp khiến nhân sự tốn công ghép hồ sơ và ban lãnh đạo khó nắm tổng quan sức khỏe toàn công ty.</p>
                         </div>
                     </div>
                 </div>
@@ -686,14 +694,6 @@
                 <!-- Bottom CTA -->
                 <div class="reveal">
                     <p class="text-base text-primary font-medium border-l-2 border-primary pl-4">Phòng Khám Đa Khoa Thành Công được thiết kế để giải quyết toàn bộ các vấn đề trên cho doanh nghiệp.</p>
-                </div>
-
-                <!-- 4 ảnh thật buổi khám tại doanh nghiệp -->
-                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 reveal">
-                    <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-sm"><img src="images/anh-thuc-te-1.jpg" alt="Buổi khám sức khỏe doanh nghiệp tại Thành Công" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy"></div>
-                    <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-sm"><img src="images/anh-thuc-te-2.jpg" alt="Tổ chức khám sức khỏe định kỳ cho nhân viên" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy"></div>
-                    <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-sm"><img src="images/anh-thuc-te-3.jpg" alt="Đội ngũ y bác sĩ khám tại doanh nghiệp" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy"></div>
-                    <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-sm"><img src="images/anh-thuc-te-4.jpg" alt="Khám sức khỏe doanh nghiệp số lượng lớn" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy"></div>
                 </div>
             </div>
         </div>
