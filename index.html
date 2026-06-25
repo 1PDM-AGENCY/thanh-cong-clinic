@@ -37,7 +37,7 @@
     </script> -->
 
     <!-- Preload critical assets -->
-    <link rel="preload" as="image" href="images/public-building-waiting-area-health-care-center-2026-01-07-06-02-06-utc.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="images/hero.jpg" fetchpriority="high">
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=Inter:wght@600;700;800;900&display=swap">
 
     <!-- Google Fonts -->
@@ -135,7 +135,7 @@
             box-shadow: 0 2px 20px rgba(0,0,0,0.08);
         }
         .header-scrolled .header-logo {
-            height: 40px !important;
+            height: 52px !important;
         }
         .header-scrolled .header-topbar {
             max-height: 0 !important;
@@ -228,7 +228,7 @@
         .hero-editorial {
             position: relative;
             min-height: 100vh;
-            background-image: url('images/public-building-waiting-area-health-care-center-2026-01-07-06-02-06-utc.jpg');
+            background-image: url('images/hero.jpg');
             background-size: cover;
             background-position: center top;
             background-repeat: no-repeat;
@@ -239,10 +239,10 @@
             inset: 0;
             background: linear-gradient(
                 to right,
-                rgba(13, 59, 107, 0.88) 0%,
-                rgba(21, 74, 126, 0.72) 40%,
-                rgba(27, 94, 158, 0.50) 70%,
-                rgba(27, 94, 158, 0.35) 100%
+                rgba(11, 45, 82, 0.92) 0%,
+                rgba(16, 60, 104, 0.84) 40%,
+                rgba(21, 74, 126, 0.72) 70%,
+                rgba(27, 94, 158, 0.60) 100%
             );
             z-index: 1;
         }
@@ -250,9 +250,9 @@
             .hero-editorial::before {
                 background: linear-gradient(
                     to bottom,
-                    rgba(13, 59, 107, 0.88) 0%,
-                    rgba(21, 74, 126, 0.72) 50%,
-                    rgba(27, 94, 158, 0.5) 100%
+                    rgba(11, 45, 82, 0.90) 0%,
+                    rgba(16, 60, 104, 0.82) 50%,
+                    rgba(21, 74, 126, 0.72) 100%
                 );
             }
         }
@@ -418,16 +418,16 @@
     <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Top bar: Address + Hotline -->
-            <div class="header-topbar flex items-center justify-between text-xs text-muted border-b border-gray-100 py-1.5 mb-1">
+            <div class="header-topbar flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-muted border-b border-gray-100 py-1.5 mb-1">
                 <div class="flex items-center gap-1.5">
                     <i data-lucide="map-pin" class="w-3 h-3 text-primary"></i>
                     <span class="sm:hidden">TP. Hồ Chí Minh</span>
                     <span class="hidden sm:inline">36 Tây Thạnh, KCN Tân Bình, Q. Tân Phú, TP.HCM</span>
                 </div>
-                <div class="flex items-center gap-1.5">
-                    <i data-lucide="phone" class="w-3 h-3 text-primary"></i>
-                    <a href="tel:02838159435" class="font-semibold text-dark hover:text-primary transition-colors">028 3815 9435</a>
-                </div>
+                <a href="tel:02838159435" class="inline-flex items-center gap-1.5 bg-accent text-white font-bold px-3 py-1 rounded-full shadow-sm hover:bg-accent-dark transition-colors">
+                    <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
+                    Hotline: 028 3815 9435
+                </a>
             </div>
 
             <div class="flex items-center justify-between py-2">
@@ -436,7 +436,7 @@
                     <img
                         src="images/logo.png"
                         alt="Logo Phòng Khám Đa Khoa Thành Công"
-                        class="header-logo h-14 transition-all duration-300"
+                        class="header-logo h-16 sm:h-20 transition-all duration-300"
                         loading="eager"
                     >
                 </a>
@@ -493,7 +493,7 @@
 
                     <p class="text-lg text-white/80 mb-6 max-w-xl mx-auto lg:mx-0 leading-relaxed">
                         Giải pháp khám sức khỏe định kỳ trọn gói cho doanh nghiệp từ
-                        <span class="font-semibold text-white">50–2.000 nhân sự</span>
+                        <span class="font-semibold text-white">10 – 6000+ nhân sự</span>
                         tại TP.HCM và khu vực lân cận. Tổ chức linh hoạt tại phòng khám hoặc tại doanh nghiệp, hồ sơ chứng từ đầy đủ, minh bạch.
                     </p>
 
@@ -687,6 +687,14 @@
                 <div class="reveal">
                     <p class="text-base text-primary font-medium border-l-2 border-primary pl-4">Phòng Khám Đa Khoa Thành Công được thiết kế để giải quyết toàn bộ các vấn đề trên cho doanh nghiệp.</p>
                 </div>
+
+                <!-- 4 ảnh thật buổi khám tại doanh nghiệp -->
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 reveal">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-sm"><img src="images/anh-thuc-te-1.jpg" alt="Buổi khám sức khỏe doanh nghiệp tại Thành Công" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy"></div>
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-sm"><img src="images/anh-thuc-te-2.jpg" alt="Tổ chức khám sức khỏe định kỳ cho nhân viên" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy"></div>
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-sm"><img src="images/anh-thuc-te-3.jpg" alt="Đội ngũ y bác sĩ khám tại doanh nghiệp" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy"></div>
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-sm"><img src="images/anh-thuc-te-4.jpg" alt="Khám sức khỏe doanh nghiệp số lượng lớn" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy"></div>
+                </div>
             </div>
         </div>
     </section>
@@ -698,7 +706,7 @@
             <div class="text-center mb-14 reveal">
                 <span class="text-xs font-bold uppercase tracking-[0.2em] text-primary border-l-2 border-primary pl-3 mb-4 inline-block">Giải pháp của chúng tôi</span>
                 <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-dark mb-4">
-                    Tại sao hơn 200 doanh nghiệp chọn Thành Công?
+                    Tại sao hơn <span class="text-accent">200+</span> doanh nghiệp chọn Thành Công?
                 </h2>
                 <p class="text-muted max-w-2xl mx-auto">Giải pháp khám sức khỏe được thiết kế riêng cho nhu cầu doanh nghiệp</p>
             </div>
@@ -755,9 +763,9 @@
                 <p class="text-muted max-w-2xl mx-auto">Lựa chọn gói khám phù hợp với nhu cầu và ngân sách của doanh nghiệp bạn</p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-6 lg:gap-8 items-start">
+            <div class="grid md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
                 <!-- Package 1: Basic -->
-                <div class="reveal reveal-delay-1 bg-white border-2 border-gray-100 rounded-2xl p-8 card-hover relative">
+                <div class="reveal reveal-delay-1 bg-white border-2 border-gray-100 rounded-2xl p-8 card-hover relative flex flex-col">
                     <div class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-5">
                         <i data-lucide="clipboard-list" class="w-6 h-6 text-primary"></i>
                     </div>
@@ -791,13 +799,13 @@
                         </li>
                     </ul>
 
-                    <a href="#lien-he" class="block w-full text-center bg-primary/5 hover:bg-primary/10 text-primary font-semibold py-3 rounded-lg transition-colors text-sm">
+                    <a href="#lien-he" class="mt-auto block w-full text-center bg-primary/5 hover:bg-primary/10 text-primary font-semibold py-3 rounded-lg transition-colors text-sm">
                         Nhận báo giá gói này
                     </a>
                 </div>
 
                 <!-- Package 2: Advanced (Popular) -->
-                <div class="reveal reveal-delay-2 bg-white border-2 border-primary rounded-2xl p-8 card-hover relative shadow-lg shadow-primary/10">
+                <div class="reveal reveal-delay-2 bg-white border-2 border-primary rounded-2xl p-8 card-hover relative shadow-lg shadow-primary/10 flex flex-col">
                     <div class="badge-popular">Phổ biến nhất</div>
                     <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
                         <i data-lucide="heart-pulse" class="w-6 h-6 text-primary"></i>
@@ -840,13 +848,13 @@
                         </li>
                     </ul>
 
-                    <a href="#lien-he" class="block w-full text-center bg-accent hover:bg-accent-dark text-white font-bold py-3 rounded-lg cta-hover text-sm shadow-lg shadow-accent/20">
+                    <a href="#lien-he" class="mt-auto block w-full text-center bg-accent hover:bg-accent-dark text-white font-bold py-3 rounded-lg cta-hover text-sm shadow-lg shadow-accent/20">
                         Nhận báo giá gói này
                     </a>
                 </div>
 
                 <!-- Package 3: Custom -->
-                <div class="reveal reveal-delay-3 bg-white border-2 border-gray-100 rounded-2xl p-8 card-hover relative">
+                <div class="reveal reveal-delay-3 bg-white border-2 border-gray-100 rounded-2xl p-8 card-hover relative flex flex-col">
                     <div class="w-12 h-12 rounded-xl bg-green-50 flex items-center justify-center mb-5">
                         <i data-lucide="settings" class="w-6 h-6 text-secondary"></i>
                     </div>
@@ -859,7 +867,7 @@
                         </p>
                     </div>
 
-                    <a href="#lien-he" class="block w-full text-center bg-primary/5 hover:bg-primary/10 text-primary font-semibold py-3 rounded-lg transition-colors text-sm">
+                    <a href="#lien-he" class="mt-auto block w-full text-center bg-primary/5 hover:bg-primary/10 text-primary font-semibold py-3 rounded-lg transition-colors text-sm">
                         Liên hệ thiết kế gói khám
                     </a>
                 </div>
@@ -1134,12 +1142,15 @@
                     <!-- Chứng nhận & giải thưởng — 2 badge thật: ISO 15189 + GPTW -->
                     <div class="mt-6">
                         <p class="text-xs font-bold uppercase tracking-[0.15em] text-muted mb-3">Chứng nhận &amp; giải thưởng</p>
-                        <div class="flex flex-wrap items-center gap-4">
+                        <div class="flex flex-wrap items-center gap-5">
                             <div class="h-20 flex items-center justify-center">
                                 <img src="images/badge-iso-15189.jpg" alt="Tiêu chuẩn ISO 15189 - Phòng xét nghiệm y khoa" class="h-20 w-auto object-contain" loading="lazy">
                             </div>
                             <div class="h-20 flex items-center justify-center">
-                                <img src="images/badge-gptw.jpg" alt="Great Place To Work Certified Dec 2025 - Dec 2026 Vietnam" class="h-20 w-auto object-contain" loading="lazy">
+                                <img src="images/badge-gptw-vietnam.png" alt="Great Place To Work Certified - Best Workplaces Vietnam 2026" class="h-20 w-auto object-contain" loading="lazy">
+                            </div>
+                            <div class="h-20 flex items-center justify-center">
+                                <img src="images/badge-bw-sea-healthcare.png" alt="Best Workplaces in Healthcare & Biopharma Southeast Asia 2026" class="h-20 w-auto object-contain" loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -1177,29 +1188,34 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-10 reveal">
                 <span class="text-xs font-bold uppercase tracking-[0.2em] text-primary border-l-2 border-primary pl-3 mb-3 inline-block">Khách hàng tiêu biểu</span>
-                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-dark">Được hàng trăm doanh nghiệp tin tưởng</h2>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-dark">Hơn <span class="text-accent">1000+</span> doanh nghiệp, trường học tin tưởng</h2>
             </div>
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-px bg-gray-100 rounded-2xl overflow-hidden border border-gray-100 reveal">
-                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-acecook.png" alt="Acecook" class="max-h-12 max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy"></div>
-                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-ajinomoto.png" alt="Ajinomoto" class="max-h-12 max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy"></div>
-                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-coca-cola.png" alt="Coca-Cola" class="max-h-12 max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy"></div>
-                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-vietnam-airlines.png" alt="Vietnam Airlines" class="max-h-12 max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy"></div>
-                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-acb.png" alt="ACB" class="max-h-12 max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy"></div>
-                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-sacombank.jpg" alt="Sacombank" class="max-h-12 max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy"></div>
-                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-lotte-mart.jpg" alt="LOTTE Mart" class="max-h-12 max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy"></div>
-                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-cj-cgv.png" alt="CGV" class="max-h-12 max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy"></div>
-                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-metro.png" alt="Metro" class="max-h-12 max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy"></div>
-                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-bibica.png" alt="BIBICA" class="max-h-12 max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy"></div>
-                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-sabeco.png" alt="Bia Sài Gòn (SABECO)" class="max-h-12 max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy"></div>
-                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-vifon.jpg" alt="Vifon" class="max-h-12 max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy"></div>
-                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-phuc-long.jpg" alt="Phúc Long" class="max-h-12 max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy"></div>
-                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-thien-long.png" alt="Thiên Long" class="max-h-12 max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy"></div>
-                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-rang-dong.jpg" alt="Rạng Đông" class="max-h-12 max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy"></div>
-                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-kido.png" alt="KIDO" class="max-h-12 max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy"></div>
-                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-cholimex.png" alt="Cholimex" class="max-h-12 max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy"></div>
-                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-tuong-an.png" alt="Dầu Tường An" class="max-h-12 max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy"></div>
-                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-generali.png" alt="Generali" class="max-h-12 max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy"></div>
-                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-bong-bach-tuyet.png" alt="Bông Bạch Tuyết" class="max-h-12 max-w-full object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-alpine-creations-viet-nam.png" alt="Alpine Creations Việt Nam" class="max-h-12 max-w-full object-contain" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-an-phuoc.jpg" alt="An Phước" class="max-h-12 max-w-full object-contain" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-bong-bach-tuyet.png" alt="Bông Bạch Tuyết" class="max-h-12 max-w-full object-contain" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-cj-cgv.png" alt="CJ CGV" class="max-h-12 max-w-full object-contain" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-cong-ty-tnhh-xnk-thai-chau.png" alt="XNK Thái Châu" class="max-h-12 max-w-full object-contain" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-cty-a-v-a-l.png" alt="A.V.A.L" class="max-h-12 max-w-full object-contain" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-cao-dang-van-hoa-nghe-thuat.png" alt="Cao đẳng Văn hóa nghệ thuật" class="max-h-12 max-w-full object-contain" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-careelink.png" alt="Careelink" class="max-h-12 max-w-full object-contain" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-cong-ich-quan-2.png" alt="Công ích Quận 2" class="max-h-12 max-w-full object-contain" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-det-may-thanh-cong.jpg" alt="Dệt may Thành Công" class="max-h-12 max-w-full object-contain" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-hoang-hac.jpg" alt="Hoàng Hạc" class="max-h-12 max-w-full object-contain" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-juki.png" alt="Juki" class="max-h-12 max-w-full object-contain" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-kohnan.jpg" alt="Kohnan" class="max-h-12 max-w-full object-contain" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-ls-pack.png" alt="LS Pack" class="max-h-12 max-w-full object-contain" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-mtex.png" alt="MTEX" class="max-h-12 max-w-full object-contain" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-matai.png" alt="Matai" class="max-h-12 max-w-full object-contain" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-nitto-vn.png" alt="NITTO VN" class="max-h-12 max-w-full object-contain" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-phuc-long.jpg" alt="Phúc Long" class="max-h-12 max-w-full object-contain" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-spc.png" alt="SPC" class="max-h-12 max-w-full object-contain" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-taxi-viet-nam-vinataxi.png" alt="Vinataxi" class="max-h-12 max-w-full object-contain" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-thai-corp-international.png" alt="Thai Corp International" class="max-h-12 max-w-full object-contain" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-thai-tuan.jpg" alt="Thái Tuấn" class="max-h-12 max-w-full object-contain" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-the-gioi-giay.png" alt="Thế giới giấy" class="max-h-12 max-w-full object-contain" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-tri-luc-viet.png" alt="Trí Lực Việt" class="max-h-12 max-w-full object-contain" loading="lazy"></div>
+                <div class="bg-white flex items-center justify-center p-5 h-24"><img src="images/logo-dai-hoc-cong-nghiep-thuc-pham.png" alt="Đại học Công nghiệp thực phẩm" class="max-h-12 max-w-full object-contain" loading="lazy"></div>
             </div>
             <p class="text-center text-xs text-muted mt-4 reveal">và hàng trăm doanh nghiệp, trường học khác trên toàn quốc</p>
         </div>
