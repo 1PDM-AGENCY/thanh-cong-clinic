@@ -765,111 +765,81 @@
 
             <div class="grid md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
                 <!-- Package 1: Basic -->
-                <div class="reveal reveal-delay-1 bg-white border-2 border-gray-100 rounded-2xl p-8 card-hover relative flex flex-col">
-                    <div class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-5">
-                        <i data-lucide="clipboard-list" class="w-6 h-6 text-primary"></i>
+                <div class="reveal reveal-delay-1 relative rounded-2xl p-8 card-hover flex flex-col text-white bg-gradient-to-br from-[#2563A8] to-[#15487C] shadow-lg shadow-primary/20">
+                    <div class="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none">
+                        <div class="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-white/10"></div>
+                        <div class="absolute -bottom-16 -left-12 w-40 h-40 rounded-full bg-white/[0.06]"></div>
                     </div>
-                    <h3 class="text-xl font-bold mb-1">Gói Cơ Bản</h3>
-                    <p class="text-sm text-muted mb-6">Phù hợp doanh nghiệp quy mô nhỏ, ngân sách hạn chế</p>
-
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-start gap-3 text-sm">
-                            <i data-lucide="check" class="w-4 h-4 text-secondary shrink-0 mt-0.5"></i>
-                            <span>Khám tổng quát</span>
-                        </li>
-                        <li class="flex items-start gap-3 text-sm">
-                            <i data-lucide="check" class="w-4 h-4 text-secondary shrink-0 mt-0.5"></i>
-                            <span>Xét nghiệm máu cơ bản</span>
-                        </li>
-                        <li class="flex items-start gap-3 text-sm">
-                            <i data-lucide="check" class="w-4 h-4 text-secondary shrink-0 mt-0.5"></i>
-                            <span>Siêu âm bụng tổng quát</span>
-                        </li>
-                        <li class="flex items-start gap-3 text-sm">
-                            <i data-lucide="check" class="w-4 h-4 text-secondary shrink-0 mt-0.5"></i>
-                            <span>Chụp X-Quang tim phổi thẳng</span>
-                        </li>
-                        <li class="flex items-start gap-3 text-sm">
-                            <i data-lucide="check" class="w-4 h-4 text-secondary shrink-0 mt-0.5"></i>
-                            <span>Hồ sơ khám sức khỏe cá nhân</span>
-                        </li>
-                        <li class="flex items-start gap-3 text-sm">
-                            <i data-lucide="check" class="w-4 h-4 text-secondary shrink-0 mt-0.5"></i>
-                            <span>Báo cáo tổng kết</span>
-                        </li>
-                    </ul>
-
-                    <a href="#lien-he" class="mt-auto block w-full text-center bg-primary/5 hover:bg-primary/10 text-primary font-semibold py-3 rounded-lg transition-colors text-sm">
-                        Nhận báo giá gói này
-                    </a>
+                    <div class="relative z-10 flex flex-col flex-1">
+                        <div class="w-12 h-12 rounded-xl bg-white/15 flex items-center justify-center mb-5">
+                            <i data-lucide="clipboard-list" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-1">Gói Cơ Bản</h3>
+                        <p class="text-sm text-white/70 mb-6">Phù hợp doanh nghiệp quy mô nhỏ, ngân sách hạn chế</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start gap-3 text-sm text-white/90"><i data-lucide="check" class="w-4 h-4 text-emerald-300 shrink-0 mt-0.5"></i><span>Khám tổng quát</span></li>
+                            <li class="flex items-start gap-3 text-sm text-white/90"><i data-lucide="check" class="w-4 h-4 text-emerald-300 shrink-0 mt-0.5"></i><span>Xét nghiệm máu cơ bản</span></li>
+                            <li class="flex items-start gap-3 text-sm text-white/90"><i data-lucide="check" class="w-4 h-4 text-emerald-300 shrink-0 mt-0.5"></i><span>Siêu âm bụng tổng quát</span></li>
+                            <li class="flex items-start gap-3 text-sm text-white/90"><i data-lucide="check" class="w-4 h-4 text-emerald-300 shrink-0 mt-0.5"></i><span>Chụp X-Quang tim phổi thẳng</span></li>
+                            <li class="flex items-start gap-3 text-sm text-white/90"><i data-lucide="check" class="w-4 h-4 text-emerald-300 shrink-0 mt-0.5"></i><span>Hồ sơ khám sức khỏe cá nhân</span></li>
+                            <li class="flex items-start gap-3 text-sm text-white/90"><i data-lucide="check" class="w-4 h-4 text-emerald-300 shrink-0 mt-0.5"></i><span>Báo cáo tổng kết</span></li>
+                        </ul>
+                        <a href="#lien-he" class="mt-auto block w-full text-center bg-white text-primary font-bold py-3 rounded-lg hover:bg-white/90 transition-colors text-sm">
+                            Nhận báo giá gói này
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Package 2: Advanced (Popular) -->
-                <div class="reveal reveal-delay-2 bg-white border-2 border-primary rounded-2xl p-8 card-hover relative shadow-lg shadow-primary/10 flex flex-col">
+                <div class="reveal reveal-delay-2 relative rounded-2xl p-8 card-hover flex flex-col text-white bg-gradient-to-br from-[#0D3B6B] to-[#16518C] shadow-2xl shadow-primary/30 ring-2 ring-accent ring-offset-2 ring-offset-white">
                     <div class="badge-popular">Phổ biến nhất</div>
-                    <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
-                        <i data-lucide="heart-pulse" class="w-6 h-6 text-primary"></i>
+                    <div class="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none">
+                        <div class="absolute -top-12 -right-12 w-40 h-40 rounded-full bg-white/10"></div>
+                        <div class="absolute -bottom-16 -left-10 w-36 h-36 rounded-full bg-accent/15"></div>
                     </div>
-                    <h3 class="text-xl font-bold mb-1">Gói Nâng Cao</h3>
-                    <p class="text-sm text-muted mb-6">Lựa chọn phổ biến nhất cho doanh nghiệp vừa và lớn</p>
-
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-start gap-3 text-sm">
-                            <i data-lucide="check" class="w-4 h-4 text-secondary shrink-0 mt-0.5"></i>
-                            <span>Khám tổng quát</span>
-                        </li>
-                        <li class="flex items-start gap-3 text-sm">
-                            <i data-lucide="check" class="w-4 h-4 text-secondary shrink-0 mt-0.5"></i>
-                            <span>Xét nghiệm chuyên sâu</span>
-                        </li>
-                        <li class="flex items-start gap-3 text-sm">
-                            <i data-lucide="check" class="w-4 h-4 text-secondary shrink-0 mt-0.5"></i>
-                            <span>Siêu âm bụng/ tuyến giáp/ tuyến vú/ tim</span>
-                        </li>
-                        <li class="flex items-start gap-3 text-sm">
-                            <i data-lucide="check" class="w-4 h-4 text-secondary shrink-0 mt-0.5"></i>
-                            <span>Chụp X-Quang tim phổi thẳng</span>
-                        </li>
-                        <li class="flex items-start gap-3 text-sm">
-                            <i data-lucide="check" class="w-4 h-4 text-secondary shrink-0 mt-0.5"></i>
-                            <span>Đo điện tim</span>
-                        </li>
-                        <li class="flex items-start gap-3 text-sm">
-                            <i data-lucide="check" class="w-4 h-4 text-secondary shrink-0 mt-0.5"></i>
-                            <span>Tầm soát ung thư</span>
-                        </li>
-                        <li class="flex items-start gap-3 text-sm">
-                            <i data-lucide="check" class="w-4 h-4 text-secondary shrink-0 mt-0.5"></i>
-                            <span>Hồ sơ khám sức khỏe cá nhân</span>
-                        </li>
-                        <li class="flex items-start gap-3 text-sm">
-                            <i data-lucide="check" class="w-4 h-4 text-secondary shrink-0 mt-0.5"></i>
-                            <span>Báo cáo tổng kết</span>
-                        </li>
-                    </ul>
-
-                    <a href="#lien-he" class="mt-auto block w-full text-center bg-accent hover:bg-accent-dark text-white font-bold py-3 rounded-lg cta-hover text-sm shadow-lg shadow-accent/20">
-                        Nhận báo giá gói này
-                    </a>
+                    <div class="relative z-10 flex flex-col flex-1">
+                        <div class="w-12 h-12 rounded-xl bg-white/15 flex items-center justify-center mb-5">
+                            <i data-lucide="heart-pulse" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-1">Gói Nâng Cao</h3>
+                        <p class="text-sm text-white/70 mb-6">Lựa chọn phổ biến nhất cho doanh nghiệp vừa và lớn</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start gap-3 text-sm text-white/90"><i data-lucide="check" class="w-4 h-4 text-emerald-300 shrink-0 mt-0.5"></i><span>Khám tổng quát</span></li>
+                            <li class="flex items-start gap-3 text-sm text-white/90"><i data-lucide="check" class="w-4 h-4 text-emerald-300 shrink-0 mt-0.5"></i><span>Xét nghiệm chuyên sâu</span></li>
+                            <li class="flex items-start gap-3 text-sm text-white/90"><i data-lucide="check" class="w-4 h-4 text-emerald-300 shrink-0 mt-0.5"></i><span>Siêu âm bụng/ tuyến giáp/ tuyến vú/ tim</span></li>
+                            <li class="flex items-start gap-3 text-sm text-white/90"><i data-lucide="check" class="w-4 h-4 text-emerald-300 shrink-0 mt-0.5"></i><span>Chụp X-Quang tim phổi thẳng</span></li>
+                            <li class="flex items-start gap-3 text-sm text-white/90"><i data-lucide="check" class="w-4 h-4 text-emerald-300 shrink-0 mt-0.5"></i><span>Đo điện tim</span></li>
+                            <li class="flex items-start gap-3 text-sm text-white/90"><i data-lucide="check" class="w-4 h-4 text-emerald-300 shrink-0 mt-0.5"></i><span>Tầm soát ung thư</span></li>
+                            <li class="flex items-start gap-3 text-sm text-white/90"><i data-lucide="check" class="w-4 h-4 text-emerald-300 shrink-0 mt-0.5"></i><span>Hồ sơ khám sức khỏe cá nhân</span></li>
+                            <li class="flex items-start gap-3 text-sm text-white/90"><i data-lucide="check" class="w-4 h-4 text-emerald-300 shrink-0 mt-0.5"></i><span>Báo cáo tổng kết</span></li>
+                        </ul>
+                        <a href="#lien-he" class="mt-auto block w-full text-center bg-accent hover:bg-accent-dark text-white font-bold py-3 rounded-lg cta-hover text-sm shadow-lg shadow-accent/30">
+                            Nhận báo giá gói này
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Package 3: Custom -->
-                <div class="reveal reveal-delay-3 bg-white border-2 border-gray-100 rounded-2xl p-8 card-hover relative flex flex-col">
-                    <div class="w-12 h-12 rounded-xl bg-green-50 flex items-center justify-center mb-5">
-                        <i data-lucide="settings" class="w-6 h-6 text-secondary"></i>
+                <div class="reveal reveal-delay-3 relative rounded-2xl p-8 card-hover flex flex-col text-white bg-gradient-to-br from-[#2563A8] to-[#15487C] shadow-lg shadow-primary/20">
+                    <div class="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none">
+                        <div class="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-white/10"></div>
+                        <div class="absolute -bottom-16 -left-12 w-40 h-40 rounded-full bg-white/[0.06]"></div>
                     </div>
-                    <h3 class="text-xl font-bold mb-1">Gói Theo Yêu Cầu</h3>
-                    <p class="text-sm text-muted mb-6">Thiết kế riêng theo đặc thù ngành nghề</p>
-
-                    <div class="bg-surface rounded-lg p-4 mb-8">
-                        <p class="text-sm text-muted leading-relaxed">
-                            Thiết kế gói khám riêng theo đặc thù ngành (thực phẩm, sản xuất, văn phòng,...). Linh hoạt số lượng và hạng mục khám theo yêu cầu cụ thể của doanh nghiệp.
-                        </p>
+                    <div class="relative z-10 flex flex-col flex-1">
+                        <div class="w-12 h-12 rounded-xl bg-white/15 flex items-center justify-center mb-5">
+                            <i data-lucide="settings" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-1">Gói Theo Yêu Cầu</h3>
+                        <p class="text-sm text-white/70 mb-6">Thiết kế riêng theo đặc thù ngành nghề</p>
+                        <div class="bg-white/10 rounded-lg p-4 mb-8">
+                            <p class="text-sm text-white/85 leading-relaxed">
+                                Thiết kế gói khám riêng theo đặc thù ngành (thực phẩm, sản xuất, văn phòng,...). Linh hoạt số lượng và hạng mục khám theo yêu cầu cụ thể của doanh nghiệp.
+                            </p>
+                        </div>
+                        <a href="#lien-he" class="mt-auto block w-full text-center bg-white text-primary font-bold py-3 rounded-lg hover:bg-white/90 transition-colors text-sm">
+                            Liên hệ thiết kế gói khám
+                        </a>
                     </div>
-
-                    <a href="#lien-he" class="mt-auto block w-full text-center bg-primary/5 hover:bg-primary/10 text-primary font-semibold py-3 rounded-lg transition-colors text-sm">
-                        Liên hệ thiết kế gói khám
-                    </a>
                 </div>
             </div>
 
