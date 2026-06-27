@@ -265,9 +265,9 @@
 
 
         /* Process tab triggers */
-        .process-tab-trigger { color: #6B7280; }
-        .process-tab-trigger.active { background: #F3F4F6; color: #1B5E9E; }
-        .process-tab-trigger:hover:not(.active) { background: #F9FAFB; }
+        .process-tab-trigger { color: #334155; background: #EEF2F6; }
+        .process-tab-trigger.active { background: #1B5E9E; color: #ffffff; }
+        .process-tab-trigger:hover:not(.active) { background: #E2E8F0; }
         #processTabList { scrollbar-width: none; -ms-overflow-style: none; }
         #processTabList::-webkit-scrollbar { display: none; }
         .no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
@@ -449,13 +449,13 @@
                 <!-- Right group: Hotline (luôn hiển thị) + CTA + Mobile menu -->
                 <div class="flex items-center gap-2 sm:gap-3 shrink-0">
                     <!-- Hotline cố định: 2 số, bấm gọi được -->
-                    <div class="flex flex-col gap-1">
-                        <a href="tel:02839159435" class="flex items-center gap-1.5 bg-accent/10 hover:bg-accent/20 rounded-lg px-2.5 py-1 transition-colors">
-                            <i data-lucide="phone-call" class="w-3.5 h-3.5 text-accent shrink-0"></i>
+                    <div class="flex flex-row gap-1.5">
+                        <a href="tel:02839159435" class="flex items-center gap-1 sm:gap-1.5 bg-accent/10 hover:bg-accent/20 rounded-lg px-2 py-1.5 sm:px-2.5 transition-colors">
+                            <i data-lucide="phone-call" class="hidden sm:block w-3.5 h-3.5 text-accent shrink-0"></i>
                             <span class="text-[11px] sm:text-sm font-bold text-accent-dark whitespace-nowrap">028 3915 9435</span>
                         </a>
-                        <a href="tel:02839159453" class="flex items-center gap-1.5 bg-accent/10 hover:bg-accent/20 rounded-lg px-2.5 py-1 transition-colors">
-                            <i data-lucide="phone-call" class="w-3.5 h-3.5 text-accent shrink-0"></i>
+                        <a href="tel:02839159453" class="flex items-center gap-1 sm:gap-1.5 bg-accent/10 hover:bg-accent/20 rounded-lg px-2 py-1.5 sm:px-2.5 transition-colors">
+                            <i data-lucide="phone-call" class="hidden sm:block w-3.5 h-3.5 text-accent shrink-0"></i>
                             <span class="text-[11px] sm:text-sm font-bold text-accent-dark whitespace-nowrap">028 3915 9453</span>
                         </a>
                     </div>
@@ -876,25 +876,25 @@
 
             <!-- Tab triggers -->
             <div class="mt-8 flex flex-row overflow-x-auto gap-3 sm:flex-wrap sm:justify-center sm:gap-4 md:gap-10 pb-2 sm:pb-0 sm:overflow-visible -mx-4 px-4 sm:mx-0 sm:px-0 reveal" id="processTabList">
-                <button type="button" class="process-tab-trigger active flex items-center gap-2 rounded-xl px-4 py-3 text-sm font-semibold text-muted transition-colors shrink-0 whitespace-nowrap" data-tab="step-1">
+                <button type="button" class="process-tab-trigger active flex items-center gap-2 rounded-xl px-4 py-3 text-sm font-semibold transition-colors shrink-0 whitespace-nowrap" data-tab="step-1">
                     <i data-lucide="message-square" class="w-4 h-4 shrink-0"></i> Bước 1: Tiếp nhận
                 </button>
-                <button type="button" class="process-tab-trigger flex items-center gap-2 rounded-xl px-4 py-3 text-sm font-semibold text-muted transition-colors shrink-0 whitespace-nowrap" data-tab="step-2">
+                <button type="button" class="process-tab-trigger flex items-center gap-2 rounded-xl px-4 py-3 text-sm font-semibold transition-colors shrink-0 whitespace-nowrap" data-tab="step-2">
                     <i data-lucide="clipboard-list" class="w-4 h-4 shrink-0"></i> Bước 2: Báo giá
                 </button>
-                <button type="button" class="process-tab-trigger flex items-center gap-2 rounded-xl px-4 py-3 text-sm font-semibold text-muted transition-colors shrink-0 whitespace-nowrap" data-tab="step-3">
+                <button type="button" class="process-tab-trigger flex items-center gap-2 rounded-xl px-4 py-3 text-sm font-semibold transition-colors shrink-0 whitespace-nowrap" data-tab="step-3">
                     <i data-lucide="calendar-check" class="w-4 h-4 shrink-0"></i> Bước 3: Lịch khám
                 </button>
-                <button type="button" class="process-tab-trigger flex items-center gap-2 rounded-xl px-4 py-3 text-sm font-semibold text-muted transition-colors shrink-0 whitespace-nowrap" data-tab="step-4">
+                <button type="button" class="process-tab-trigger flex items-center gap-2 rounded-xl px-4 py-3 text-sm font-semibold transition-colors shrink-0 whitespace-nowrap" data-tab="step-4">
                     <i data-lucide="building-2" class="w-4 h-4 shrink-0"></i> Bước 4: Tổ chức
                 </button>
-                <button type="button" class="process-tab-trigger flex items-center gap-2 rounded-xl px-4 py-3 text-sm font-semibold text-muted transition-colors shrink-0 whitespace-nowrap" data-tab="step-5">
+                <button type="button" class="process-tab-trigger flex items-center gap-2 rounded-xl px-4 py-3 text-sm font-semibold transition-colors shrink-0 whitespace-nowrap" data-tab="step-5">
                     <i data-lucide="file-check" class="w-4 h-4 shrink-0"></i> Bước 5: Kết quả
                 </button>
             </div>
 
             <!-- Tab content panels -->
-            <div class="mx-auto mt-8 max-w-screen-xl rounded-2xl bg-gray-100/70 p-6 lg:p-16 reveal" id="processTabPanels">
+            <div class="mx-auto mt-8 max-w-screen-xl rounded-2xl bg-gray-100 border border-gray-200 p-6 lg:p-16 reveal" id="processTabPanels">
                 <!-- Step 1 content -->
                 <div class="process-tab-panel active flex flex-col items-center text-center gap-4" data-panel="step-1">
                     <span class="text-xs font-bold uppercase tracking-[0.2em] text-primary/60">Bước 01</span>
@@ -956,9 +956,9 @@
 
                 <!-- BS 1 -->
                 <div class="team-card shrink-0 w-[270px] sm:w-[290px] lg:w-auto">
-                    <div class="flex items-start justify-between px-6 pt-6 pb-4 min-h-[116px] lg:min-h-[96px]">
+                    <div class="flex flex-col px-6 pt-6 pb-4 min-h-[124px]">
                         <p class="font-bold text-dark text-lg leading-snug">ThS. BS Tôn Thất<br>Thanh Long</p>
-                        <span class="text-[10px] font-bold text-dark/50 uppercase tracking-widest text-right leading-tight mt-1">Giám đốc<br>chuyên môn</span>
+                        <span class="text-[10px] font-bold text-dark/50 uppercase tracking-widest leading-tight mt-1.5">Giám đốc<br>chuyên môn</span>
                     </div>
                     <div class="team-card-photo aspect-[4/5] overflow-hidden relative">
                         <img src="images/bs-ton-that-thanh-long.png" alt="ThS. BS Tôn Thất Thanh Long" class="w-full h-full object-cover object-top" loading="lazy">
@@ -967,9 +967,9 @@
 
                 <!-- BS 2 -->
                 <div class="team-card shrink-0 w-[270px] sm:w-[290px] lg:w-auto">
-                    <div class="flex items-start justify-between px-6 pt-6 pb-4 min-h-[116px] lg:min-h-[96px]">
+                    <div class="flex flex-col px-6 pt-6 pb-4 min-h-[124px]">
                         <p class="font-bold text-dark text-lg leading-snug">BS Trần<br>Thị Hằng</p>
-                        <span class="text-[10px] font-bold text-dark/50 uppercase tracking-widest text-right leading-tight mt-1">Phó Giám đốc<br>chuyên môn</span>
+                        <span class="text-[10px] font-bold text-dark/50 uppercase tracking-widest leading-tight mt-1.5">Phó Giám đốc<br>chuyên môn</span>
                     </div>
                     <div class="team-card-photo aspect-[4/5] overflow-hidden relative">
                         <img src="images/bs-tran-thi-hang.png" alt="BS Trần Thị Hằng" class="w-full h-full object-cover object-top" loading="lazy">
@@ -978,9 +978,9 @@
 
                 <!-- BS 3 -->
                 <div class="team-card shrink-0 w-[270px] sm:w-[290px] lg:w-auto">
-                    <div class="flex items-start justify-between px-6 pt-6 pb-4 min-h-[116px] lg:min-h-[96px]">
+                    <div class="flex flex-col px-6 pt-6 pb-4 min-h-[124px]">
                         <p class="font-bold text-dark text-lg leading-snug">BS Đặng<br>Hồng Giang</p>
-                        <span class="text-[10px] font-bold text-dark/50 uppercase tracking-widest text-right leading-tight mt-1">BS phụ trách đoàn<br>KSK ngoại viện</span>
+                        <span class="text-[10px] font-bold text-dark/50 uppercase tracking-widest leading-tight mt-1.5">BS phụ trách đoàn<br>KSK ngoại viện</span>
                     </div>
                     <div class="team-card-photo aspect-[4/5] overflow-hidden relative">
                         <img src="images/bs-dang-hong-giang.png" alt="BS Đặng Hồng Giang" class="w-full h-full object-cover object-top" loading="lazy">
@@ -989,9 +989,9 @@
 
                 <!-- BS 4 -->
                 <div class="team-card shrink-0 w-[270px] sm:w-[290px] lg:w-auto">
-                    <div class="flex items-start justify-between px-6 pt-6 pb-4 min-h-[116px] lg:min-h-[96px]">
+                    <div class="flex flex-col px-6 pt-6 pb-4 min-h-[124px]">
                         <p class="font-bold text-dark text-lg leading-snug">BS Võ<br>Văn Thắng</p>
-                        <span class="text-[10px] font-bold text-dark/50 uppercase tracking-widest text-right leading-tight mt-1">Trưởng khoa<br>Bác sĩ gia đình</span>
+                        <span class="text-[10px] font-bold text-dark/50 uppercase tracking-widest leading-tight mt-1.5">Trưởng khoa<br>Bác sĩ gia đình</span>
                     </div>
                     <div class="team-card-photo aspect-[4/5] overflow-hidden relative">
                         <img src="images/bs-vo-van-thang.png" alt="BS Võ Văn Thắng" class="w-full h-full object-cover object-top" loading="lazy">
@@ -1000,9 +1000,9 @@
 
                 <!-- BS 5 -->
                 <div class="team-card shrink-0 w-[270px] sm:w-[290px] lg:w-auto">
-                    <div class="flex items-start justify-between px-6 pt-6 pb-4 min-h-[116px] lg:min-h-[96px]">
+                    <div class="flex flex-col px-6 pt-6 pb-4 min-h-[124px]">
                         <p class="font-bold text-dark text-lg leading-snug">BS Đỗ<br>Xuân Tân</p>
-                        <span class="text-[10px] font-bold text-dark/50 uppercase tracking-widest text-right leading-tight mt-1">Trưởng khoa<br>Mắt</span>
+                        <span class="text-[10px] font-bold text-dark/50 uppercase tracking-widest leading-tight mt-1.5">Trưởng khoa<br>Mắt</span>
                     </div>
                     <div class="team-card-photo aspect-[4/5] overflow-hidden relative">
                         <img src="images/bs-do-xuan-tan.png" alt="BS Đỗ Xuân Tân" class="w-full h-full object-cover object-top" loading="lazy">
@@ -1011,9 +1011,9 @@
 
                 <!-- BS 6 -->
                 <div class="team-card shrink-0 w-[270px] sm:w-[290px] lg:w-auto">
-                    <div class="flex items-start justify-between px-6 pt-6 pb-4 min-h-[116px] lg:min-h-[96px]">
+                    <div class="flex flex-col px-6 pt-6 pb-4 min-h-[124px]">
                         <p class="font-bold text-dark text-lg leading-snug">BS Phạm<br>Khắc Hòa</p>
-                        <span class="text-[10px] font-bold text-dark/50 uppercase tracking-widest text-right leading-tight mt-1">Trưởng khoa<br>Chẩn đoán hình ảnh</span>
+                        <span class="text-[10px] font-bold text-dark/50 uppercase tracking-widest leading-tight mt-1.5">Trưởng khoa<br>Chẩn đoán hình ảnh</span>
                     </div>
                     <div class="team-card-photo aspect-[4/5] overflow-hidden relative">
                         <img src="images/bs-pham-khac-hoa.png" alt="BS Phạm Khắc Hòa" class="w-full h-full object-cover object-top" loading="lazy">
@@ -1022,9 +1022,9 @@
 
                 <!-- BS 7 -->
                 <div class="team-card shrink-0 w-[270px] sm:w-[290px] lg:w-auto">
-                    <div class="flex items-start justify-between px-6 pt-6 pb-4 min-h-[116px] lg:min-h-[96px]">
+                    <div class="flex flex-col px-6 pt-6 pb-4 min-h-[124px]">
                         <p class="font-bold text-dark text-lg leading-snug">BS Dương<br>Thị Yến</p>
-                        <span class="text-[10px] font-bold text-dark/50 uppercase tracking-widest text-right leading-tight mt-1">Bác sĩ<br>Chẩn đoán hình ảnh</span>
+                        <span class="text-[10px] font-bold text-dark/50 uppercase tracking-widest leading-tight mt-1.5">Bác sĩ<br>Chẩn đoán hình ảnh</span>
                     </div>
                     <div class="team-card-photo aspect-[4/5] overflow-hidden relative">
                         <img src="images/bs-duong-thi-yen.png" alt="BS Dương Thị Yến" class="w-full h-full object-cover object-top" loading="lazy">
@@ -1033,9 +1033,9 @@
 
                 <!-- BS 8 -->
                 <div class="team-card shrink-0 w-[270px] sm:w-[290px] lg:w-auto">
-                    <div class="flex items-start justify-between px-6 pt-6 pb-4 min-h-[116px] lg:min-h-[96px]">
+                    <div class="flex flex-col px-6 pt-6 pb-4 min-h-[124px]">
                         <p class="font-bold text-dark text-lg leading-snug">BS Phùng<br>Văn Đức</p>
-                        <span class="text-[10px] font-bold text-dark/50 uppercase tracking-widest text-right leading-tight mt-1">Bác sĩ khoa<br>Tai Mũi Họng</span>
+                        <span class="text-[10px] font-bold text-dark/50 uppercase tracking-widest leading-tight mt-1.5">Bác sĩ khoa<br>Tai Mũi Họng</span>
                     </div>
                     <div class="team-card-photo aspect-[4/5] overflow-hidden relative">
                         <img src="images/bs-phung-van-duc.png" alt="BS Phùng Văn Đức" class="w-full h-full object-cover object-top" loading="lazy">
