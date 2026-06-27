@@ -79,12 +79,12 @@
         "name": "Phòng Khám Đa Khoa Thành Công",
         "image": "https://thanhcongclinic.com/images/logo.png",
         "url": "https://thanhcongclinic.com",
-        "telephone": "028 3815 9435",
+        "telephone": "028 3915 9435",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "36 Tây Thạnh (đường CN4 KCN Tân Bình)",
-            "addressLocality": "Quận Tân Phú",
-            "addressRegion": "TP.HCM",
+            "streetAddress": "36 đường CN4, KCN Tân Bình, Phường Tây Thạnh",
+            "addressLocality": "TP. Hồ Chí Minh",
+            "addressRegion": "TP. Hồ Chí Minh",
             "addressCountry": "VN"
         },
         "openingHoursSpecification": [
@@ -422,15 +422,11 @@
                 <div class="flex items-center gap-1.5">
                     <i data-lucide="map-pin" class="w-3 h-3 text-primary"></i>
                     <span class="sm:hidden">TP. Hồ Chí Minh</span>
-                    <span class="hidden sm:inline">36 Tây Thạnh, KCN Tân Bình, Q. Tân Phú, TP.HCM</span>
+                    <span class="hidden sm:inline">36 đường CN4, KCN Tân Bình, Phường Tây Thạnh, TP. Hồ Chí Minh, Việt Nam</span>
                 </div>
-                <a href="tel:02838159435" class="inline-flex items-center gap-1.5 bg-accent text-white font-bold px-3 py-1 rounded-full shadow-sm hover:bg-accent-dark transition-colors">
-                    <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
-                    Hotline: 028 3815 9435
-                </a>
             </div>
 
-            <div class="flex items-center justify-between py-2">
+            <div class="flex items-center justify-between gap-3 py-2">
                 <!-- Logo -->
                 <a href="#hero" class="flex items-center gap-3 shrink-0">
                     <img
@@ -442,7 +438,7 @@
                 </a>
 
                 <!-- Desktop Nav -->
-                <nav class="hidden lg:flex items-center gap-8">
+                <nav class="hidden lg:flex items-center gap-5 xl:gap-7">
                     <a href="#dich-vu" class="text-sm font-medium text-dark/70 hover:text-primary transition-colors">Dịch vụ</a>
                     <a href="#goi-kham" class="text-sm font-medium text-dark/70 hover:text-primary transition-colors">Gói khám</a>
                     <a href="#quy-trinh" class="text-sm font-medium text-dark/70 hover:text-primary transition-colors">Quy trình</a>
@@ -450,16 +446,28 @@
                     <a href="#lien-he" class="text-sm font-medium text-dark/70 hover:text-primary transition-colors">Liên hệ</a>
                 </nav>
 
-                <!-- CTA Desktop -->
-                <a href="#lien-he" class="hidden lg:inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white font-semibold px-5 py-2.5 rounded-lg cta-hover text-sm">
-                    <i data-lucide="phone" class="w-4 h-4"></i>
-                    Nhận báo giá
-                </a>
+                <!-- Right group: Hotline (luôn hiển thị) + CTA + Mobile menu -->
+                <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+                    <!-- Hotline cố định: 2 số, bấm gọi được -->
+                    <div class="flex items-center gap-2 bg-accent/10 rounded-lg px-2.5 py-1.5">
+                        <i data-lucide="phone-call" class="w-4 h-4 text-accent shrink-0"></i>
+                        <div class="flex flex-col leading-tight">
+                            <a href="tel:02839159435" class="text-[11px] sm:text-sm font-bold text-accent-dark hover:text-accent transition-colors whitespace-nowrap">028 3915 9435</a>
+                            <a href="tel:02839159453" class="text-[11px] sm:text-sm font-bold text-accent-dark hover:text-accent transition-colors whitespace-nowrap">028 3915 9453</a>
+                        </div>
+                    </div>
 
-                <!-- Mobile Menu Button -->
-                <button id="menuToggle" class="lg:hidden p-2 text-dark/70 hover:text-primary" aria-label="Menu">
-                    <i data-lucide="menu" class="w-6 h-6" id="menuIcon"></i>
-                </button>
+                    <!-- CTA Desktop (xl trở lên để tránh chật) -->
+                    <a href="#lien-he" class="hidden xl:inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white font-semibold px-5 py-2.5 rounded-lg cta-hover text-sm">
+                        <i data-lucide="phone" class="w-4 h-4"></i>
+                        Nhận báo giá
+                    </a>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="menuToggle" class="lg:hidden p-2 text-dark/70 hover:text-primary" aria-label="Menu">
+                        <i data-lucide="menu" class="w-6 h-6" id="menuIcon"></i>
+                    </button>
+                </div>
             </div>
 
             <!-- Mobile Menu -->
@@ -508,13 +516,13 @@
                         </div>
                         <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 text-sm text-white/95">
                             <i data-lucide="map-pin" class="w-4 h-4 text-accent-light shrink-0"></i>
-                            <span>Tại phòng khám hoặc tại DN</span>
+                            <span>Tại Phòng khám hoặc tại Doanh nghiệp</span>
                         </div>
                     </div>
 
                     <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
                         <a href="#lien-he" class="inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent-dark text-white font-bold px-7 py-4 rounded-xl cta-hover text-base shadow-lg shadow-accent/30">
-                            Nhận tư vấn gói khám cho doanh nghiệp
+                            Yêu cầu báo giá
                             <i data-lucide="arrow-right" class="w-5 h-5"></i>
                         </a>
                         <a href="#lien-he" class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/40 text-white font-semibold px-7 py-4 rounded-xl transition-colors text-base">
@@ -693,7 +701,7 @@
 
                 <!-- Bottom CTA -->
                 <div class="reveal">
-                    <p class="text-base text-primary font-medium border-l-2 border-primary pl-4">Phòng Khám Đa Khoa Thành Công được thiết kế để giải quyết toàn bộ các vấn đề trên cho doanh nghiệp.</p>
+                    <p class="text-base text-primary font-medium border-l-2 border-primary pl-4">Phòng khám đa khoa Thành Công cam kết giải quyết toàn bộ các vấn đề trên cho Quý công ty.</p>
                 </div>
             </div>
         </div>
@@ -706,15 +714,15 @@
             <div class="text-center mb-14 reveal">
                 <span class="text-xs font-bold uppercase tracking-[0.2em] text-primary border-l-2 border-primary pl-3 mb-4 inline-block">Giải pháp của chúng tôi</span>
                 <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-dark mb-4">
-                    Tại sao hơn <span class="text-accent">200+</span> doanh nghiệp chọn Thành Công?
+                    Tại sao hơn <span class="text-accent">200+</span> doanh nghiệp chọn Phòng khám đa khoa Thành Công?
                 </h2>
-                <p class="text-muted max-w-2xl mx-auto">Giải pháp khám sức khỏe được thiết kế riêng cho nhu cầu doanh nghiệp</p>
+                <p class="text-muted max-w-2xl mx-auto">Giải pháp khám sức khỏe được thiết kế riêng phù hợp cho mọi nhu cầu của doanh nghiệp</p>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
                 <!-- Solution 1 -->
-                <div class="reveal reveal-delay-1 bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow">
-                    <div class="relative">
+                <div class="reveal reveal-delay-1 bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden p-3 hover:shadow-lg transition-shadow">
+                    <div class="relative rounded-xl overflow-hidden">
                         <img src="images/the-manh-quy-trinh.jpg" alt="Quy trình khám tối ưu, tiết kiệm thời gian" class="w-full aspect-square object-cover" loading="lazy">
                         <div class="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white via-white/80 to-transparent"></div>
                         <h3 class="absolute top-0 inset-x-0 px-5 pt-5 text-center text-base font-semibold italic text-primary">Quy trình khám tối ưu, tiết kiệm thời gian</h3>
@@ -722,8 +730,8 @@
                 </div>
 
                 <!-- Solution 2 -->
-                <div class="reveal reveal-delay-2 bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow">
-                    <div class="relative">
+                <div class="reveal reveal-delay-2 bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden p-3 hover:shadow-lg transition-shadow">
+                    <div class="relative rounded-xl overflow-hidden">
                         <img src="images/the-manh-da-chuyen-khoa.jpg" alt="Khám đa chuyên khoa tại một cơ sở" class="w-full aspect-square object-cover" loading="lazy">
                         <div class="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white via-white/80 to-transparent"></div>
                         <h3 class="absolute top-0 inset-x-0 px-5 pt-5 text-center text-base font-semibold italic text-primary">Khám đa chuyên khoa tại một cơ sở duy nhất</h3>
@@ -731,8 +739,8 @@
                 </div>
 
                 <!-- Solution 3 -->
-                <div class="reveal reveal-delay-3 bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow">
-                    <div class="relative">
+                <div class="reveal reveal-delay-3 bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden p-3 hover:shadow-lg transition-shadow">
+                    <div class="relative rounded-xl overflow-hidden">
                         <img src="images/the-manh-bao-gia.jpg" alt="Báo giá trọn gói, cam kết không phát sinh" class="w-full aspect-square object-cover" loading="lazy">
                         <div class="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white via-white/80 to-transparent"></div>
                         <h3 class="absolute top-0 inset-x-0 px-5 pt-5 text-center text-base font-semibold italic text-primary">Báo giá trọn gói, cam kết không phát sinh</h3>
@@ -740,8 +748,8 @@
                 </div>
 
                 <!-- Solution 4 -->
-                <div class="reveal reveal-delay-4 bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow">
-                    <div class="relative">
+                <div class="reveal reveal-delay-4 bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden p-3 hover:shadow-lg transition-shadow">
+                    <div class="relative rounded-xl overflow-hidden">
                         <img src="images/the-manh-bao-cao.jpg" alt="Báo cáo tổng hợp sức khỏe cho doanh nghiệp" class="w-full aspect-square object-cover" loading="lazy">
                         <div class="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white via-white/80 to-transparent"></div>
                         <h3 class="absolute top-0 inset-x-0 px-5 pt-5 text-center text-base font-semibold italic text-primary">Báo cáo tổng hợp sức khỏe cho doanh nghiệp</h3>
@@ -909,7 +917,7 @@
                 <div class="process-tab-panel hidden flex flex-col items-center text-center gap-4" data-panel="step-4">
                     <span class="text-xs font-bold uppercase tracking-[0.2em] text-primary/60">Bước 04</span>
                     <h3 class="text-3xl font-semibold lg:text-5xl text-dark">Tổ chức khám</h3>
-                    <p class="text-muted lg:text-lg max-w-2xl">Thực hiện khám tại phòng khám hoặc triển khai tại doanh nghiệp. Quy trình phân luồng chuyên nghiệp, trung bình mỗi nhân viên hoàn thành khám trong 60 đến 90 phút.</p>
+                    <p class="text-muted lg:text-lg max-w-2xl">Thực hiện khám tại phòng khám hoặc triển khai tại doanh nghiệp. Quy trình phân luồng chuyên nghiệp, trung bình mỗi nhân viên hoàn thành khám trong 30 - 45 phút.</p>
                 </div>
 
                 <!-- Step 5 content -->
@@ -922,7 +930,7 @@
 
             <!-- Time note -->
             <div class="text-center mt-10 reveal">
-                <p class="text-sm text-muted italic">Trung bình mỗi nhân viên hoàn thành khám trong 60 – 90 phút.</p>
+                <p class="text-sm text-muted italic">Trung bình mỗi nhân viên hoàn thành khám trong 30 - 45 phút.</p>
             </div>
         </div>
     </section>
@@ -1101,7 +1109,7 @@
                     <div class="bg-surface rounded-xl p-5 space-y-3">
                         <div class="flex items-start gap-3 text-sm">
                             <i data-lucide="map-pin" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>
-                            <span>36 Tây Thạnh (đường CN4 KCN Tân Bình), P. Tây Thạnh, Q. Tân Phú, TP.HCM</span>
+                            <span>36 đường CN4, KCN Tân Bình, Phường Tây Thạnh, TP. Hồ Chí Minh, Việt Nam</span>
                         </div>
                         <div class="flex items-center gap-3 text-sm">
                             <i data-lucide="clock" class="w-4 h-4 text-primary shrink-0"></i>
@@ -1334,6 +1342,9 @@
                     <p class="text-sm text-white/60 leading-relaxed max-w-xs">
                         Phòng Khám Đa Khoa Thành Công. Đối tác y tế tin cậy, đồng hành cùng sức khỏe doanh nghiệp của bạn.
                     </p>
+                    <div class="mt-6 inline-flex bg-white rounded-xl p-3">
+                        <img src="images/badge-gptw-vietnam.png" alt="Great Place To Work Certified - Best Workplaces Vietnam 2026" class="h-20 w-auto object-contain" loading="lazy">
+                    </div>
                 </div>
 
                 <!-- Column 2: Contact -->
@@ -1342,11 +1353,14 @@
                     <ul class="space-y-3">
                         <li class="flex items-start gap-3 text-sm text-white/70">
                             <i data-lucide="map-pin" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i>
-                            <span>36 Tây Thạnh (đường CN4 KCN Tân Bình), P. Tây Thạnh, Q. Tân Phú, TP.HCM</span>
+                            <span>36 đường CN4, KCN Tân Bình, Phường Tây Thạnh, TP. Hồ Chí Minh, Việt Nam</span>
                         </li>
-                        <li class="flex items-center gap-3 text-sm text-white/70">
-                            <i data-lucide="phone" class="w-4 h-4 text-accent shrink-0"></i>
-                            <a href="tel:02838159435" class="hover:text-white transition-colors">028 3815 9435</a>
+                        <li class="flex items-start gap-3 text-sm text-white/70">
+                            <i data-lucide="phone" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i>
+                            <span class="flex flex-col gap-0.5">
+                                <a href="tel:02839159435" class="hover:text-white transition-colors">028 3915 9435</a>
+                                <a href="tel:02839159453" class="hover:text-white transition-colors">028 3915 9453</a>
+                            </span>
                         </li>
                         <li class="flex items-center gap-3 text-sm text-white/70">
                             <i data-lucide="mail" class="w-4 h-4 text-accent shrink-0"></i>
@@ -1373,6 +1387,12 @@
                             <a href="https://facebook.com/phongkhamdakhoathanhcong" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-sm text-white/70 hover:text-white transition-colors">
                                 <i data-lucide="facebook" class="w-4 h-4 text-accent shrink-0"></i>
                                 Facebook Phòng Khám Thành Công
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://zalo.me/3805777419254545140" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-sm text-white/70 hover:text-white transition-colors">
+                                <i data-lucide="message-circle" class="w-4 h-4 text-accent shrink-0"></i>
+                                Chat Zalo
                             </a>
                         </li>
                     </ul>
@@ -1402,7 +1422,7 @@
     <!-- ===== FLOATING CTA (Mobile) - 2 Buttons ===== -->
     <div id="floatingCTA" class="fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-gray-200 p-3 lg:hidden transform translate-y-full transition-transform duration-300">
         <div class="flex gap-3">
-            <a href="tel:02838159435" class="flex-1 flex items-center justify-center gap-2 bg-secondary hover:opacity-90 text-white font-bold py-3 rounded-xl text-sm cta-hover shadow-lg">
+            <a href="tel:02839159435" class="flex-1 flex items-center justify-center gap-2 bg-secondary hover:opacity-90 text-white font-bold py-3 rounded-xl text-sm cta-hover shadow-lg">
                 <i data-lucide="phone" class="w-4 h-4"></i>
                 Gọi ngay
             </a>
@@ -1412,6 +1432,17 @@
             </a>
         </div>
     </div>
+
+
+    <!-- ===== FLOATING ZALO BUTTON ===== -->
+    <a href="https://zalo.me/3805777419254545140" target="_blank" rel="noopener noreferrer"
+       class="fixed left-4 bottom-24 lg:bottom-6 z-40 inline-flex items-center gap-2 bg-[#0068FF] hover:bg-[#0052cc] text-white font-bold pl-2.5 pr-4 py-2 rounded-full shadow-xl transition-colors"
+       aria-label="Chat Zalo với Phòng Khám Đa Khoa Thành Công">
+        <span class="w-7 h-7 rounded-full bg-white flex items-center justify-center shrink-0">
+            <i data-lucide="message-circle" class="w-4 h-4 text-[#0068FF]"></i>
+        </span>
+        <span class="text-sm">Zalo</span>
+    </a>
 
 
     <!-- ===== TOAST NOTIFICATION ===== -->
