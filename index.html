@@ -239,10 +239,10 @@
             inset: 0;
             background: linear-gradient(
                 to right,
-                rgba(11, 45, 82, 0.92) 0%,
-                rgba(16, 60, 104, 0.84) 40%,
-                rgba(21, 74, 126, 0.72) 70%,
-                rgba(27, 94, 158, 0.60) 100%
+                rgba(18, 84, 150, 0.92) 0%,
+                rgba(23, 108, 190, 0.82) 40%,
+                rgba(30, 127, 214, 0.70) 70%,
+                rgba(46, 159, 224, 0.55) 100%
             );
             z-index: 1;
         }
@@ -250,9 +250,9 @@
             .hero-editorial::before {
                 background: linear-gradient(
                     to bottom,
-                    rgba(11, 45, 82, 0.90) 0%,
-                    rgba(16, 60, 104, 0.82) 50%,
-                    rgba(21, 74, 126, 0.72) 100%
+                    rgba(18, 84, 150, 0.90) 0%,
+                    rgba(26, 116, 200, 0.80) 50%,
+                    rgba(46, 159, 224, 0.66) 100%
                 );
             }
         }
@@ -280,7 +280,10 @@
             background: linear-gradient(180deg, #F8FAFE 0%, #EEF4FB 100%);
         }
         .section-gradient-blue {
-            background: linear-gradient(135deg, #1B5E9E 0%, #154A7E 100%);
+            background: linear-gradient(135deg, #1E7FD6 0%, #2E9FE0 100%);
+        }
+        .footer-blue {
+            background: linear-gradient(135deg, #1E7FD6 0%, #1565B0 100%);
         }
 
 
@@ -371,37 +374,10 @@
             background: #ffffff;
         }
         .stats-strip-inner {
-            background: linear-gradient(135deg, #1B5E9E 0%, #1A6DB8 100%);
+            background: linear-gradient(135deg, #1E7FD6 0%, #2E9FE0 100%);
             border: 3px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 4px 20px rgba(27, 94, 158, 0.25);
+            box-shadow: 0 4px 20px rgba(30, 127, 214, 0.28);
         }
-
-        /* Doctor team section */
-        .team-section {
-            background: linear-gradient(135deg, #0A4D6E 0%, #0D3B6B 40%, #143D5E 100%);
-        }
-        .team-card {
-            background: #FDF6ED;
-            border-radius: 1rem;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .team-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.2);
-        }
-        .team-card-photo {
-            background: linear-gradient(180deg, #FDF6ED 0%, #EDE4D8 100%);
-        }
-        .team-card-photo img {
-            position: relative;
-            z-index: 1;
-        }
-        .team-card-placeholder {
-            opacity: 0.7;
-        }
-        .team-scroll { scrollbar-width: none; -ms-overflow-style: none; }
-        .team-scroll::-webkit-scrollbar { display: none; }
 
         /* Header topbar transition */
         .header-topbar {
@@ -504,8 +480,8 @@
 
                     <p class="text-lg text-white/80 mb-6 max-w-xl mx-auto lg:mx-0 leading-relaxed">
                         Giải pháp khám sức khỏe định kỳ trọn gói cho doanh nghiệp từ
-                        <span class="font-semibold text-white">10 – 6000+ nhân sự</span>
-                        tại TP.HCM và khu vực lân cận. Tổ chức linh hoạt tại phòng khám hoặc tại doanh nghiệp, hồ sơ chứng từ đầy đủ, minh bạch.
+                        <span class="font-semibold text-white">10 - 6000++</span>
+                        tại TP.HCM và khu vực lân cận. Tổ chức linh hoạt tại phòng khám hoặc tại doanh nghiệp, trường học; hồ sơ chứng từ đầy đủ, minh bạch.
                     </p>
 
                     <div class="flex flex-wrap gap-2 mb-8 justify-center lg:justify-start">
@@ -519,7 +495,7 @@
                         </div>
                         <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 text-sm text-white/95">
                             <i data-lucide="map-pin" class="w-4 h-4 text-accent-light shrink-0"></i>
-                            <span>Tại Phòng khám hoặc tại Doanh nghiệp</span>
+                            <span>Tại Phòng khám hoặc tại Doanh nghiệp, trường học</span>
                         </div>
                     </div>
 
@@ -527,9 +503,6 @@
                         <a href="#lien-he" class="inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent-dark text-white font-bold px-7 py-4 rounded-xl cta-hover text-base shadow-lg shadow-accent/30">
                             Yêu cầu báo giá
                             <i data-lucide="arrow-right" class="w-5 h-5"></i>
-                        </a>
-                        <a href="#lien-he" class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/40 text-white font-semibold px-7 py-4 rounded-xl transition-colors text-base">
-                            Yêu cầu đề xuất & báo giá sơ bộ
                         </a>
                     </div>
                 </div>
@@ -598,7 +571,7 @@
     </section>
 
     <!-- ===== STATS STRIP (below hero) ===== -->
-    <section class="stats-strip py-12 lg:py-16" id="statsStrip">
+    <section class="stats-strip py-8 lg:py-12" id="statsStrip">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="stats-strip-inner rounded-2xl lg:rounded-full px-8 py-8 lg:px-12 lg:py-6">
                 <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-2">
@@ -639,7 +612,7 @@
 
 
     <!-- ===== SECTION 2: VẤN ĐỀ DOANH NGHIỆP THƯỜNG GẶP (Feature bento layout) ===== -->
-    <section class="py-16 lg:py-24 bg-white">
+    <section class="py-10 lg:py-14 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col gap-10">
                 <!-- Left-aligned header (matching React Feature component) -->
@@ -647,7 +620,7 @@
                     <span class="text-xs font-bold uppercase tracking-[0.2em] text-red-500 border-l-2 border-red-500 pl-3">Vấn đề phổ biến</span>
                     <div class="flex gap-2 flex-col">
                         <h2 class="text-3xl md:text-5xl tracking-tight max-w-xl font-extrabold text-dark text-left">
-                            Những khó khăn phổ biến khi tổ chức khám sức khỏe định kỳ
+                            Đây có phải là những khó khăn doanh nghiệp đang gặp khi tổ chức khám sức khỏe định kỳ?
                         </h2>
                         <p class="text-lg max-w-xl lg:max-w-lg leading-relaxed tracking-tight text-muted text-left">
                             Phần lớn doanh nghiệp gặp ít nhất một trong những vấn đề sau khi tổ chức khám sức khỏe cho nhân viên
@@ -663,8 +636,8 @@
                         <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/55 to-black/25"></div>
                         <i data-lucide="calendar-clock" class="relative z-10 w-8 h-8 stroke-1 text-white"></i>
                         <div class="relative z-10 flex flex-col">
-                            <h3 class="text-xl tracking-tight font-semibold text-white">Tốn thời gian sắp xếp và điều phối lịch khám cho nhân viên</h3>
-                            <p class="text-white/85 max-w-md text-base mt-2">Bộ phận nhân sự mất nhiều thời gian lập danh sách, phân ca và điều phối lịch khám cho hàng trăm nhân viên, thay vì tập trung vào công việc chuyên môn chính.</p>
+                            <h3 class="text-xl tracking-tight font-semibold text-white">Áp lực điều phối lịch khám cho nhân viên</h3>
+                            <p class="text-white/85 max-w-md text-base mt-2">Quy trình khám khiến nhân viên phải chờ đợi lâu, làm gián đoạn công việc và ảnh hưởng đến năng suất hoạt động của doanh nghiệp.</p>
                         </div>
                     </div>
 
@@ -672,10 +645,10 @@
                     <div class="reveal reveal-delay-2 group relative overflow-hidden bg-gray-900 rounded-2xl aspect-square p-6 flex justify-between flex-col">
                         <img src="images/anh-thuc-te-2.jpg" alt="Tổ chức khám sức khỏe định kỳ cho nhân viên" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/55 to-black/25"></div>
-                        <i data-lucide="clock" class="relative z-10 w-8 h-8 stroke-1 text-white"></i>
+                        <i data-lucide="badge-check" class="relative z-10 w-8 h-8 stroke-1 text-white"></i>
                         <div class="relative z-10 flex flex-col">
-                            <h3 class="text-xl tracking-tight font-semibold text-white">Nhân viên phải chờ đợi lâu, ảnh hưởng năng suất làm việc</h3>
-                            <p class="text-white/85 max-w-xs text-base mt-2">Quy trình thiếu tối ưu khiến nhân viên chờ đợi và nghỉ làm kéo dài, ảnh hưởng đến tiến độ sản xuất, kinh doanh.</p>
+                            <h3 class="text-xl tracking-tight font-semibold text-white">Băn khoăn về năng lực của đơn vị khám</h3>
+                            <p class="text-white/85 max-w-xs text-base mt-2">Không dễ đánh giá đơn vị nào đủ nhân lực, trang thiết bị và kinh nghiệm để tổ chức khám tại doanh nghiệp đúng tiến độ, đúng chất lượng.</p>
                         </div>
                     </div>
 
@@ -683,10 +656,10 @@
                     <div class="reveal reveal-delay-3 group relative overflow-hidden bg-gray-900 rounded-2xl aspect-square p-6 flex justify-between flex-col">
                         <img src="images/anh-thuc-te-3.jpg" alt="Đội ngũ y bác sĩ khám tại doanh nghiệp" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/55 to-black/25"></div>
-                        <i data-lucide="alert-triangle" class="relative z-10 w-8 h-8 stroke-1 text-white"></i>
+                        <i data-lucide="folder-check" class="relative z-10 w-8 h-8 stroke-1 text-white"></i>
                         <div class="relative z-10 flex flex-col">
-                            <h3 class="text-xl tracking-tight font-semibold text-white">Lo ngại chất lượng khám và độ chính xác của kết quả</h3>
-                            <p class="text-white/85 max-w-xs text-base mt-2">Thị trường nhiều cơ sở không đồng đều; chọn sai đơn vị ảnh hưởng trực tiếp đến độ chính xác kết quả và quyền lợi người lao động.</p>
+                            <h3 class="text-xl tracking-tight font-semibold text-white">Áp lực quản lý hồ sơ sau khám</h3>
+                            <p class="text-white/85 max-w-xs text-base mt-2">Việc tổng hợp kết quả, quản lý hồ sơ và lập báo cáo sau khám thường mất nhiều thời gian nếu thiếu sự hỗ trợ từ đơn vị cung cấp.</p>
                         </div>
                     </div>
 
@@ -694,10 +667,10 @@
                     <div class="reveal reveal-delay-1 group relative overflow-hidden bg-gray-900 rounded-2xl h-full lg:col-span-2 p-6 aspect-square lg:aspect-auto lg:min-h-[300px] flex justify-between flex-col">
                         <img src="images/anh-thuc-te-4.jpg" alt="Khám sức khỏe doanh nghiệp số lượng lớn" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/55 to-black/25"></div>
-                        <i data-lucide="file-text" class="relative z-10 w-8 h-8 stroke-1 text-white"></i>
+                        <i data-lucide="wallet" class="relative z-10 w-8 h-8 stroke-1 text-white"></i>
                         <div class="relative z-10 flex flex-col">
-                            <h3 class="text-xl tracking-tight font-semibold text-white">Mất nhiều công sức tổng hợp hồ sơ, báo cáo sau khám</h3>
-                            <p class="text-white/85 max-w-md text-base mt-2">Kết quả trả rời rạc, thiếu báo cáo tổng hợp khiến nhân sự tốn công ghép hồ sơ và ban lãnh đạo khó nắm tổng quan sức khỏe toàn công ty.</p>
+                            <h3 class="text-xl tracking-tight font-semibold text-white">Quan tâm đến chi phí khám sức khỏe</h3>
+                            <p class="text-white/85 max-w-md text-base mt-2">Doanh nghiệp mong muốn lựa chọn gói khám phù hợp với ngân sách nhưng vẫn đảm bảo chất lượng chuyên môn và trải nghiệm cho CBNV.</p>
                         </div>
                     </div>
                 </div>
@@ -712,9 +685,9 @@
 
 
     <!-- ===== SECTION 3: GIẢI PHÁP CỦA PHÒNG KHÁM ===== -->
-    <section id="dich-vu" class="py-16 lg:py-24 section-gradient-light">
+    <section id="dich-vu" class="py-10 lg:py-14 section-gradient-light">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-14 reveal">
+            <div class="text-center mb-10 reveal">
                 <span class="text-xs font-bold uppercase tracking-[0.2em] text-primary border-l-2 border-primary pl-3 mb-4 inline-block">Giải pháp của chúng tôi</span>
                 <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-dark mb-4">
                     Tại sao hơn <span class="text-accent">200+</span> doanh nghiệp chọn Phòng khám đa khoa Thành Công?
@@ -723,40 +696,29 @@
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
-                <!-- Solution 1 -->
-                <div class="reveal reveal-delay-1 bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden p-3 hover:shadow-lg transition-shadow">
-                    <div class="relative rounded-xl overflow-hidden">
-                        <img src="images/the-manh-quy-trinh.jpg" alt="Quy trình khám tối ưu, tiết kiệm thời gian" class="w-full aspect-square object-cover" loading="lazy">
-                        <div class="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white via-white/80 to-transparent"></div>
-                        <h3 class="absolute top-0 inset-x-0 px-5 pt-5 text-center text-base font-semibold italic text-primary">Quy trình khám tối ưu, tiết kiệm thời gian</h3>
+                <div class="reveal reveal-delay-1 bg-white rounded-2xl shadow-md border border-gray-100 p-6 text-center hover:shadow-lg transition-shadow">
+                    <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="gauge" class="w-7 h-7 text-primary"></i>
                     </div>
+                    <p class="text-base font-semibold text-dark leading-snug">Quy trình khám nhanh gọn, giảm tối đa thời gian chờ đợi.</p>
                 </div>
-
-                <!-- Solution 2 -->
-                <div class="reveal reveal-delay-2 bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden p-3 hover:shadow-lg transition-shadow">
-                    <div class="relative rounded-xl overflow-hidden">
-                        <img src="images/the-manh-da-chuyen-khoa.jpg" alt="Khám đa chuyên khoa tại một cơ sở" class="w-full aspect-square object-cover" loading="lazy">
-                        <div class="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white via-white/80 to-transparent"></div>
-                        <h3 class="absolute top-0 inset-x-0 px-5 pt-5 text-center text-base font-semibold italic text-primary">Khám đa chuyên khoa tại một cơ sở duy nhất</h3>
+                <div class="reveal reveal-delay-2 bg-white rounded-2xl shadow-md border border-gray-100 p-6 text-center hover:shadow-lg transition-shadow">
+                    <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="building-2" class="w-7 h-7 text-primary"></i>
                     </div>
+                    <p class="text-base font-semibold text-dark leading-snug">Tổ chức đoàn khám tại Phòng khám hoặc Doanh nghiệp.</p>
                 </div>
-
-                <!-- Solution 3 -->
-                <div class="reveal reveal-delay-3 bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden p-3 hover:shadow-lg transition-shadow">
-                    <div class="relative rounded-xl overflow-hidden">
-                        <img src="images/the-manh-bao-gia.jpg" alt="Báo giá trọn gói, cam kết không phát sinh" class="w-full aspect-square object-cover" loading="lazy">
-                        <div class="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white via-white/80 to-transparent"></div>
-                        <h3 class="absolute top-0 inset-x-0 px-5 pt-5 text-center text-base font-semibold italic text-primary">Báo giá trọn gói, cam kết không phát sinh</h3>
+                <div class="reveal reveal-delay-3 bg-white rounded-2xl shadow-md border border-gray-100 p-6 text-center hover:shadow-lg transition-shadow">
+                    <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="file-check-2" class="w-7 h-7 text-primary"></i>
                     </div>
+                    <p class="text-base font-semibold text-dark leading-snug">Báo cáo tổng kết đầy đủ, trả kết quả đúng hẹn.</p>
                 </div>
-
-                <!-- Solution 4 -->
-                <div class="reveal reveal-delay-4 bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden p-3 hover:shadow-lg transition-shadow">
-                    <div class="relative rounded-xl overflow-hidden">
-                        <img src="images/the-manh-bao-cao.jpg" alt="Báo cáo tổng hợp sức khỏe cho doanh nghiệp" class="w-full aspect-square object-cover" loading="lazy">
-                        <div class="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white via-white/80 to-transparent"></div>
-                        <h3 class="absolute top-0 inset-x-0 px-5 pt-5 text-center text-base font-semibold italic text-primary">Báo cáo tổng hợp sức khỏe cho doanh nghiệp</h3>
+                <div class="reveal reveal-delay-4 bg-white rounded-2xl shadow-md border border-gray-100 p-6 text-center hover:shadow-lg transition-shadow">
+                    <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="sliders-horizontal" class="w-7 h-7 text-primary"></i>
                     </div>
+                    <p class="text-base font-semibold text-dark leading-snug">Tư vấn thiết kế gói khám linh hoạt phù hợp với ngân sách và nhu cầu của doanh nghiệp.</p>
                 </div>
             </div>
         </div>
@@ -764,9 +726,9 @@
 
 
     <!-- ===== SECTION 4: CÁC GÓI KHÁM SỨC KHỎE ===== -->
-    <section id="goi-kham" class="py-16 lg:py-24 bg-white">
+    <section id="goi-kham" class="py-10 lg:py-14 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-14 reveal">
+            <div class="text-center mb-10 reveal">
                 <span class="text-xs font-bold uppercase tracking-[0.2em] text-secondary border-l-2 border-secondary pl-3 mb-4 inline-block">Gói dịch vụ</span>
                 <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-dark mb-4">
                     Các gói khám sức khỏe doanh nghiệp
@@ -776,7 +738,7 @@
 
             <div class="grid md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
                 <!-- Package 1: Basic -->
-                <div class="reveal reveal-delay-1 relative rounded-2xl p-8 card-hover flex flex-col text-white bg-gradient-to-br from-[#2563A8] to-[#15487C] shadow-lg shadow-primary/20">
+                <div class="reveal reveal-delay-1 relative rounded-2xl p-8 card-hover flex flex-col text-white bg-gradient-to-br from-[#2E9FE0] to-[#1E7FD6] shadow-lg shadow-primary/20">
                     <div class="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none">
                         <div class="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-white/10"></div>
                         <div class="absolute -bottom-16 -left-12 w-40 h-40 rounded-full bg-white/[0.06]"></div>
@@ -785,15 +747,13 @@
                         <div class="w-12 h-12 rounded-xl bg-white/15 flex items-center justify-center mb-5">
                             <i data-lucide="clipboard-list" class="w-6 h-6 text-white"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-1">Gói Cơ Bản</h3>
+                        <h3 class="text-xl font-bold mb-1">Gói Tiêu chuẩn</h3>
                         <p class="text-sm text-white/70 mb-6">Phù hợp doanh nghiệp quy mô nhỏ, ngân sách hạn chế</p>
                         <ul class="space-y-3 mb-8">
                             <li class="flex items-start gap-3 text-sm text-white/90"><i data-lucide="check" class="w-4 h-4 text-emerald-300 shrink-0 mt-0.5"></i><span>Khám tổng quát</span></li>
                             <li class="flex items-start gap-3 text-sm text-white/90"><i data-lucide="check" class="w-4 h-4 text-emerald-300 shrink-0 mt-0.5"></i><span>Xét nghiệm máu cơ bản</span></li>
                             <li class="flex items-start gap-3 text-sm text-white/90"><i data-lucide="check" class="w-4 h-4 text-emerald-300 shrink-0 mt-0.5"></i><span>Siêu âm bụng tổng quát</span></li>
                             <li class="flex items-start gap-3 text-sm text-white/90"><i data-lucide="check" class="w-4 h-4 text-emerald-300 shrink-0 mt-0.5"></i><span>Chụp X-Quang tim phổi thẳng</span></li>
-                            <li class="flex items-start gap-3 text-sm text-white/90"><i data-lucide="check" class="w-4 h-4 text-emerald-300 shrink-0 mt-0.5"></i><span>Hồ sơ khám sức khỏe cá nhân</span></li>
-                            <li class="flex items-start gap-3 text-sm text-white/90"><i data-lucide="check" class="w-4 h-4 text-emerald-300 shrink-0 mt-0.5"></i><span>Báo cáo tổng kết</span></li>
                         </ul>
                         <a href="#lien-he" class="mt-auto block w-full text-center bg-white text-primary font-bold py-3 rounded-lg hover:bg-white/90 transition-colors text-sm">
                             Nhận báo giá gói này
@@ -802,7 +762,7 @@
                 </div>
 
                 <!-- Package 2: Advanced (Popular) -->
-                <div class="reveal reveal-delay-2 relative rounded-2xl p-8 card-hover flex flex-col text-white bg-gradient-to-br from-[#0D3B6B] to-[#16518C] shadow-2xl shadow-primary/30 ring-2 ring-accent ring-offset-2 ring-offset-white">
+                <div class="reveal reveal-delay-2 relative rounded-2xl p-8 card-hover flex flex-col text-white bg-gradient-to-br from-[#1E7FD6] to-[#15588F] shadow-2xl shadow-primary/30 ring-2 ring-accent ring-offset-2 ring-offset-white">
                     <div class="badge-popular">Phổ biến nhất</div>
                     <div class="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none">
                         <div class="absolute -top-12 -right-12 w-40 h-40 rounded-full bg-white/10"></div>
@@ -812,17 +772,17 @@
                         <div class="w-12 h-12 rounded-xl bg-white/15 flex items-center justify-center mb-5">
                             <i data-lucide="heart-pulse" class="w-6 h-6 text-white"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-1">Gói Nâng Cao</h3>
+                        <h3 class="text-xl font-bold mb-1">Gói Toàn diện</h3>
                         <p class="text-sm text-white/70 mb-6">Lựa chọn phổ biến nhất cho doanh nghiệp vừa và lớn</p>
                         <ul class="space-y-3 mb-8">
                             <li class="flex items-start gap-3 text-sm text-white/90"><i data-lucide="check" class="w-4 h-4 text-emerald-300 shrink-0 mt-0.5"></i><span>Khám tổng quát</span></li>
-                            <li class="flex items-start gap-3 text-sm text-white/90"><i data-lucide="check" class="w-4 h-4 text-emerald-300 shrink-0 mt-0.5"></i><span>Xét nghiệm chuyên sâu</span></li>
-                            <li class="flex items-start gap-3 text-sm text-white/90"><i data-lucide="check" class="w-4 h-4 text-emerald-300 shrink-0 mt-0.5"></i><span>Siêu âm bụng/ tuyến giáp/ tuyến vú/ tim</span></li>
+                            <li class="flex items-start gap-3 text-sm text-white/90"><i data-lucide="check" class="w-4 h-4 text-emerald-300 shrink-0 mt-0.5"></i><span>Xét nghiệm máu cơ bản</span></li>
+                            <li class="flex items-start gap-3 text-sm text-white/90"><i data-lucide="check" class="w-4 h-4 text-emerald-300 shrink-0 mt-0.5"></i><span>Siêu âm bụng tổng quát</span></li>
                             <li class="flex items-start gap-3 text-sm text-white/90"><i data-lucide="check" class="w-4 h-4 text-emerald-300 shrink-0 mt-0.5"></i><span>Chụp X-Quang tim phổi thẳng</span></li>
+                            <li class="flex items-start gap-3 text-sm text-white/90"><i data-lucide="check" class="w-4 h-4 text-emerald-300 shrink-0 mt-0.5"></i><span>Xét nghiệm máu chuyên sâu</span></li>
+                            <li class="flex items-start gap-3 text-sm text-white/90"><i data-lucide="check" class="w-4 h-4 text-emerald-300 shrink-0 mt-0.5"></i><span>Siêu âm tuyến giáp/tuyến vú/tim</span></li>
                             <li class="flex items-start gap-3 text-sm text-white/90"><i data-lucide="check" class="w-4 h-4 text-emerald-300 shrink-0 mt-0.5"></i><span>Đo điện tim</span></li>
                             <li class="flex items-start gap-3 text-sm text-white/90"><i data-lucide="check" class="w-4 h-4 text-emerald-300 shrink-0 mt-0.5"></i><span>Tầm soát ung thư</span></li>
-                            <li class="flex items-start gap-3 text-sm text-white/90"><i data-lucide="check" class="w-4 h-4 text-emerald-300 shrink-0 mt-0.5"></i><span>Hồ sơ khám sức khỏe cá nhân</span></li>
-                            <li class="flex items-start gap-3 text-sm text-white/90"><i data-lucide="check" class="w-4 h-4 text-emerald-300 shrink-0 mt-0.5"></i><span>Báo cáo tổng kết</span></li>
                         </ul>
                         <a href="#lien-he" class="mt-auto block w-full text-center bg-accent hover:bg-accent-dark text-white font-bold py-3 rounded-lg cta-hover text-sm shadow-lg shadow-accent/30">
                             Nhận báo giá gói này
@@ -831,7 +791,7 @@
                 </div>
 
                 <!-- Package 3: Custom -->
-                <div class="reveal reveal-delay-3 relative rounded-2xl p-8 card-hover flex flex-col text-white bg-gradient-to-br from-[#2563A8] to-[#15487C] shadow-lg shadow-primary/20">
+                <div class="reveal reveal-delay-3 relative rounded-2xl p-8 card-hover flex flex-col text-white bg-gradient-to-br from-[#2E9FE0] to-[#1E7FD6] shadow-lg shadow-primary/20">
                     <div class="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none">
                         <div class="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-white/10"></div>
                         <div class="absolute -bottom-16 -left-12 w-40 h-40 rounded-full bg-white/[0.06]"></div>
@@ -840,7 +800,7 @@
                         <div class="w-12 h-12 rounded-xl bg-white/15 flex items-center justify-center mb-5">
                             <i data-lucide="settings" class="w-6 h-6 text-white"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-1">Gói Theo Yêu Cầu</h3>
+                        <h3 class="text-xl font-bold mb-1">Gói Chuyên sâu</h3>
                         <p class="text-sm text-white/70 mb-6">Thiết kế riêng theo đặc thù ngành nghề</p>
                         <div class="bg-white/10 rounded-lg p-4 mb-8">
                             <p class="text-sm text-white/85 leading-relaxed">
@@ -863,7 +823,7 @@
 
 
     <!-- ===== SECTION 5: QUY TRÌNH TỔ CHỨC KHÁM (Tab layout — ported from Feature108 React) ===== -->
-    <section id="quy-trinh" class="py-16 lg:py-24 section-gradient-light">
+    <section id="quy-trinh" class="py-10 lg:py-14 section-gradient-light">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Header -->
             <div class="flex flex-col items-center gap-4 text-center reveal">
@@ -877,19 +837,19 @@
             <!-- Tab triggers -->
             <div class="mt-8 flex flex-row overflow-x-auto gap-3 sm:flex-wrap sm:justify-center sm:gap-4 md:gap-10 pb-2 sm:pb-0 sm:overflow-visible -mx-4 px-4 sm:mx-0 sm:px-0 reveal" id="processTabList">
                 <button type="button" class="process-tab-trigger active flex items-center gap-2 rounded-xl px-4 py-3 text-sm font-semibold transition-colors shrink-0 whitespace-nowrap" data-tab="step-1">
-                    <i data-lucide="message-square" class="w-4 h-4 shrink-0"></i> Bước 1: Tiếp nhận
+                    <i data-lucide="message-square" class="w-4 h-4 shrink-0"></i> Bước 1: Khảo sát
                 </button>
                 <button type="button" class="process-tab-trigger flex items-center gap-2 rounded-xl px-4 py-3 text-sm font-semibold transition-colors shrink-0 whitespace-nowrap" data-tab="step-2">
-                    <i data-lucide="clipboard-list" class="w-4 h-4 shrink-0"></i> Bước 2: Báo giá
+                    <i data-lucide="clipboard-list" class="w-4 h-4 shrink-0"></i> Bước 2: Lập kế hoạch
                 </button>
                 <button type="button" class="process-tab-trigger flex items-center gap-2 rounded-xl px-4 py-3 text-sm font-semibold transition-colors shrink-0 whitespace-nowrap" data-tab="step-3">
-                    <i data-lucide="calendar-check" class="w-4 h-4 shrink-0"></i> Bước 3: Lịch khám
+                    <i data-lucide="building-2" class="w-4 h-4 shrink-0"></i> Bước 3: Tổ chức
                 </button>
                 <button type="button" class="process-tab-trigger flex items-center gap-2 rounded-xl px-4 py-3 text-sm font-semibold transition-colors shrink-0 whitespace-nowrap" data-tab="step-4">
-                    <i data-lucide="building-2" class="w-4 h-4 shrink-0"></i> Bước 4: Tổ chức
+                    <i data-lucide="file-check" class="w-4 h-4 shrink-0"></i> Bước 4: Trả kết quả
                 </button>
                 <button type="button" class="process-tab-trigger flex items-center gap-2 rounded-xl px-4 py-3 text-sm font-semibold transition-colors shrink-0 whitespace-nowrap" data-tab="step-5">
-                    <i data-lucide="file-check" class="w-4 h-4 shrink-0"></i> Bước 5: Kết quả
+                    <i data-lucide="stethoscope" class="w-4 h-4 shrink-0"></i> Bước 5: Tư vấn
                 </button>
             </div>
 
@@ -898,36 +858,36 @@
                 <!-- Step 1 content -->
                 <div class="process-tab-panel active flex flex-col items-center text-center gap-4" data-panel="step-1">
                     <span class="text-xs font-bold uppercase tracking-[0.2em] text-primary/60">Bước 01</span>
-                    <h3 class="text-3xl font-semibold lg:text-5xl text-dark">Tiếp nhận yêu cầu</h3>
-                    <p class="text-muted lg:text-lg max-w-2xl">Doanh nghiệp liên hệ và trao đổi nhu cầu khám sức khỏe. Phòng khám tiếp nhận thông tin về số lượng nhân viên, ngành nghề và các yêu cầu đặc biệt nếu có.</p>
+                    <h3 class="text-3xl font-semibold lg:text-5xl text-dark">Khảo sát báo giá</h3>
+                    <p class="text-muted lg:text-lg max-w-2xl">Tiếp nhận thông tin doanh nghiệp, tư vấn gói khám phù hợp trong vòng 5 giờ làm việc.</p>
                 </div>
 
                 <!-- Step 2 content -->
                 <div class="process-tab-panel hidden flex flex-col items-center text-center gap-4" data-panel="step-2">
                     <span class="text-xs font-bold uppercase tracking-[0.2em] text-primary/60">Bước 02</span>
-                    <h3 class="text-3xl font-semibold lg:text-5xl text-dark">Tư vấn gói khám và báo giá</h3>
-                    <p class="text-muted lg:text-lg max-w-2xl">Đề xuất gói phù hợp với quy mô và ngân sách doanh nghiệp. Gửi báo giá chi tiết trong vòng 24 giờ, cam kết trọn gói không phát sinh.</p>
+                    <h3 class="text-3xl font-semibold lg:text-5xl text-dark">Lập kế hoạch khám</h3>
+                    <p class="text-muted lg:text-lg max-w-2xl">Xây dựng lịch khám, phân ca và chuẩn bị nhân sự, trang thiết bị trong 1 - 3 ngày làm việc.</p>
                 </div>
 
                 <!-- Step 3 content -->
                 <div class="process-tab-panel hidden flex flex-col items-center text-center gap-4" data-panel="step-3">
                     <span class="text-xs font-bold uppercase tracking-[0.2em] text-primary/60">Bước 03</span>
-                    <h3 class="text-3xl font-semibold lg:text-5xl text-dark">Thống nhất lịch khám</h3>
-                    <p class="text-muted lg:text-lg max-w-2xl">Sắp xếp lịch phù hợp với tiến độ hoạt động của doanh nghiệp. Phân luồng theo ca, đảm bảo không ảnh hưởng đến sản xuất và kinh doanh.</p>
+                    <h3 class="text-3xl font-semibold lg:text-5xl text-dark">Tổ chức khám</h3>
+                    <p class="text-muted lg:text-lg max-w-2xl">Triển khai khám tại doanh nghiệp hoặc tại Phòng khám theo lịch đã thống nhất, điều phối linh hoạt và hạn chế ảnh hưởng đến hoạt động của doanh nghiệp.</p>
                 </div>
 
                 <!-- Step 4 content -->
                 <div class="process-tab-panel hidden flex flex-col items-center text-center gap-4" data-panel="step-4">
                     <span class="text-xs font-bold uppercase tracking-[0.2em] text-primary/60">Bước 04</span>
-                    <h3 class="text-3xl font-semibold lg:text-5xl text-dark">Tổ chức khám</h3>
-                    <p class="text-muted lg:text-lg max-w-2xl">Thực hiện khám tại phòng khám hoặc triển khai tại doanh nghiệp. Quy trình phân luồng chuyên nghiệp, trung bình mỗi nhân viên hoàn thành khám trong 30 - 45 phút.</p>
+                    <h3 class="text-3xl font-semibold lg:text-5xl text-dark">Trả kết quả</h3>
+                    <p class="text-muted lg:text-lg max-w-2xl">Xem kết quả trực tuyến. Trả kết quả khám sức khỏe cá nhân và báo cáo tổng hợp sức khỏe doanh nghiệp, tùy theo danh mục khám và thỏa thuận của doanh nghiệp.</p>
                 </div>
 
                 <!-- Step 5 content -->
                 <div class="process-tab-panel hidden flex flex-col items-center text-center gap-4" data-panel="step-5">
                     <span class="text-xs font-bold uppercase tracking-[0.2em] text-primary/60">Bước 05</span>
-                    <h3 class="text-3xl font-semibold lg:text-5xl text-dark">Trả kết quả và báo cáo</h3>
-                    <p class="text-muted lg:text-lg max-w-2xl">Gửi kết quả cá nhân cho từng nhân viên và báo cáo tổng hợp tình trạng sức khỏe toàn công ty cho bộ phận nhân sự và ban lãnh đạo.</p>
+                    <h3 class="text-3xl font-semibold lg:text-5xl text-dark">Tư vấn sau khám</h3>
+                    <p class="text-muted lg:text-lg max-w-2xl">Sau khi có kết quả, bác sĩ sẽ tư vấn kết quả, đồng thời hướng dẫn theo dõi và hỗ trợ các trường hợp cần khám chuyên sâu.</p>
                 </div>
             </div>
 
@@ -939,118 +899,10 @@
     </section>
 
 
-    <!-- ===== SECTION: ĐỘI NGŨ BÁC SĨ ===== -->
-    <section class="team-section py-16 lg:py-24 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="mb-10 lg:mb-14 reveal">
-                <span class="text-xs font-bold uppercase tracking-[0.2em] text-white/70 border-l-2 border-white/40 pl-3 mb-4 inline-block">Đội ngũ chuyên gia</span>
-                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white">
-                    Gặp gỡ đội ngũ bác sĩ
-                </h2>
-            </div>
-        </div>
-
-        <!-- Cards: horizontal scroll mobile, grid desktop -->
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex gap-5 overflow-x-auto team-scroll lg:grid lg:grid-cols-4 lg:overflow-visible pb-4 lg:pb-0 -mx-4 px-4 lg:mx-0 lg:px-0 reveal">
-
-                <!-- BS 1 -->
-                <div class="team-card shrink-0 w-[270px] sm:w-[290px] lg:w-auto">
-                    <div class="flex flex-col px-6 pt-6 pb-4 min-h-[124px]">
-                        <p class="font-bold text-dark text-lg leading-snug">ThS. BS Tôn Thất<br>Thanh Long</p>
-                        <span class="text-[10px] font-bold text-dark/50 uppercase tracking-widest leading-tight mt-1.5">Giám đốc<br>chuyên môn</span>
-                    </div>
-                    <div class="team-card-photo aspect-[4/5] overflow-hidden relative">
-                        <img src="images/bs-ton-that-thanh-long.png" alt="ThS. BS Tôn Thất Thanh Long" class="w-full h-full object-cover object-top" loading="lazy">
-                    </div>
-                </div>
-
-                <!-- BS 2 -->
-                <div class="team-card shrink-0 w-[270px] sm:w-[290px] lg:w-auto">
-                    <div class="flex flex-col px-6 pt-6 pb-4 min-h-[124px]">
-                        <p class="font-bold text-dark text-lg leading-snug">BS Trần<br>Thị Hằng</p>
-                        <span class="text-[10px] font-bold text-dark/50 uppercase tracking-widest leading-tight mt-1.5">Phó Giám đốc<br>chuyên môn</span>
-                    </div>
-                    <div class="team-card-photo aspect-[4/5] overflow-hidden relative">
-                        <img src="images/bs-tran-thi-hang.png" alt="BS Trần Thị Hằng" class="w-full h-full object-cover object-top" loading="lazy">
-                    </div>
-                </div>
-
-                <!-- BS 3 -->
-                <div class="team-card shrink-0 w-[270px] sm:w-[290px] lg:w-auto">
-                    <div class="flex flex-col px-6 pt-6 pb-4 min-h-[124px]">
-                        <p class="font-bold text-dark text-lg leading-snug">BS Đặng<br>Hồng Giang</p>
-                        <span class="text-[10px] font-bold text-dark/50 uppercase tracking-widest leading-tight mt-1.5">BS phụ trách đoàn<br>KSK ngoại viện</span>
-                    </div>
-                    <div class="team-card-photo aspect-[4/5] overflow-hidden relative">
-                        <img src="images/bs-dang-hong-giang.png" alt="BS Đặng Hồng Giang" class="w-full h-full object-cover object-top" loading="lazy">
-                    </div>
-                </div>
-
-                <!-- BS 4 -->
-                <div class="team-card shrink-0 w-[270px] sm:w-[290px] lg:w-auto">
-                    <div class="flex flex-col px-6 pt-6 pb-4 min-h-[124px]">
-                        <p class="font-bold text-dark text-lg leading-snug">BS Võ<br>Văn Thắng</p>
-                        <span class="text-[10px] font-bold text-dark/50 uppercase tracking-widest leading-tight mt-1.5">Trưởng khoa<br>Bác sĩ gia đình</span>
-                    </div>
-                    <div class="team-card-photo aspect-[4/5] overflow-hidden relative">
-                        <img src="images/bs-vo-van-thang.png" alt="BS Võ Văn Thắng" class="w-full h-full object-cover object-top" loading="lazy">
-                    </div>
-                </div>
-
-                <!-- BS 5 -->
-                <div class="team-card shrink-0 w-[270px] sm:w-[290px] lg:w-auto">
-                    <div class="flex flex-col px-6 pt-6 pb-4 min-h-[124px]">
-                        <p class="font-bold text-dark text-lg leading-snug">BS Đỗ<br>Xuân Tân</p>
-                        <span class="text-[10px] font-bold text-dark/50 uppercase tracking-widest leading-tight mt-1.5">Trưởng khoa<br>Mắt</span>
-                    </div>
-                    <div class="team-card-photo aspect-[4/5] overflow-hidden relative">
-                        <img src="images/bs-do-xuan-tan.png" alt="BS Đỗ Xuân Tân" class="w-full h-full object-cover object-top" loading="lazy">
-                    </div>
-                </div>
-
-                <!-- BS 6 -->
-                <div class="team-card shrink-0 w-[270px] sm:w-[290px] lg:w-auto">
-                    <div class="flex flex-col px-6 pt-6 pb-4 min-h-[124px]">
-                        <p class="font-bold text-dark text-lg leading-snug">BS Phạm<br>Khắc Hòa</p>
-                        <span class="text-[10px] font-bold text-dark/50 uppercase tracking-widest leading-tight mt-1.5">Trưởng khoa<br>Chẩn đoán hình ảnh</span>
-                    </div>
-                    <div class="team-card-photo aspect-[4/5] overflow-hidden relative">
-                        <img src="images/bs-pham-khac-hoa.png" alt="BS Phạm Khắc Hòa" class="w-full h-full object-cover object-top" loading="lazy">
-                    </div>
-                </div>
-
-                <!-- BS 7 -->
-                <div class="team-card shrink-0 w-[270px] sm:w-[290px] lg:w-auto">
-                    <div class="flex flex-col px-6 pt-6 pb-4 min-h-[124px]">
-                        <p class="font-bold text-dark text-lg leading-snug">BS Dương<br>Thị Yến</p>
-                        <span class="text-[10px] font-bold text-dark/50 uppercase tracking-widest leading-tight mt-1.5">Bác sĩ<br>Chẩn đoán hình ảnh</span>
-                    </div>
-                    <div class="team-card-photo aspect-[4/5] overflow-hidden relative">
-                        <img src="images/bs-duong-thi-yen.png" alt="BS Dương Thị Yến" class="w-full h-full object-cover object-top" loading="lazy">
-                    </div>
-                </div>
-
-                <!-- BS 8 -->
-                <div class="team-card shrink-0 w-[270px] sm:w-[290px] lg:w-auto">
-                    <div class="flex flex-col px-6 pt-6 pb-4 min-h-[124px]">
-                        <p class="font-bold text-dark text-lg leading-snug">BS Phùng<br>Văn Đức</p>
-                        <span class="text-[10px] font-bold text-dark/50 uppercase tracking-widest leading-tight mt-1.5">Bác sĩ khoa<br>Tai Mũi Họng</span>
-                    </div>
-                    <div class="team-card-photo aspect-[4/5] overflow-hidden relative">
-                        <img src="images/bs-phung-van-duc.png" alt="BS Phùng Văn Đức" class="w-full h-full object-cover object-top" loading="lazy">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
     <!-- ===== SECTION 6: NĂNG LỰC VÀ HỒ SƠ PHÁP LÝ ===== -->
-    <section id="nang-luc" class="py-16 lg:py-24 bg-white">
+    <section id="nang-luc" class="py-10 lg:py-14 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-14 reveal">
+            <div class="text-center mb-10 reveal">
                 <span class="text-xs font-bold uppercase tracking-[0.2em] text-secondary border-l-2 border-secondary pl-3 mb-4 inline-block">Uy tín và pháp lý</span>
                 <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-dark mb-4">
                     Năng lực và hồ sơ pháp lý
@@ -1084,7 +936,7 @@
                                 <i data-lucide="badge-check" class="w-5 h-5 text-secondary"></i>
                             </div>
                             <div>
-                                <p class="font-semibold mb-0.5">Đội ngũ bác sĩ có chứng chỉ hành nghề</p>
+                                <p class="font-semibold mb-0.5">Đội ngũ bác sĩ, điều dưỡng có chứng chỉ hành nghề</p>
                                 <p class="text-sm text-muted">20+ bác sĩ đa chuyên khoa được Sở Y tế cấp chứng chỉ</p>
                             </div>
                         </li>
@@ -1093,7 +945,7 @@
                                 <i data-lucide="badge-check" class="w-5 h-5 text-secondary"></i>
                             </div>
                             <div>
-                                <p class="font-semibold mb-0.5">Trang thiết bị được kiểm định định kỳ</p>
+                                <p class="font-semibold mb-0.5">Trang thiết bị được kiểm định, hiệu chuẩn định kỳ</p>
                                 <p class="text-sm text-muted">Đảm bảo độ chính xác và an toàn cho người khám</p>
                             </div>
                         </li>
@@ -1102,7 +954,7 @@
                                 <i data-lucide="badge-check" class="w-5 h-5 text-secondary"></i>
                             </div>
                             <div>
-                                <p class="font-semibold mb-0.5">Cơ sở vật chất đạt chuẩn phòng khám đa khoa</p>
+                                <p class="font-semibold mb-0.5">Cơ sở vật chất hiện đại, diện tích rộng trên 2000m2</p>
                                 <p class="text-sm text-muted">Không gian rộng rãi, thuận tiện tổ chức khám số lượng lớn</p>
                             </div>
                         </li>
@@ -1144,18 +996,16 @@
                 <div class="reveal reveal-delay-2">
                     <div class="relative rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden">
                         <div id="certSlider" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar">
-                            <button type="button" onclick="openCertLightbox(0)" class="snap-center shrink-0 w-full"><img src="images/cert-01-dkkd-1-t.jpg" alt="Giấy chứng nhận đăng ký doanh nghiệp trang 1" class="w-full aspect-[3/4] object-contain bg-white" loading="lazy"></button>
-                            <button type="button" onclick="openCertLightbox(1)" class="snap-center shrink-0 w-full"><img src="images/cert-02-dkkd-2-t.jpg" alt="Giấy chứng nhận đăng ký doanh nghiệp trang 2" class="w-full aspect-[3/4] object-contain bg-white" loading="lazy"></button>
-                            <button type="button" onclick="openCertLightbox(2)" class="snap-center shrink-0 w-full"><img src="images/cert-03-pham-vi-cm-1-t.jpg" alt="Phê duyệt phạm vi hoạt động chuyên môn trang 1" class="w-full aspect-[3/4] object-contain bg-white" loading="lazy"></button>
-                            <button type="button" onclick="openCertLightbox(3)" class="snap-center shrink-0 w-full"><img src="images/cert-04-pham-vi-cm-2-t.jpg" alt="Phê duyệt phạm vi hoạt động chuyên môn trang 2" class="w-full aspect-[3/4] object-contain bg-white" loading="lazy"></button>
-                            <button type="button" onclick="openCertLightbox(4)" class="snap-center shrink-0 w-full"><img src="images/cert-05-pham-vi-cm-3-t.jpg" alt="Phê duyệt phạm vi hoạt động chuyên môn trang 3" class="w-full aspect-[3/4] object-contain bg-white" loading="lazy"></button>
-                            <button type="button" onclick="openCertLightbox(5)" class="snap-center shrink-0 w-full"><img src="images/cert-06-bo-sung-cm-1-t.jpg" alt="Bổ sung phạm vi hoạt động chuyên môn trang 1" class="w-full aspect-[3/4] object-contain bg-white" loading="lazy"></button>
-                            <button type="button" onclick="openCertLightbox(6)" class="snap-center shrink-0 w-full"><img src="images/cert-07-bo-sung-cm-2-t.jpg" alt="Bổ sung phạm vi hoạt động chuyên môn trang 2" class="w-full aspect-[3/4] object-contain bg-white" loading="lazy"></button>
-                            <button type="button" onclick="openCertLightbox(7)" class="snap-center shrink-0 w-full"><img src="images/cert-08-giay-phep-kcb-t.jpg" alt="Giấy phép hoạt động khám chữa bệnh" class="w-full aspect-[3/4] object-contain bg-white" loading="lazy"></button>
-                            <button type="button" onclick="openCertLightbox(8)" class="snap-center shrink-0 w-full"><img src="images/cert-09-kiem-chuan-xet-nghiem-t.jpg" alt="Giấy chứng nhận Kiểm chuẩn Xét nghiệm TP.HCM" class="w-full aspect-[3/4] object-contain bg-white" loading="lazy"></button>
-                            <button type="button" onclick="openCertLightbox(9)" class="snap-center shrink-0 w-full"><img src="images/cert-10-cong-van-tt14-1-t.jpg" alt="Công văn chấp thuận khám sức khỏe TT14 trang 1" class="w-full aspect-[3/4] object-contain bg-white" loading="lazy"></button>
-                            <button type="button" onclick="openCertLightbox(10)" class="snap-center shrink-0 w-full"><img src="images/cert-11-cong-van-tt14-2-t.jpg" alt="Công văn chấp thuận khám sức khỏe TT14 trang 2" class="w-full aspect-[3/4] object-contain bg-white" loading="lazy"></button>
-                            <button type="button" onclick="openCertLightbox(11)" class="snap-center shrink-0 w-full"><img src="images/cert-12-so-do-phong-kham-t.jpg" alt="Sơ đồ các phòng ban phòng khám" class="w-full aspect-[3/4] object-contain bg-white" loading="lazy"></button>
+                            <button type="button" onclick="openCertLightbox(0)" class="snap-center shrink-0 w-full"><img src="images/cert-02-dkkd-2-t.jpg" alt="Giấy chứng nhận đăng ký doanh nghiệp trang 2" class="w-full aspect-[3/4] object-contain bg-white" loading="lazy"></button>
+                            <button type="button" onclick="openCertLightbox(1)" class="snap-center shrink-0 w-full"><img src="images/cert-03-pham-vi-cm-1-t.jpg" alt="Phê duyệt phạm vi hoạt động chuyên môn trang 1" class="w-full aspect-[3/4] object-contain bg-white" loading="lazy"></button>
+                            <button type="button" onclick="openCertLightbox(2)" class="snap-center shrink-0 w-full"><img src="images/cert-04-pham-vi-cm-2-t.jpg" alt="Phê duyệt phạm vi hoạt động chuyên môn trang 2" class="w-full aspect-[3/4] object-contain bg-white" loading="lazy"></button>
+                            <button type="button" onclick="openCertLightbox(3)" class="snap-center shrink-0 w-full"><img src="images/cert-05-pham-vi-cm-3-t.jpg" alt="Phê duyệt phạm vi hoạt động chuyên môn trang 3" class="w-full aspect-[3/4] object-contain bg-white" loading="lazy"></button>
+                            <button type="button" onclick="openCertLightbox(4)" class="snap-center shrink-0 w-full"><img src="images/cert-06-bo-sung-cm-1-t.jpg" alt="Bổ sung phạm vi hoạt động chuyên môn trang 1" class="w-full aspect-[3/4] object-contain bg-white" loading="lazy"></button>
+                            <button type="button" onclick="openCertLightbox(5)" class="snap-center shrink-0 w-full"><img src="images/cert-07-bo-sung-cm-2-t.jpg" alt="Bổ sung phạm vi hoạt động chuyên môn trang 2" class="w-full aspect-[3/4] object-contain bg-white" loading="lazy"></button>
+                            <button type="button" onclick="openCertLightbox(6)" class="snap-center shrink-0 w-full"><img src="images/cert-08-giay-phep-kcb-t.jpg" alt="Giấy phép hoạt động khám chữa bệnh" class="w-full aspect-[3/4] object-contain bg-white" loading="lazy"></button>
+                            <button type="button" onclick="openCertLightbox(7)" class="snap-center shrink-0 w-full"><img src="images/cert-09-kiem-chuan-xet-nghiem-t.jpg" alt="Giấy chứng nhận Kiểm chuẩn Xét nghiệm TP.HCM" class="w-full aspect-[3/4] object-contain bg-white" loading="lazy"></button>
+                            <button type="button" onclick="openCertLightbox(8)" class="snap-center shrink-0 w-full"><img src="images/cert-10-cong-van-tt14-1-t.jpg" alt="Công văn chấp thuận khám sức khỏe TT14 trang 1" class="w-full aspect-[3/4] object-contain bg-white" loading="lazy"></button>
+                            <button type="button" onclick="openCertLightbox(9)" class="snap-center shrink-0 w-full"><img src="images/cert-11-cong-van-tt14-2-t.jpg" alt="Công văn chấp thuận khám sức khỏe TT14 trang 2" class="w-full aspect-[3/4] object-contain bg-white" loading="lazy"></button>
                         </div>
                         <button type="button" onclick="certSlide(-1)" aria-label="Trước" class="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 hover:bg-white shadow flex items-center justify-center text-dark"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
                         <button type="button" onclick="certSlide(1)" aria-label="Sau" class="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 hover:bg-white shadow flex items-center justify-center text-dark"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
@@ -1168,7 +1018,7 @@
 
 
     <!-- ===== KHÁCH HÀNG TIÊU BIỂU (lưới logo) ===== -->
-    <section class="py-14 lg:py-20 bg-white border-t border-gray-100">
+    <section class="py-8 lg:py-12 bg-white border-t border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-10 reveal">
                 <span class="text-xs font-bold uppercase tracking-[0.2em] text-primary border-l-2 border-primary pl-3 mb-3 inline-block">Khách hàng tiêu biểu</span>
@@ -1207,7 +1057,7 @@
 
 
     <!-- ===== SECTION 9: FORM ĐĂNG KÝ TƯ VẤN ===== -->
-    <section id="lien-he" class="py-16 lg:py-24 section-gradient-blue relative overflow-hidden">
+    <section id="lien-he" class="py-10 lg:py-14 section-gradient-blue relative overflow-hidden">
         <!-- Decorative pattern -->
         <div class="absolute inset-0 opacity-5">
             <div class="absolute top-10 left-10 w-40 h-40 border-2 border-white rounded-full"></div>
@@ -1292,12 +1142,10 @@
                             class="form-input w-full px-4 py-3 rounded-lg border border-gray-200 text-sm focus:outline-none transition-all"
                         >
                             <option value="">Chọn số lượng nhân viên</option>
-                            <option value="under-50">Dưới 50 nhân viên</option>
-                            <option value="50-100">50 - 100 nhân viên</option>
-                            <option value="100-300">100 - 300 nhân viên</option>
-                            <option value="300-500">300 - 500 nhân viên</option>
-                            <option value="over-500">Trên 500 nhân viên</option>
-                            <option value="unknown">Chưa xác định</option>
+                            <option value="duoi-100">Dưới 100</option>
+                            <option value="100-500">Từ 100 - 500</option>
+                            <option value="500-3000">Từ 500 - 3.000</option>
+                            <option value="tren-3000">Trên 3.000</option>
                         </select>
                         <p class="error-msg text-xs text-red-500 mt-1 hidden" role="alert"></p>
                     </div>
@@ -1334,22 +1182,9 @@
 
 
     <!-- ===== SECTION 10: FOOTER ===== -->
-    <footer class="bg-dark text-white pt-16 pb-8">
+    <footer class="footer-blue text-white pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-3 gap-10 lg:gap-16 mb-12">
-                <!-- Column 1: Brand -->
-                <div>
-                    <img
-                        src="images/logo.png"
-                        alt="Logo Phòng Khám Đa Khoa Thành Công"
-                        class="h-12 mb-4 brightness-0 invert"
-                        loading="lazy"
-                    >
-                    <p class="text-sm text-white/60 leading-relaxed max-w-xs">
-                        Phòng Khám Đa Khoa Thành Công. Đối tác y tế tin cậy, đồng hành cùng sức khỏe doanh nghiệp của bạn.
-                    </p>
-                </div>
-
+            <div class="grid md:grid-cols-2 gap-10 lg:gap-16 mb-12">
                 <!-- Column 2: Contact -->
                 <div>
                     <h3 class="font-bold text-lg mb-4">Thông tin liên hệ</h3>
@@ -2119,7 +1954,6 @@
 
         /* ===== Cert Lightbox (hồ sơ pháp lý) ===== */
         var CERT_DOCS = [
-            { src: 'images/cert-01-dkkd-1.jpg', cap: 'Giấy chứng nhận đăng ký doanh nghiệp (trang 1/2)' },
             { src: 'images/cert-02-dkkd-2.jpg', cap: 'Giấy chứng nhận đăng ký doanh nghiệp (trang 2/2)' },
             { src: 'images/cert-03-pham-vi-cm-1.jpg', cap: 'Quyết định phê duyệt phạm vi hoạt động chuyên môn (trang 1/3)' },
             { src: 'images/cert-04-pham-vi-cm-2.jpg', cap: 'Quyết định phê duyệt phạm vi hoạt động chuyên môn (trang 2/3)' },
@@ -2129,8 +1963,7 @@
             { src: 'images/cert-08-giay-phep-kcb.jpg', cap: 'Giấy phép hoạt động khám chữa bệnh' },
             { src: 'images/cert-09-kiem-chuan-xet-nghiem.jpg', cap: 'Giấy chứng nhận Trung tâm Kiểm chuẩn Xét nghiệm TP.HCM' },
             { src: 'images/cert-10-cong-van-tt14-1.jpg', cap: 'Công văn chấp thuận tổ chức khám sức khỏe (Thông tư 14/2013/TT-BYT) (trang 1/2)' },
-            { src: 'images/cert-11-cong-van-tt14-2.jpg', cap: 'Công văn chấp thuận tổ chức khám sức khỏe (Thông tư 14/2013/TT-BYT) (trang 2/2)' },
-            { src: 'images/cert-12-so-do-phong-kham.jpg', cap: 'Sơ đồ các phòng ban phòng khám' }
+            { src: 'images/cert-11-cong-van-tt14-2.jpg', cap: 'Công văn chấp thuận tổ chức khám sức khỏe (Thông tư 14/2013/TT-BYT) (trang 2/2)' }
         ];
         var certIndex = 0;
         window.openCertLightbox = function(i) {
