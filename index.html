@@ -287,88 +287,6 @@
         }
 
 
-        /* Chat box - collapsed bar */
-        .chat-collapsed {
-            height: 56px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        .chat-collapsed:hover {
-            box-shadow: 0 8px 25px rgba(27, 94, 158, 0.3);
-            transform: translateY(-2px);
-        }
-
-        /* Chat box - expanded panel */
-        .chat-expanded {
-            height: 420px;
-            transition: height 400ms ease-out;
-        }
-        @media (max-width: 1023px) {
-            .chat-expanded {
-                height: 60vh;
-                max-height: 420px;
-            }
-        }
-
-        /* Chat icon pulse */
-        @keyframes chat-pulse {
-            0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.15); opacity: 0.8; }
-        }
-        .chat-pulse {
-            animation: chat-pulse 2s ease-in-out infinite;
-        }
-
-        /* Typing indicator */
-        .typing-indicator {
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            padding: 10px 16px;
-            background: #F3F4F6;
-            border-radius: 18px 18px 18px 4px;
-        }
-        .typing-dot {
-            width: 8px;
-            height: 8px;
-            background: #9CA3AF;
-            border-radius: 50%;
-            animation: typing-bounce 1.4s ease-in-out infinite;
-        }
-        .typing-dot:nth-child(2) { animation-delay: 0.2s; }
-        .typing-dot:nth-child(3) { animation-delay: 0.4s; }
-        @keyframes typing-bounce {
-            0%, 60%, 100% { transform: scale(1); opacity: 0.5; }
-            30% { transform: scale(1.3); opacity: 1; }
-        }
-
-        /* Chat message animations */
-        @keyframes msg-bot {
-            from { opacity: 0; transform: translateX(-10px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-        .chat-msg-bot { animation: msg-bot 0.3s ease-out forwards; }
-
-        @keyframes msg-user {
-            from { opacity: 0; transform: translateX(10px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-        .chat-msg-user { animation: msg-user 0.3s ease-out forwards; }
-
-        /* Suggestion chips */
-        @keyframes chip-fade-in {
-            from { opacity: 0; transform: translateY(6px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .suggestion-chip {
-            animation: chip-fade-in 0.3s ease-out forwards;
-            opacity: 0;
-        }
-        .suggestion-chip:nth-child(1) { animation-delay: 0.05s; }
-        .suggestion-chip:nth-child(2) { animation-delay: 0.15s; }
-        .suggestion-chip:nth-child(3) { animation-delay: 0.25s; }
-        .suggestion-chip:nth-child(4) { animation-delay: 0.35s; }
-
         /* Stats strip - blue rounded card */
         .stats-strip {
             background: #ffffff;
@@ -463,13 +381,13 @@
     </header>
 
 
-    <!-- ===== SECTION 1: HERO BANNER (Editorial + AI Chat) ===== -->
+    <!-- ===== SECTION 1: HERO BANNER (Editorial) ===== -->
     <section id="hero" class="hero-editorial pt-40 pb-16 lg:pb-20 flex items-center relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-            <div class="grid lg:grid-cols-5 gap-10 lg:gap-12 items-center">
+            <div class="grid items-center">
 
                 <!-- Left Column: Editorial Text -->
-                <div class="lg:col-span-3 text-white text-center lg:text-left">
+                <div class="text-white text-center lg:text-left max-w-3xl mx-auto lg:mx-0">
                     <span class="text-xs font-bold uppercase tracking-[0.2em] text-white/70 border-l-2 border-secondary-light pl-3 mb-6 inline-block">Được Sở Y tế TP.HCM cấp phép</span>
 
                     <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-[3.25rem] font-extrabold !leading-[1.3] mb-6">
@@ -504,59 +422,6 @@
                             Yêu cầu báo giá
                             <i data-lucide="arrow-right" class="w-5 h-5"></i>
                         </a>
-                    </div>
-                </div>
-
-                <!-- Right Column: AI Chat Box -->
-                <div class="lg:col-span-2" id="aiChatWrapper">
-                    <!-- State 1: Collapsed bar -->
-                    <div id="chatCollapsed" class="chat-collapsed bg-white rounded-full shadow-xl flex items-center gap-3 px-5" onclick="expandChat()">
-                        <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                            <i data-lucide="message-circle" class="w-5 h-5 text-primary chat-pulse"></i>
-                        </div>
-                        <span class="text-sm font-medium text-dark/70 flex-1">Tư vấn ngay với AI...</span>
-                        <i data-lucide="chevron-up" class="w-5 h-5 text-muted"></i>
-                    </div>
-
-                    <!-- State 2: Expanded chat panel (hidden initially) -->
-                    <div id="chatExpanded" class="hidden bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden chat-expanded">
-                        <!-- Header -->
-                        <div class="flex items-center gap-3 px-4 py-3 border-b border-gray-100 shrink-0">
-                            <div class="w-9 h-9 rounded-full bg-primary flex items-center justify-center shrink-0">
-                                <i data-lucide="bot" class="w-5 h-5 text-white"></i>
-                            </div>
-                            <div class="flex-1 min-w-0">
-                                <p class="text-sm font-semibold text-dark leading-tight">Trợ lý Thành Công</p>
-                                <div class="flex items-center gap-1.5">
-                                    <span class="w-2 h-2 rounded-full bg-secondary inline-block"></span>
-                                    <span class="text-xs text-muted">Online</span>
-                                </div>
-                            </div>
-                            <button onclick="collapseChat()" class="p-1.5 hover:bg-gray-100 rounded-lg transition-colors">
-                                <i data-lucide="chevron-down" class="w-5 h-5 text-muted"></i>
-                            </button>
-                        </div>
-
-                        <!-- Messages area -->
-                        <div id="chatMessages" class="flex-1 overflow-y-auto p-4 space-y-3">
-                            <!-- Messages injected by JS -->
-                        </div>
-
-                        <!-- Input area -->
-                        <div id="chatInputArea" class="border-t border-gray-100 p-3 shrink-0">
-                            <div class="flex items-center gap-2">
-                                <input
-                                    type="text"
-                                    id="chatInput"
-                                    placeholder="Nhập tin nhắn..."
-                                    class="flex-1 px-4 py-2.5 rounded-full border border-gray-200 text-sm focus:outline-none focus:border-primary transition-colors"
-                                    onkeydown="if(event.key==='Enter')sendChatMessage()"
-                                >
-                                <button onclick="sendChatMessage()" class="w-10 h-10 rounded-full bg-primary hover:bg-primary-dark flex items-center justify-center shrink-0 transition-colors">
-                                    <i data-lucide="send" class="w-4 h-4 text-white"></i>
-                                </button>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -1316,7 +1181,6 @@
             initCounterAnimation();
             initFormValidation();
             initFloatingCTA();
-            initAIChat();
             initProcessTabs();
         });
 
@@ -1599,324 +1463,6 @@
             }, { passive: true });
         }
 
-        /* ===== AI Chat Box ===== */
-        function initAIChat() {
-            var chatState = {
-                isExpanded: false,
-                currentStep: 0,
-                formData: {
-                    company: '',
-                    contact: '',
-                    phone: '',
-                    employees: '',
-                    notes: ''
-                }
-            };
-
-            var chatFlow = [
-                {
-                    step: 1,
-                    botMessage: 'Xin chào! 👋 Tôi là trợ lý AI của Phòng Khám Thành Công. Tôi có thể giúp bạn nhận báo giá khám sức khỏe doanh nghiệp nhanh chóng.\n\nCho tôi biết tên doanh nghiệp của bạn nhé!',
-                    inputType: 'text',
-                    placeholder: 'Nhập tên doanh nghiệp...',
-                    field: 'company'
-                },
-                {
-                    step: 2,
-                    botMessage: 'Cảm ơn! Cho tôi biết tên người liên hệ ạ?',
-                    inputType: 'text',
-                    placeholder: 'Nhập tên người liên hệ...',
-                    field: 'contact'
-                },
-                {
-                    step: 3,
-                    botMessage: 'Số điện thoại để chúng tôi liên hệ lại ạ?',
-                    inputType: 'phone',
-                    placeholder: 'VD: 0901234567',
-                    field: 'phone'
-                },
-                {
-                    step: 4,
-                    botMessage: 'Doanh nghiệp bạn có bao nhiêu nhân viên?',
-                    inputType: 'chips',
-                    chips: [
-                        { label: 'Dưới 100', value: 'duoi-100', icon: 'users' },
-                        { label: 'Từ 100 - 500', value: '100-500', icon: 'users' },
-                        { label: 'Từ 500 - 3.000', value: '500-3000', icon: 'building' },
-                        { label: 'Trên 3.000', value: 'tren-3000', icon: 'building-2' }
-                    ],
-                    field: 'employees'
-                },
-                {
-                    step: 5,
-                    botMessage: 'Bạn có lưu ý gì thêm không?',
-                    inputType: 'chips',
-                    chips: [
-                        { label: 'Không, gửi báo giá luôn', value: 'skip', icon: 'send' },
-                        { label: 'Tôi muốn ghi chú thêm', value: 'add-note', icon: 'pencil' }
-                    ],
-                    field: '_notesDecision'
-                }
-            ];
-
-            var messagesEl = document.getElementById('chatMessages');
-            var inputEl = document.getElementById('chatInput');
-            var inputAreaEl = document.getElementById('chatInputArea');
-
-            // Expand chat
-            window.expandChat = function() {
-                var collapsed = document.getElementById('chatCollapsed');
-                var expanded = document.getElementById('chatExpanded');
-                collapsed.classList.add('hidden');
-                expanded.classList.remove('hidden');
-                chatState.isExpanded = true;
-
-                if (chatState.currentStep === 0) {
-                    chatState.currentStep = 1;
-                    showBotMessage(chatFlow[0].botMessage, function() {
-                        setupInput(chatFlow[0]);
-                    });
-                }
-                lucide.createIcons();
-            };
-
-            // Collapse chat
-            window.collapseChat = function() {
-                var collapsed = document.getElementById('chatCollapsed');
-                var expanded = document.getElementById('chatExpanded');
-                expanded.classList.add('hidden');
-                collapsed.classList.remove('hidden');
-                chatState.isExpanded = false;
-            };
-
-            // Send text message
-            window.sendChatMessage = function() {
-                inputEl = document.getElementById('chatInput');
-                if (!inputEl) return;
-                var value = inputEl.value.trim();
-                if (!value) return;
-
-                // Phone validation at step 3
-                if (chatState.currentStep === 3) {
-                    var phonePattern = /^(0|\+84)\d{9}$/;
-                    if (!phonePattern.test(value.replace(/[\s-]/g, ''))) {
-                        showBotMessage('Số điện thoại không hợp lệ. Vui lòng nhập lại (VD: 0901234567)', function() {
-                            setupInput(chatFlow[2]);
-                        });
-                        inputEl.value = '';
-                        return;
-                    }
-                }
-
-                addUserMessage(value);
-                inputEl.value = '';
-
-                var currentFlowStep = chatFlow.find(function(s) { return s.step === chatState.currentStep; });
-                if (currentFlowStep && currentFlowStep.field) {
-                    chatState.formData[currentFlowStep.field] = value;
-                }
-
-                advanceStep();
-            };
-
-            // Select chip
-            window.selectChip = function(value, label) {
-                // Remove chips BEFORE adding user message
-                var allChips = messagesEl.querySelectorAll('.chips-container');
-                allChips.forEach(function(c) { c.remove(); });
-
-                addUserMessage(label);
-
-                if (chatState.currentStep === 4) {
-                    chatState.formData.employees = value;
-                }
-
-                if (chatState.currentStep === 5) {
-                    if (value === 'add-note') {
-                        showBotMessage('Hãy ghi chú thêm yêu cầu của bạn nhé:', function() {
-                            setupInput({
-                                inputType: 'textarea',
-                                placeholder: 'Nhập ghi chú...',
-                                field: 'notes'
-                            });
-                            chatState.currentStep = 55;
-                        });
-                        return;
-                    } else {
-                        chatState.formData.notes = '';
-                    }
-                }
-
-                advanceStep();
-            };
-
-            // Submit note from textarea
-            window.submitNote = function() {
-                var noteInput = document.getElementById('chatInput');
-                var value = noteInput ? noteInput.value.trim() : '';
-                if (!value) return;
-                chatState.formData.notes = value;
-                addUserMessage(value);
-                advanceStep();
-            };
-
-            // Restart chat
-            window.restartChat = function() {
-                chatState.currentStep = 1;
-                chatState.submitted = false;
-                chatState.formData = { company: '', contact: '', phone: '', employees: '', notes: '' };
-                messagesEl.innerHTML = '';
-                inputAreaEl.classList.remove('hidden');
-                inputAreaEl.innerHTML = '<div class="flex items-center gap-2">' +
-                    '<input type="text" id="chatInput" placeholder="Nhập tin nhắn..." class="flex-1 px-4 py-2.5 rounded-full border border-gray-200 text-sm focus:outline-none focus:border-primary transition-colors" onkeydown="if(event.key===\'Enter\')sendChatMessage()">' +
-                    '<button onclick="sendChatMessage()" class="w-10 h-10 rounded-full bg-primary hover:bg-primary-dark flex items-center justify-center shrink-0 transition-colors">' +
-                    '<i data-lucide="send" class="w-4 h-4 text-white"></i></button></div>';
-                inputEl = document.getElementById('chatInput');
-                lucide.createIcons();
-
-                showBotMessage(chatFlow[0].botMessage, function() {
-                    setupInput(chatFlow[0]);
-                });
-            };
-
-            function advanceStep() {
-                var nextStepNum;
-                if (chatState.currentStep === 55) {
-                    nextStepNum = 6;
-                } else {
-                    nextStepNum = chatState.currentStep + 1;
-                }
-
-                if (nextStepNum <= 5) {
-                    chatState.currentStep = nextStepNum;
-                    var nextFlow = chatFlow.find(function(s) { return s.step === nextStepNum; });
-                    showBotMessage(nextFlow.botMessage, function() {
-                        setupInput(nextFlow);
-                    });
-                } else {
-                    chatState.currentStep = 6;
-                    showCompletionMessage();
-                }
-            }
-
-            function showBotMessage(text, callback) {
-                var typingEl = document.createElement('div');
-                typingEl.className = 'flex justify-start';
-                typingEl.innerHTML = '<div class="typing-indicator"><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div></div>';
-                messagesEl.appendChild(typingEl);
-                scrollToBottom();
-
-                setTimeout(function() {
-                    typingEl.remove();
-                    var msgEl = document.createElement('div');
-                    msgEl.className = 'flex justify-start chat-msg-bot';
-                    var formattedText = text.replace(/\n/g, '<br>');
-                    msgEl.innerHTML = '<div class="max-w-[85%] bg-gray-100 rounded-2xl rounded-bl-sm px-4 py-3 text-sm text-dark leading-relaxed">' + formattedText + '</div>';
-                    messagesEl.appendChild(msgEl);
-                    scrollToBottom();
-                    if (callback) setTimeout(callback, 200);
-                }, 1200);
-            }
-
-            function addUserMessage(text) {
-                var msgEl = document.createElement('div');
-                msgEl.className = 'flex justify-end chat-msg-user';
-                msgEl.innerHTML = '<div class="max-w-[85%] bg-primary text-white rounded-2xl rounded-br-sm px-4 py-3 text-sm leading-relaxed">' + escapeHtml(text) + '</div>';
-                messagesEl.appendChild(msgEl);
-                scrollToBottom();
-            }
-
-            function setupInput(flowStep) {
-                // Always clean up any leftover chips first
-                messagesEl.querySelectorAll('.chips-container').forEach(function(c) { c.remove(); });
-
-                if (flowStep.inputType === 'chips') {
-                    inputAreaEl.classList.add('hidden');
-                    var chipsHtml = '<div class="chips-container flex flex-wrap gap-2 px-1 mt-2">';
-                    flowStep.chips.forEach(function(chip) {
-                        chipsHtml += '<button onclick="selectChip(\'' + chip.value + '\', \'' + escapeHtml(chip.label) + '\')" class="suggestion-chip inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-primary/20 text-sm font-medium text-primary hover:bg-primary/10 transition-colors cursor-pointer">';
-                        chipsHtml += '<i data-lucide="' + chip.icon + '" class="w-3.5 h-3.5"></i>';
-                        chipsHtml += chip.label + '</button>';
-                    });
-                    chipsHtml += '</div>';
-                    messagesEl.insertAdjacentHTML('beforeend', chipsHtml);
-                    scrollToBottom();
-                    lucide.createIcons();
-                } else if (flowStep.inputType === 'textarea') {
-                    inputAreaEl.classList.remove('hidden');
-                    inputAreaEl.innerHTML = '<div class="flex flex-col gap-2">' +
-                        '<textarea id="chatInput" rows="3" placeholder="' + flowStep.placeholder + '" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-primary transition-colors resize-none"></textarea>' +
-                        '<button onclick="submitNote()" class="self-end px-4 py-2 rounded-full bg-primary hover:bg-primary-dark text-white text-sm font-medium flex items-center gap-1.5 transition-colors">' +
-                        '<i data-lucide="send" class="w-3.5 h-3.5"></i> Gửi</button></div>';
-                    inputEl = document.getElementById('chatInput');
-                    inputEl.focus();
-                    lucide.createIcons();
-                } else {
-                    inputAreaEl.classList.remove('hidden');
-                    inputAreaEl.innerHTML = '<div class="flex items-center gap-2">' +
-                        '<input type="text" id="chatInput" placeholder="' + flowStep.placeholder + '" class="flex-1 px-4 py-2.5 rounded-full border border-gray-200 text-sm focus:outline-none focus:border-primary transition-colors" onkeydown="if(event.key===\'Enter\')sendChatMessage()">' +
-                        '<button onclick="sendChatMessage()" class="w-10 h-10 rounded-full bg-primary hover:bg-primary-dark flex items-center justify-center shrink-0 transition-colors">' +
-                        '<i data-lucide="send" class="w-4 h-4 text-white"></i></button></div>';
-                    inputEl = document.getElementById('chatInput');
-                    inputEl.focus();
-                    lucide.createIcons();
-                }
-            }
-
-            function showCompletionMessage() {
-                var data = chatState.formData;
-
-                // Đẩy lead về Google Sheet (chỉ 1 lần mỗi phiên chat)
-                if (!chatState.submitted) {
-                    chatState.submitted = true;
-                    var empMap = {
-                        'duoi-100': 'Dưới 100',
-                        '100-500': 'Từ 100 - 500',
-                        '500-3000': 'Từ 500 - 3.000',
-                        'tren-3000': 'Trên 3.000'
-                    };
-                    submitLead({
-                        company: data.company || '',
-                        address: '',
-                        contact: data.contact || '',
-                        phone: data.phone || '',
-                        employees: empMap[data.employees] || data.employees || '',
-                        message: data.notes || ''
-                    });
-                }
-
-                var completionText = 'Tuyệt vời! ✅ Thông tin đã được ghi nhận. Phòng khám sẽ gửi báo giá chi tiết cho <strong>' + escapeHtml(data.company) + '</strong> qua số <strong>' + escapeHtml(data.phone) + '</strong> trong 5 giờ làm việc. Cảm ơn bạn!';
-
-                inputAreaEl.classList.add('hidden');
-
-                showBotMessage(completionText, function() {
-                    console.log('=== AI CHAT FORM SUBMISSION ===');
-                    console.log('Data:', data);
-                    console.log('Timestamp:', new Date().toISOString());
-                    console.log('================================');
-
-                    showToast();
-
-                    var restartHtml = '<div class="flex justify-center mt-3">' +
-                        '<button onclick="restartChat()" class="suggestion-chip inline-flex items-center gap-2 px-5 py-2.5 rounded-full border-2 border-primary/20 text-sm font-semibold text-primary hover:bg-primary/10 transition-colors">' +
-                        '<i data-lucide="refresh-cw" class="w-4 h-4"></i>Gửi yêu cầu khác</button></div>';
-                    messagesEl.insertAdjacentHTML('beforeend', restartHtml);
-                    scrollToBottom();
-                    lucide.createIcons();
-                });
-            }
-
-            function scrollToBottom() {
-                messagesEl.scrollTop = messagesEl.scrollHeight;
-            }
-
-            function escapeHtml(text) {
-                var div = document.createElement('div');
-                div.textContent = text;
-                return div.innerHTML;
-            }
-        }
-
         /* ===== Process Tabs (ported from Feature108 React component) ===== */
         function initProcessTabs() {
             var triggers = document.querySelectorAll('.process-tab-trigger');
@@ -2008,9 +1554,9 @@
     <script type="text/javascript" src="https://assets.filum.ai/chat/filum_chat_latest.js"></script>
     <script>
       window.filumChat.initialize({
-        organizationId: '45c8e3c7-4501-4068-a0a4-228c34cf489f',
-        installedSourceId: 7406,
-        configId: 'DDF4KD5LB',
+        organizationId: '3acb6be9-3077-496a-a30d-51a12d75227f',
+        installedSourceId: 7906,
+        configId: 'uSQmuIdNz',
       })
     </script>
 </body>
